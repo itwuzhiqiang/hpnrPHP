@@ -1,4 +1,4 @@
-FROM registry.cn-hangzhou.aliyuncs.com/padkeji/base-php
+FROM com-hpnr-registry/hpnrPHP
 
 COPY ./nginx/ /project/nginx/
 COPY ./padphp/ /project/padphp/
