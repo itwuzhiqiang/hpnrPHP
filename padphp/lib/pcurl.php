@@ -27,7 +27,7 @@ class PadLib_Pcurl {
 			// worker默认的参数
 			'workerOptions' => array(
 				// 超时时间
-				'timeout' => 3000,
+				'timeout' => 30000,
 				// 默认的代理地址
 				'proxy' => array(),
 				// 重试次数

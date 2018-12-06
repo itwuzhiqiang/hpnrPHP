@@ -112,7 +112,7 @@ class PadLib_Curl {
 		
 		// 重试次数
 		$tryCount = $this->getOption('retryCount', 1);
-		curl_setopt($this->_handler, CURLOPT_TIMEOUT_MS, $this->getOption('timeout', 10000) / $tryCount);
+		curl_setopt($this->_handler, CURLOPT_TIMEOUT_MS, $this->getOption('timeout', 100000) / $tryCount);
 		
 		$responseContent = null;
 		$responseInfo = null;
