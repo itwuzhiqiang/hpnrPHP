@@ -1,0 +1,65 @@
+<page>
+	<navbar title="添加车辆信息"/>
+	<content>
+		<view class="col1 mh column bgf8f8">
+			<view class="header row bb">
+				<view class="headericon ac" onClick="goBack()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">添加车辆信息</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h44"/>
+			<view class="ph12 bgfff">
+				<view class="row al h40 bb">
+					<view class="">
+						<text class="fs12 fc797979">号牌号码</text>
+					</view>
+					<view class="col1">
+						<input class="chage lg" type="text" placeholder="请输入车牌号" onChange="setVal('viVehicleNumber',e)"/>
+					</view>
+				</view>
+				<view class="row al h40 bb" onClick="goList()">
+					<view class="col1">
+						<text class="fs12 fc797979">号牌种类</text>
+					</view>
+					<text class="fs12 fc999 tr">{$apiPtText}</text>
+					<view class="ml10">
+						<icon icon="icon-xiangyou" class="fcd4d4d4 fs12"/>
+					</view>
+				</view>
+				<view class="row al h40 bb">
+					<view class="">
+						<text class="fs12 fc797979">车辆识别代码(后六位)</text>
+					</view>
+					<view class="col1">
+						<input class="chage lg" type="text" placeholder="请输入车辆识别代码"
+								 onChange="setVal('viVehicleIdentificationCode',e)"/>
+					</view>
+				</view>
+			</view>
+
+			<view class="footer row al col1 bgf8f8">
+				<view class="row ac col1 ph12">
+					<view class="btn4 b55e0ea bg55e0ea row ac">
+						<text class="fs15 fcfff">添加车辆</text>
+					</view>
+				</view>
+				<view class="row sb col1 ph12" if="{1==2}">
+					<view class="btn4 b55e0ea bg55e0ea row ac">
+						<icon icon="icon-shoucang" class="fs16 fcfff"/>
+						<text class="fs15 fcfff">设为默认</text>
+					</view>
+					<view class="btn4 bg2bd3df b2bd3df row ac">
+						<icon icon="icon-add" class="fs16 fcfff"/>
+						<text class="fs15 fcfff">添加保险信息</text>
+					</view>
+				</view>
+			</view>
+			<view class="h50"></view>
+		</view>
+	</content>
+</page>

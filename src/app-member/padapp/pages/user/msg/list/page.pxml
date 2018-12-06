@@ -1,0 +1,70 @@
+<page>
+	<navbar title="通知"/>
+	<content>
+		<view class="mh column col1 bgf8f8">
+			<view class="header row bbddd">
+				<view class="headericon ac" onClick="goBack()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+
+					<view class="nav row al">
+						<view class="{'row ac h28 col1 ' + ($nav==1?'bg0da7b2':'')}" onClick="setNav(1)">
+							<text class="{'fs12 ' +($nav==1?'fcfff':'fc0da7b2')}">事故信息</text>
+						</view>
+						<view class="{'row ac h28 col1 ' + ($nav==2?'bg0da7b2':'')}" onClick="setNav(2)">
+							<text class="{'fs12 ' +($nav==2?'fcfff':'fc0da7b2')}">系统通知</text>
+						</view>
+					</view>
+
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h44"/>
+
+			<view if="{$nav==1}">
+				<view if="{$eventMsg.data}" for="{$eventMsg.data.list}">
+					<view class="h40 ph12 row al">
+						<text class="fs13 fc999">事故编号：{item.rpaNumber}</text>
+					</view>
+					<view class="bgfff ph12">
+						<view class="pt10 pb10 bb" for="{item.messageInfo}" for-item="mItem" for-key="mKey">
+							<view>
+								<text class="fs13 fc6767 liu2">{mItem.mTitle}</text>
+							</view>
+							<view class="mt5">
+								<text class="fs13 fc999">{mItem.mCreateTimeStr}</text>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view onClick="nextPage()" if="{$eventMsgNextPage}"
+						class="mt25 mb25 row ac col1">
+					<text class="fc999">点击加载更多</text>
+				</view>
+			</view>
+			<view if="{$nav==2}">
+				<view class="row al col1 h60 bgfff ph12 bb" if="{$msgQueryByParentId.data}" for="{$msgQueryByParentId.data}"
+						onClick="goNotice(item.typeId,item.typeName)">
+					<view class="mr10 row al">
+						<image class="w35" src="{item.typeImg}"/>
+					</view>
+					<view class="col1">
+						<view class="row sb col1">
+							<text class="fc333 fs13">{item.typeName}</text>
+							<text class="fs13 fc999">{item.createTimeStr}</text>
+						</view>
+						<view class="mt5">
+							<text class="fs13 fc999 liu1">{item.msgTitle}</text>
+						</view>
+					</view>
+				</view>
+				<view onClick="nextPage()" if="{$msgQueryByParentIdNextPage}"
+						class="mt25 mb25 row ac col1">
+					<text class="fc999">点击加载更多</text>
+				</view>
+			</view>
+		</view>
+	</content>
+</page>

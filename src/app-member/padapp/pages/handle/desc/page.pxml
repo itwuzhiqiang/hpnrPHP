@@ -1,0 +1,158 @@
+<page>
+	<navbar title="事故描述"/>
+	<content>
+		<view class="mh bgf8f8 column col1">
+			<view class="header row">
+				<view class="headericon ac" onClick="goHistory()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">事故描述</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h44"/>
+			<view class="col1">
+				<view class="tixing h60 row ac col1 bgfff bt">
+					<view class="row ac col1 mh12">
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac lineorder1 col1">
+								</view>
+								<!--已完成-->
+								<view class="">
+									<icon icon="icon-wancheng" class="fcFE7449 f18"/>
+								</view>
+								<!--未完成-->
+								<!--<view class="circle1">-->
+								<!--</view>-->
+								<!--未进行-->
+								<!--<view class="circle2"/>-->
+								<view class="row ac lineorder1 col1">
+								</view>
+							</view>
+							<view class="row ac h20">
+								<!--完成不需要mt12-->
+								<view class="">
+									<text class="fc6767 fs12">拍照取证</text>
+								</view>
+							</view>
+						</view>
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac lineorder1 col1"/>
+								<view class="circle1"/>
+								<view class="row ac lineorder1 col1"/>
+							</view>
+							<view class="row ac h20">
+								<view class="mt12">
+									<text class="fc2bd3df fs12">事故描述</text>
+								</view>
+							</view>
+						</view>
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac col1 lineorder1"/>
+								<view class="circle2"/>
+								<view class="row ac col1 lineorder1"/>
+							</view>
+							<view class="row ac h20">
+								<view class="mt12">
+									<text class="fc6767 fs12">信息采集</text>
+								</view>
+							</view>
+						</view>
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac lineorder1 col1"/>
+								<view class="circle2"/>
+								<view class="row ac lineorder1 col1"/>
+							</view>
+							<view class="row ac h20">
+								<view class="mt12">
+									<text class="fc6767 fs12">责任划分</text>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view class="w h60">
+				</view>
+				<view class="bgfff ph12 pb20">
+					<view class="row h40 bb bt sb col1">
+						<text class="fs14 fc6767">时间</text>
+						<view class="row al" if="{$handleAccident.data}">
+							<text class="fs13 fc999 liu1">{$rpaCreateTime}</text>
+							<!--<icon icon="icon-xiangyou" class="fc999 fs14"/>-->
+						</view>
+					</view>
+					<view class="row h40 bb sb col1">
+						<text class="fs14 fc6767">地点</text>
+						<view class="row al" onClick="goUpdate()">
+							<text class="fs13 fc999 liu1">{$rpaAddress+$symbol+$address}</text>
+							<icon icon="icon-xiangyou" class="fc999 fs14"/>
+						</view>
+					</view>
+					<view class="row al h25 col1">
+						<text class="fs12 fc999">{$str}</text>
+					</view>
+					<view class="row h40 bb al col1">
+						<text class="fs14 fc6767">情形描述</text>
+					</view>
+					<view class="row al col1">
+						<textarea class="lg b textarea col1" placeholder="300字以内" value="{$desc}" onChange="setVal(e)">
+						</textarea>
+					</view>
+					<!--<view class="mt20">-->
+					<!--<view class="row ac bfbtn">-->
+					<!--<view class="mr10">-->
+					<!--<icon icon="icon-icon-system-fn-play" class="fc2bd3df fs14"/>-->
+					<!--</view>-->
+					<!--<text class="fs13 fc2bd3df">00:03</text>-->
+					<!--<view class="bfclose">-->
+					<!--<icon icon="icon-guanbi1" class="fcFE7449 fs16"/>-->
+					<!--</view>-->
+					<!--</view>-->
+					<!--</view>-->
+				</view>
+
+				<view class="layerbg row ac" if="{$show}">
+					<view class="layercon1">
+						<view class="h45 row ac col1 mt15">
+							<text class="fs17 fc333 fw600">温馨提示</text>
+						</view>
+						<view class="row ac mh15 tc col1">
+							<text class="fc6767 fs14">你是需要手动输入，还是地图定位更改地址？</text>
+						</view>
+						<view class="row sb mh15 col1 mt15 mb15">
+							<view class="row ac btn3" onClick="goUpdate()">
+								<text class="fs15 fc2bd3df">手动输入</text>
+							</view>
+							<view class="row ac btn3" onClick="goMap()">
+								<text class="fs15 fc2bd3df">地图定位</text>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="w h50 bgf8f8">
+				<view class="row ac col1 mh12">
+					<!--<view class="btn4 b2bd3df row ac">-->
+					<!--<icon icon="icon-luyin" class="fc2bd3df fs16"/>-->
+					<!--<text class="fs15 fc2bd3df">按住说话</text>-->
+					<!--</view>-->
+					<!--<view class="btn4 bg2bd3df b2bd3df row ac" onClick="goInformation()">-->
+					<!--<text class="fs15 fcfff">完成</text>-->
+					<!--</view>-->
+					<view class="btn1 bg2bd3df b2bd3df row ac" onClick="goInformation()">
+						<text class="fs15 fcfff">完成</text>
+					</view>
+
+				</view>
+			</view>
+			<view id="targetContainer">
+			</view>
+		</view>
+	</content>
+</page>

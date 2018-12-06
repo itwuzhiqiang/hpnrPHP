@@ -1,0 +1,8 @@
+<page>
+	<navbar title="事故责任书"/>
+	<content class="bgf5f5">
+		<view class="bgfff col1 row ac mhb90">
+			<webview if="{$url}" class="asd" src="{$url}" />
+		</view>
+	</content>
+</page>

@@ -1,0 +1,279 @@
+<page>
+	<navbar title="事故详情"/>
+	<content>
+		<view>
+			<view class="header row bbddd">
+				<view class="headericon ac" onClick="goHistory()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df f18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">事故详情</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h44"/>
+			<view>
+				<view>
+					<view class="bgfff mt10">
+						<view class="h40 row al col1">
+							<view class="stiao"></view>
+							<view class="ml10">
+								<text class="fs14 fc6767">事故基本信息</text>
+							</view>
+						</view>
+						<view class="h40 row al bb bt mh12 col1">
+							<text class="fs13 fc6767">时间天气：</text>
+							<text class="fs13 fc6767">{$accident.rpaOccurrenceTime} {$accident.rpaWeather}</text>
+						</view>
+						<view class="pt10 pb10 row als bb mh12 col1">
+							<text class="fs13 fc6767">事故地点：</text>
+							<view class="col1">
+								<text class="fs13 fc6767">{$accident.rpaAddress}</text>
+							</view>
+						</view>
+						<view class="h40 row al bb mh12 col1">
+							<text class="fs13 fc6767">事故类型：</text>
+							<text class="fs13 fc6767">{$accident.rpaTypeText}</text>
+						</view>
+						<view class="pt10 pb10 row als bb mh12 col1">
+							<text class="fs13 fc6767">事故情形：</text>
+							<text class="fs13 fc6767">{$accident.rpaMangerText}</text>
+						</view>
+						<view class="h40 row al bb mh12 col1">
+							<text class="fs13 fc6767">案件状态：</text>
+							<text class="fs13 fcFE7449">{$accident.rpaStateDescription}</text>
+						</view>
+					</view>
+					<view if="{$type==1}">
+						<view class="bgfff mt10">
+							<view class="h40 row al col1">
+								<view class="stiao"/>
+								<view class="ml10">
+									<text class="fs14 fc6767">第一方相关信息</text>
+								</view>
+							</view>
+							<view class="h40 row sb bb bt mh12 col1">
+								<text class="fs13 fc6767">姓名</text>
+								<text class="fs13 fc6767">张一山</text>
+							</view>
+							<view class="h40 row sb bb bt mh12 col1">
+								<text class="fs13 fc6767">身份证号</text>
+								<text class="fs13 fc6767">500100000000000000</text>
+							</view>
+							<view class="h40 row sb bb bt mh12 col1">
+								<text class="fs13 fc6767">手机号码</text>
+								<text class="fs13 fc6767">18290291928</text>
+							</view>
+							<view class="h40 row sb bb mh12 col1">
+								<text class="fs13 fc6767">车牌号</text>
+								<text class="fs13 fc6767">渝a2b000</text>
+							</view>
+							<view class="h40 row sb bb mh12 col1">
+								<text class="fs13 fc6767">保险公司</text>
+								<text class="fs13 fc6767">中国平安</text>
+							</view>
+							<view class="h40 row sb bb mh12 col1">
+								<text class="fs13 fc6767">责任划分</text>
+								<text class="fs13 fcFE7449">全责</text>
+							</view>
+							<!--<view class="pt15 pb15 row ac col1">-->
+							<!--<text class="fs14 fcFE7449">不认可处理结果</text>-->
+							<!--</view>-->
+							<!--<view class="pt15 pb15 ph12">-->
+							<!--<view class="row sb col1">-->
+							<!--<input class="b fs13 fc999 lg codeinput" placeholder="请输入短信验证码"/>-->
+							<!--<view class="row ar col1">-->
+							<!--<view class="b getcode row ac">-->
+							<!--<text class="fc999 fs13">59s</text>-->
+							<!--</view>-->
+							<!--<view class="row ac confirm1">-->
+							<!--<text class="fcfff fs13">确认</text>-->
+							<!--</view>-->
+							<!--</view>-->
+							<!--</view>-->
+							<!--<view class="row sb col1 mt10">-->
+							<!--<view class="btn4 bgf00 row ac">-->
+							<!--<text class="fs15 fcfff">拒绝</text>-->
+							<!--</view>-->
+							<!--<view class="btn4 bgFE7449  row ac">-->
+							<!--<text class="fs15 fcfff">提交</text>-->
+							<!--</view>-->
+							<!--</view>-->
+							<!--</view>-->
+						</view>
+
+						<view class="bgfff mt10">
+							<view class="h40 row al col1">
+								<view class="stiao"></view>
+								<view class="ml10">
+									<text class="fs14 fc6767">第二方相关信息</text>
+								</view>
+							</view>
+							<view class="h40 row sb bb bt mh12 col1">
+								<text class="fs13 fc6767">姓名</text>
+								<text class="fs13 fc6767">张一山</text>
+							</view>
+							<view class="h40 row sb bb bt mh12 col1">
+								<text class="fs13 fc6767">身份证号</text>
+								<text class="fs13 fc6767">500100000000000000</text>
+							</view>
+							<view class="h40 row sb bb bt mh12 col1">
+								<text class="fs13 fc6767">手机号码</text>
+								<text class="fs13 fc6767">18290291928</text>
+							</view>
+							<view class="h40 row sb bb mh12 col1">
+								<text class="fs13 fc6767">车牌号</text>
+								<text class="fs13 fc6767">渝a2b000</text>
+							</view>
+							<view class="h40 row sb bb mh12 col1">
+								<text class="fs13 fc6767">保险公司</text>
+								<text class="fs13 fc6767">中国平安</text>
+							</view>
+							<view class="h40 row sb bb mh12 col1">
+								<text class="fs13 fc6767">责任划分</text>
+								<text class="fs13 fcFE7449">全责</text>
+							</view>
+							<!--<view class="pt15 pb15 row ac col1">-->
+							<!--<text class="fs14 fc2bd3df">已认可</text>-->
+							<!--</view>-->
+							<!--<view class="pt15 pb15 ph12" >-->
+							<!--<view class="row sb col1">-->
+							<!--<input class="b fs13 fc999 lg codeinput" placeholder="请输入短信验证码"/>-->
+							<!--<view class="row ar col1">-->
+							<!--<view class="b2bd3df 2bd3df getcode row ac">-->
+							<!--<text class="fc2bd3df fs13">重发</text>-->
+							<!--</view>-->
+							<!--<view class="row ac confirm1">-->
+							<!--<text class="fcfff fs13">确认</text>-->
+							<!--</view>-->
+							<!--</view>-->
+							<!--</view>-->
+							<!--<view class="row sb col1 mt10">-->
+							<!--<view class="btn4 bgf00 row ac">-->
+							<!--<text class="fs15 fcfff">拒绝</text>-->
+							<!--</view>-->
+							<!--<view class="btn4 bgFE7449 row ac">-->
+							<!--<text class="fs15 fcfff">提交</text>-->
+							<!--</view>-->
+							<!--</view>-->
+							<!--</view>-->
+						</view>
+					</view>
+
+					<view if="{$type==2}">
+						<view class="bgfff mt10">
+							<view class="h40 row al col1">
+								<view class="stiao"/>
+								<view class="ml10">
+									<text class="fs14 fc6767">第一方相关信息</text>
+								</view>
+							</view>
+							<view class="h40 row sb bb bt mh12 col1">
+								<text class="fs13 fc6767">姓名</text>
+								<text class="fs13 fc6767">张一山</text>
+							</view>
+							<view class="h40 row sb bb bt mh12 col1">
+								<text class="fs13 fc6767">手机号码</text>
+								<text class="fs13 fc6767">18290291928</text>
+							</view>
+							<view class="pt15 pb15 ph12">
+								<view class="row sb col1">
+									<input class="b fs13 fc999 lg codeinput" placeholder="请输入短信验证码"/>
+									<view class="row ar col1">
+										<view class="b getcode row ac" if="{$time[0] > 0}">
+											<text class="fc999 fs13">{$time[0]}s</text>
+										</view>
+										<view class="b2bd3df 2bd3df getcode row ac" else="" onClick="goRetransmission(0)">
+											<text class="fc2bd3df fs13">重发</text>
+										</view>
+									</view>
+								</view>
+								<view class="row sb col1 mt10">
+									<view class="btn4 bgf00 row ac">
+										<text class="fs15 fcfff">拒绝</text>
+									</view>
+									<view class="btn4 bgFE7449  row ac">
+										<text class="fs15 fcfff">提交</text>
+									</view>
+								</view>
+							</view>
+						</view>
+
+						<view class="bgfff mt10">
+							<view class="h40 row al col1">
+								<view class="stiao"/>
+								<view class="ml10">
+									<text class="fs14 fc6767">第二方相关信息</text>
+								</view>
+							</view>
+							<view class="h40 row sb bb bt mh12 col1">
+								<text class="fs13 fc6767">姓名</text>
+								<text class="fs13 fc6767">张一山</text>
+							</view>
+							<view class="h40 row sb bb bt mh12 col1">
+								<text class="fs13 fc6767">手机号码</text>
+								<text class="fs13 fc6767">18290291928</text>
+							</view>
+							<view class="pt15 pb15 ph12">
+								<view class="row sb col1">
+									<input class="b fs13 fc999 lg codeinput" placeholder="请输入短信验证码"/>
+									<view class="row ar col1">
+										<view class="b getcode row ac" if="{$time[1] > 0}">
+											<text class="fc999 fs13">{$time[1]}s</text>
+										</view>
+										<view class="b2bd3df 2bd3df getcode row ac" else="" onClick="goRetransmission(1)">
+											<text class="fc2bd3df fs13">重发</text>
+										</view>
+									</view>
+								</view>
+								<view class="row sb col1 mt10">
+									<view class="btn4 bgf00 row ac" onClick="goRefuse()">
+										<text class="fs15 fcfff">拒绝</text>
+									</view>
+									<view class="btn4 bgFE7449  row ac" onClick="goSubmit()">
+										<text class="fs15 fcfff">提交</text>
+									</view>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<!--<view class="layerbg row ac">-->
+				<!--<view class="layercon1">-->
+				<!--<view class="row ac mh15 pt25 pb20 tc col1">-->
+				<!--<text class="fc333 fs15">当事人未输入验证码，表示不认同当前处理结果</text>-->
+				<!--</view>-->
+				<!--<view class="row al col1 bt">-->
+				<!--<view class="row ac h50 col1 br">-->
+				<!--<text class="fs16 fc00a1ff">再看看</text>-->
+				<!--</view>-->
+				<!--<view class="row ac h50 col1">-->
+				<!--<text class="fs16 fc00a1ff">确定</text>-->
+				<!--</view>-->
+				<!--</view>-->
+				<!--</view>-->
+				<!--</view>-->
+
+				<view class="layerbg row ac" if="{$show}">
+					<view class="layercon1">
+						<view class="row ac mh15 pt25 pb20 tc col1">
+							<text class="fc333 fs15">已拒绝事故处理结果，如有异议请告知该当事人于十五日内向上级公安机关申请重新认定！</text>
+						</view>
+						<view class="row ac col1 h50 bt" onClick="goYes()">
+							<text class="fs16 fc00a1ff">知道了</text>
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="w h50 row ac col1 bgf8f8 mt30">
+				<view class="mr12 ml12 br38 h40 bgfea851 row ac col1" if="{$type==1}" onClick="goPush()">
+					<text class="fs15 fcfff">推送给事故相关当事人</text>
+				</view>
+				<view class="mr12 ml12 br38 h40 bgFE7449 row ac col1" else="" onClick="goSure()">
+					<text class="fs15 fcfff">确定</text>
+				</view>
+			</view>
+		</view>
+	</content>
+</page>

@@ -1,0 +1,57 @@
+<page>
+	<navbar title="修改密码"/>
+	<content>
+		<view class="mh col1 column bgfff">
+			<view class="header row bb">
+				<view class="headericon ac" onClick="goBack()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">修改密码</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h44"/>
+			<view class="ph15">
+				<view class="row al h40 bb">
+					<view class="">
+						<text class="fs12 fc797979">旧密码</text>
+					</view>
+					<view class="col1">
+						<input class="chage lg" type="password" placeholder="请输入旧密码" onChange="setVal(e,'password')"/>
+					</view>
+				</view>
+				<view class="row al h40 bb">
+					<view class="">
+						<text class="fs12 fc797979">新密码</text>
+					</view>
+					<view class="col1">
+						<input class="chage lg" type="password" placeholder="请输入新密码" onChange="setVal(e,'newPassword')"/>
+					</view>
+				</view>
+				<view class="row al h40 bb">
+					<view class="">
+						<text class="fs12 fc797979">确认密码</text>
+					</view>
+					<view class="col1">
+						<input class="chage lg" type="password" placeholder="请再次输入新密码" onChange="setVal(e,'rePassword')"/>
+					</view>
+				</view>
+				<view class="mt30 row ac col1" onClick="goChange()">
+					<view class="btn1 bg2bd3df row ac">
+						<text class="fcfff fs15">
+							确认
+						</text>
+					</view>
+				</view>
+
+				<view class="mt30 row ac col1" onClick="goForget()">
+					<text class="fc999 fs15">
+						忘记密码
+					</text>
+				</view>
+			</view>
+		</view>
+	</content>
+</page>

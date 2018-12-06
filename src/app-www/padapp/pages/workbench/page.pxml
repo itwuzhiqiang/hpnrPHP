@@ -1,0 +1,8 @@
+<page>
+	<navbar title="系统登录"/>
+	<content>
+		<view for="{$pageGroups}">
+			<element element="(item.pages.length > 0 ? item.pages[item.pages.length - 1].element : null)"/>
+		</view>
+	</content>
+</page>

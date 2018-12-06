@@ -1,0 +1,193 @@
+<page>
+	<navbar title="温馨提醒"/>
+	<content>
+		<view class="mh bgf8f8">
+			<view class="header row">
+				<view class="headericon ac" onClick="goBack()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">温馨提醒</text>
+				</view>
+				<view class="headericon ac"/>
+			</view>
+			<view class="h44"/>
+			<view>
+				<view class="tixing h60 row ac bbFE7449 bgfff bt">
+					<view class="mr10">
+						<icon icon="icon-shuoming1" class="fcFE7449 fs28"/>
+					</view>
+					<view class="w250">
+						<text class="fs14 fcFE7449">有以下情形之一应立即拨打110！
+							在现场等待执法人员处理。
+						</text>
+					</view>
+				</view>
+				<view class="w h60"/>
+				<view class="bgfff mh12 ph12 br5 mt10 mb10">
+					<view class="row als pt10 pb10 bb">
+						<view class="mr5 numberbox row ac">
+							<text class="fs12 fc7979">1</text>
+						</view>
+						<view>
+							<text class="fs13 fc7979">机动车无号牌、无检验合格标志、无保险标志</text>
+						</view>
+					</view>
+					<view class="row als pt10 pb10 bb">
+						<view class="mr5 numberbox row ac">
+							<text class="fs12 fc7979">2</text>
+						</view>
+						<view>
+							<text class="fs13 fc7979">机动车载运爆炸物品、易燃易爆化学物品以及毒害性、放射性、腐蚀性、传染病病源体等危险物品</text>
+						</view>
+					</view>
+					<view class="row als pt10 pb10 bb">
+						<view class="mr5 numberbox row ac">
+							<text class="fs12 fc7979">3</text>
+						</view>
+						<view>
+							<text class="fs13 fc7979">任意一方驾驶人有酒驾毒驾嫌疑</text>
+						</view>
+					</view>
+					<view class="row als pt10 pb10 bb">
+						<view class="mr5 numberbox row ac">
+							<text class="fs12 fc7979">4</text>
+						</view>
+						<view>
+							<text class="fs13 fc7979">驾驶人无有效机动车驾驶证</text>
+						</view>
+					</view>
+					<view class="row als pt10 pb10 bb">
+						<view class="mr5 numberbox row ac">
+							<text class="fs12 fc7979">5</text>
+						</view>
+						<view>
+							<text class="fs13 fc7979">驾驶人有饮酒、服用国家管制的精神药品或者麻醉药品嫌疑</text>
+						</view>
+					</view>
+					<view class="row als pt10 pb10 bb">
+						<view class="mr5 numberbox row ac">
+							<text class="fs12 fc7979">6</text>
+						</view>
+						<view>
+							<text class="fs13 fc7979">驾驶人从事校车业务或者旅客运输，有严重超过额定乘员载客，或者严重超过规定时速行驶嫌疑</text>
+						</view>
+					</view>
+					<view class="row als pt10 pb10 bb">
+						<view class="mr5 numberbox row ac">
+							<text class="fs12 fc7979">7</text>
+						</view>
+						<view>
+							<text class="fs13 fc7979">当事人不能自行移动车辆</text>
+						</view>
+					</view>
+					<view class="row als pt10 pb10 bb">
+						<view class="mr5 numberbox row ac">
+							<text class="fs12 fc7979">8</text>
+						</view>
+						<view>
+							<text class="fs13 fc7979">驾驶人有故意行为</text>
+						</view>
+					</view>
+					<view class="row als pt10 pb10 bb">
+						<view class="mr5 numberbox row ac">
+							<text class="fs12 fc7979">9</text>
+						</view>
+						<view>
+							<text class="fs13 fc7979">驾驶人逃逸或者离开事故现场</text>
+						</view>
+					</view>
+					<view class="row als pt10 pb10 bb">
+						<view class="mr5 numberbox row ac">
+							<text class="fs12 fc7979">10</text>
+						</view>
+						<view>
+							<text class="fs13 fc7979">当事人故意破坏、伪造现场、毁灭证据</text>
+						</view>
+					</view>
+					<view class="row als pt10 pb10 bb">
+						<view class="mr5 numberbox row ac">
+							<text class="fs12 fc7979">11</text>
+						</view>
+						<view>
+							<text class="fs13 fc7979">驾驶人涉嫌利用机动车从事违法犯罪行为</text>
+						</view>
+					</view>
+					<view class="row als pt10 pb10 bb">
+						<view class="mr5 numberbox row ac">
+							<text class="fs12 fc7979">12</text>
+						</view>
+						<view>
+							<text class="fs13 fc7979">事故现场不具备拍摄条件</text>
+						</view>
+					</view>
+					<view class="row als pt10 pb10">
+						<view class="mr5 numberbox row ac">
+							<text class="fs12 fc7979">13</text>
+						</view>
+						<view>
+							<text class="fs13 fc7979">依照有关规定应当保护现场并报警的其他情形</text>
+						</view>
+					</view>
+				</view>
+
+				<view class="layerbg row ac" if="{$show}">
+					<view class="layercon">
+						<view class="h60 row ac col1 bbFE7449">
+							<view class="mr10">
+								<icon icon="icon-shuoming1" class="fcFE7449 fs32"/>
+							</view>
+							<view>
+								<view class="row ac">
+									<text class="fs14 fcFE7449">本系统暂时只适</text>
+								</view>
+								<view>
+									<text class="fs14 fcFE7449">用于财产损失事故</text>
+								</view>
+							</view>
+						</view>
+						<view class="pt15 pb15">
+							<view class="row ac">
+								<view class="re-img mrvw3">
+									<image class="re-img" src="assets://img/re1.jpg"/>
+								</view>
+								<view class="re-img">
+									<image class="re-img" src="assets://img/re2.jpg"/>
+								</view>
+							</view>
+							<view class="row ac mtvw3">
+								<view class="re-img mrvw3">
+									<image class="re-img" src="assets://img/re3.jpg"/>
+								</view>
+								<view class="re-img">
+									<image class="re-img" src="assets://img/re4.jpg"/>
+								</view>
+							</view>
+						</view>
+						<view class="row ac col1">
+							<view class="vw67">
+								<text class="fs13 fc6767 lh18">为了您的安全，请全程开启危险报警闪光灯，放置三角警示牌！请您在确保自身安全的情况下操作本系统，避免二次交通事故发生</text>
+							</view>
+						</view>
+						<view class="pt25 pb25 row ac col1" onClick="goType()">
+							<view class="btn2 row ac bg2bd3df">
+								<text class="fcfff fs15">知道了</text>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="footer row al col1 bgf8f8">
+				<view class="row sb col1 ph12">
+					<view class="btn4 b2bd3df row ac" onClick="call()">
+						<text class="fs14 fc2bd3df">立即报警</text>
+					</view>
+					<view class="btn4 bg2bd3df row ac" onClick="setShow()">
+						<text class="fs14 fcfff">继续处理</text>
+					</view>
+				</view>
+			</view>
+			<view class="h50"/>
+		</view>
+	</content>
+</page>

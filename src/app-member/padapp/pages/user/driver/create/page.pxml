@@ -1,0 +1,44 @@
+<page>
+	<navbar title="添加驾驶证信息"/>
+	<content>
+		<view class="col1 mh column bgf8f8">
+			<view class="header row bb">
+				<view class="headericon ac" onClick="goBack()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">添加驾驶证信息</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h44"/>
+			<view class="ph12 bgfff">
+				<view class="row al h40 bb">
+					<view class="">
+						<text class="fs12 fc797979">证件号码</text>
+					</view>
+					<view class="col1">
+						<input class="chage lg" type="text" placeholder="请输入证件号码" onChange="setVal(e,'certificateNumber')"/>
+					</view>
+				</view>
+
+				<view class="row al h40 bb">
+					<view class="">
+						<text class="fs12 fc797979">档案编号</text>
+					</view>
+					<view class="col1">
+						<input class="chage lg" type="text" placeholder="请输入档案编号" onChange="setVal(e,'fileNumber')"/>
+					</view>
+				</view>
+			</view>
+
+			<view class="footer row ac col1 bgf8f8" onClick="goChange()">
+				<view class="row ac btn1 bg2bd3df b2bd3df mb10">
+					<text class="fs15 fcfff">绑定</text>
+				</view>
+			</view>
+			<view class="h50"></view>
+		</view>
+	</content>
+</page>

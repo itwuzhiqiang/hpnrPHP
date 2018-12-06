@@ -1,0 +1,157 @@
+<page>
+	<navbar title="案件详情"/>
+	<content>
+		<view class="bgf8f8 mh">
+			<view class="header1 row bbddd">
+				<view class="headericon ac">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">案件详情</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="bgfff mt10">
+				<view class="h40 row al col1">
+					<view class="stiao"></view>
+					<view class="ml10">
+						<text class="fs14 fc333">事故基本信息</text>
+					</view>
+				</view>
+				<view class="h40 row al bb bt mh12 col1">
+					<text class="fs13 fc6767">时间天气：</text>
+					<text class="fs13 fc6767">{$handleAccident.data.accident.rpaOccurrenceTime +
+						$handleAccident.data.accident.rpaWeather}</text>
+				</view>
+				<view class="pt10 pb10 row als bb mh12 col1">
+					<text class="fs13 fc6767">事故地点：</text>
+					<view class="col1">
+						<text class="fs13 fc6767">{$handleAccident.data.accident.rpaAddress}</text>
+					</view>
+				</view>
+				<view class="h40 row al bb mh12 col1">
+					<text class="fs13 fc6767">事故类型：</text>
+					<text class="fs13 fc6767">{$handleAccident.data.accident.rpaTypeText}</text>
+				</view>
+				<view class="pt10 pb10 row als bb mh12 col1">
+					<text class="fs13 fc6767">事故情形：</text>
+					<text class="fs13 fc6767">{$handleAccident.data.accident.rpaMangerText}</text>
+				</view>
+				<view class="h40 row al mh12 col1">
+					<text class="fs13 fc6767">案件状态：</text>
+					<text class="fs13 fcFE7449">{$handleAccident.data.accident.rpaStateDescription}</text>
+				</view>
+			</view>
+
+			<view class="bgfff mt10">
+				<view class="h40 row al col1 bb">
+					<view class="stiao">
+					</view>
+					<view class="ml10">
+						<text class="fs14 fc333">案件进度查看</text>
+					</view>
+				</view>
+				<view class="h60 row al mh12 col1">
+					<view>
+						<icon icon="icon-dian-copy-copy" class="fs16 fc2bd3df"/>
+					</view>
+					<view class="ml10 sgimg">
+						<image class="w" src="assets://img/sg12-1.png" if="{1==2}"/>
+						<image class="w" src="assets://img/sg12-6.png"/>
+					</view>
+					<view class="row al col1 h60 bb ml10">
+						<view class="col1">
+							<text class="fc333 fs14">事故照片</text>
+						</view>
+						<view class="row al">
+							<view class="mr5">
+								<text class="fs14 fc999">查看</text>
+							</view>
+							<icon icon="icon-xiangyou" class="fs14 fc999"/>
+						</view>
+					</view>
+				</view>
+				<view class="h60 row al mh12 col1">
+					<view>
+						<icon icon="icon-dian-copy-copy" class="fs16 fc2bd3df"/>
+					</view>
+					<view class="ml10 sgimg">
+						<image class="w" src="assets://img/sg12-2.png" if="{1==2}"/>
+						<image class="w" src="assets://img/sg12-7.png"/>
+					</view>
+					<view class="row al col1 h60 bb ml10">
+						<view class="col1">
+							<text class="fc333 fs14">驾驶人及车辆信息</text>
+						</view>
+						<view class="row al">
+							<view class="mr5">
+								<text class="fs14 fc999">查看</text>
+							</view>
+							<icon icon="icon-xiangyou" class="fs14 fc999"/>
+						</view>
+					</view>
+				</view>
+				<view class="h60 row al mh12 col1">
+					<view>
+						<icon icon="icon-dian-copy-copy" class="fs16 fc2bd3df"/>
+					</view>
+					<view class="ml10 sgimg">
+						<image class="w" src="assets://img/sg12-3.png" if="{1==2}"/>
+						<image class="w" src="assets://img/sg12-8.png"/>
+					</view>
+					<view class="row al col1 h60 bb ml10">
+						<view class="col1">
+							<text class="fc333 fs14">事故认定书</text>
+						</view>
+						<view class="row al">
+							<view class="mr5">
+								<text class="fs14 fc999">查看</text>
+							</view>
+							<icon icon="icon-xiangyou" class="fs14 fc999"/>
+						</view>
+					</view>
+				</view>
+				<view class="h60 row al mh12 col1">
+					<view>
+						<icon icon="icon-dian-copy-copy" class="fs16 fc2bd3df"/>
+					</view>
+					<view class="ml10 sgimg">
+						<image class="w" src="assets://img/sg12-4.png"/>
+					</view>
+					<view class="row al col1 h60 bb ml10">
+						<view class="col1">
+							<text class="fc333 fs14">保险报案电话</text>
+						</view>
+						<view class="row al">
+							<view class="mr5">
+								<text class="fs14 fc999">拨打</text>
+							</view>
+							<icon icon="icon-xiangyou" class="fs14 fc999"/>
+						</view>
+					</view>
+				</view>
+				<view class="h60 row al mh12 col1">
+					<view>
+						<icon icon="icon-dian-copy-copy" class="fs16 fc2bd3df"/>
+					</view>
+					<view class="ml10 sgimg">
+						<image class="w" src="assets://img/sg12-5.png" if="{1==2}"/>
+						<image class="w" src="assets://img/sg12-8.png"/>
+					</view>
+					<view class="row al col1 h60 bb ml10">
+						<view class="col1">
+							<text class="fc333 fs14">理赔信息</text>
+						</view>
+						<view class="row al">
+							<view class="mr5">
+								<text class="fs14 fc999">查看</text>
+							</view>
+							<icon icon="icon-xiangyou" class="fs14 fc999"/>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</content>
+</page>

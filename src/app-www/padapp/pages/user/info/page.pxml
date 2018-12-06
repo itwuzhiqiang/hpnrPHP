@@ -1,0 +1,82 @@
+<page>
+	<navbar title="登录"/>
+	<content>
+		<view class="mh bgf8f8">
+			<view class="header row bb">
+				<view class="headericon ac" onClick="goHistory()">
+					<icon icon="icon-xiangzuo" class="fc333 f18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">个人信息</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h44">
+			</view>
+			<view>
+				<view class="ph15 bgfff">
+					<view class="row al bb pv10">
+						<view class="col1">
+							<text class="fs12 fc797979">头像</text>
+						</view>
+						<view class="y50 hidden">
+							<image class="w" src="{$policeInfo.data.policePic}"/>
+						</view>
+					</view>
+					<view class="row al h45 bb">
+						<view class="col1">
+							<text class="fs12 fc797979">姓名</text>
+						</view>
+						<view class="">
+							<text class="fs12 fc797979">{$policeInfo.data.policeName}</text>
+						</view>
+					</view>
+					<view class="row al h45 bb">
+						<view class="col1">
+							<text class="fs12 fc797979">性别</text>
+						</view>
+						<view class="">
+							<text class="fs12 fc797979">{$policeInfo.data.policeSex == 1 ? '男' : '女'}</text>
+						</view>
+						<!--<view class="iconfont icon-xiangyou fcd4d4d4 fs12 mt4">-->
+						<!--</view>-->
+					</view>
+					<view class="row al h45 bb">
+						<view class="col1">
+							<text class="fs12 fc797979">手机号码</text>
+						</view>
+						<view class="">
+							<text class="fs12 fc797979">{$policeInfo.data.phone}</text>
+						</view>
+					</view>
+					<view class="row al h45 bb">
+						<view class="col1">
+							<text class="fs12 fc797979">警员编号</text>
+						</view>
+						<view class="">
+							<text class="fs12 fc797979">{$policeInfo.data.policeNumber}</text>
+						</view>
+					</view>
+					<view class="row al h45">
+						<view class="col1">
+							<text class="fs12 fc797979">所属警区</text>
+						</view>
+						<view class="">
+							<text class="fs12 fc797979">{$policeInfo.data.districtId}</text>
+						</view>
+						<!--<view class="iconfont icon-xiangyou fcd4d4d4 fs12 mt4">-->
+						<!--</view>-->
+					</view>
+				</view>
+				<view class="mt30 row ac col1" onClick="goLogout()">
+					<view class="btn1 bg2bd3df row ac">
+						<text class="fcfff fs15">
+							退出
+						</text>
+					</view>
+				</view>
+			</view>
+		</view>
+	</content>
+</page>

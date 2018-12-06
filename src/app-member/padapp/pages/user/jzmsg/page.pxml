@@ -1,0 +1,39 @@
+<page>
+	<navbar title="驾照信息"/>
+	<content>
+		<view class="mh col1 column bgf8f8">
+			<view class="header row bb">
+				<view class="headericon ac">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"></icon>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">驾照信息</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h44"/>
+			<view class="mt20">
+				<view class="row al h40 bb ph12 bgfff">
+					<view class="">
+						<text class="fs12 fc797979">驾驶证号码</text>
+					</view>
+					<view class="col1"><input class="chage lg" type="text" placeholder="请输入驾驶证号码（x用*代替）"/></view>
+				</view>
+				<view class="row al h40 bb ph12 bgfff">
+					<view class="">
+						<text class="fs12 fc797979">档案编号</text>
+					</view>
+					<view class="col1"><input class="chage lg" type="text" placeholder="请输入档案编号"/></view>
+				</view>
+				<view class="mt30 row ac col1">
+					<view class="btn1 bg2bd3df row ac">
+						<text class="fcfff fs15">
+							绑定
+						</text>
+					</view>
+				</view>
+			</view>
+		</view>
+	</content>
+</page>

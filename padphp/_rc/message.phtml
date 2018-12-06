@@ -1,0 +1,27 @@
+<style>
+body {
+	background: #F6F6F6;
+}
+</style>
+<div style="margin: 0px auto; width: 500px; padding: 36px 0 0 0;">
+	<div class="box"
+		style="background: #FFF; border: 1px solid #AAA; padding: 5px;">
+		<s class="box-tp"><b></b></s>
+		<div class="box-hd">
+			<h3>
+				<b>提示信息</b>
+			</h3>
+			<div class="box-act"></div>
+		</div>
+		<div class="box-bd" style="padding: 10px; text-align: center;">
+			<div style="padding: 10px;"><?= $coreMessageStr ?></div>
+			<div>
+			<?php foreach($coreMessageButtons as $button){ ?>
+			[<a href="<?= $button['url'] ?>"><?= $button['text'] ?></a>]
+			<?php } ?>
+			</div>
+		</div>
+		<s class="box-bt"><b></b></s>
+	</div>
+</div>
+

@@ -1,0 +1,32 @@
+<page>
+	<navbar title="意见反馈"/>
+	<content>
+		<view class="mh column col1 bgf8f8">
+			<view class="header row bbddd">
+				<view class="headericon ac" onClick="goBack()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">意见反馈</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h44"/>
+			<view>
+				<view class="ph12 mt10 h40 row al">
+					<text class="fs14 fc6767">你留下的每一个字都将帮助改善我们的产品</text>
+				</view>
+				<view class="ph12 row ac col1">
+					<textarea class="textarea col1 b lg" placeholder="300字以内..." onChange="setVal(e,'ufMsg')">
+					</textarea>
+				</view>
+				<view class="row ac col1 mt30" onClick="goChange()">
+					<view class="btn1 bg2bd3df row ac">
+						<text class="fs15 fcfff">完成</text>
+					</view>
+				</view>
+			</view>
+		</view>
+	</content>
+</page>

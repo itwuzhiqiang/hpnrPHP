@@ -1,0 +1,21 @@
+<page>
+	<navbar title="使用说明"/>
+	<content>
+		<view class="mh col1 column bgf8f8">
+			<view class="header row bb">
+				<view class="headericon ac" onClick="goHistory()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">使用说明</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h44"/>
+			<view class="ph12 row ac col1 pt10 pb10">
+				<image class="w h" src="assets://img/us1.jpg"/>
+			</view>
+		</view>
+	</content>
+</page>

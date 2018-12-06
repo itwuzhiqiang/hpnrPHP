@@ -1,0 +1,17 @@
+缓存的列表ID - 对应当前所有对象
+ety.ids@{entity_name}
+
+缓存的列表ID - 对应某个对象
+ety.ids@{entity_name}.{entity_name}.{entity_id}
+
+缓存的关系
+ety.rlt@{entity_name}
+
+缓存的数据
+data@{cache_id}
+
+单条缓存
+hash: ety.item@{entity_name}  => {id}
+
+/** 总体用法 */
+ety(...)->cache('@@;erpire=3600;@user.1;@@.user.1')

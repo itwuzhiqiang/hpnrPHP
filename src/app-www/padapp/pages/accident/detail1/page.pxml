@@ -1,0 +1,121 @@
+<page>
+<navbar title="事故详情"/>
+<content>
+	<view class="mh bgf8f8">
+		<view class="header row bbddd">
+			<view class="headericon ac">
+				<icon icon="icon-xiangzuo" class="fc333 f18"/>
+			</view>
+			<view class="col1 ac">
+				<text class="fc000 fs16">事故详情</text>
+			</view>
+			<view class="headericon ac">
+			</view>
+		</view>
+		<view class="h44"/>
+		<view>
+			<view class="tixing h60 row ac tc bbFE7449 bgfff bt">
+				<view class="mr10">
+					<icon icon="icon-shuoming1" class="fcFE7449 fs28"/>
+				</view>
+				<text class="fs14 fcFE7449">请仔细阅读，确认无误后请推送给相关当事人!</text>
+			</view>
+			<view class="w h60"></view>
+			<view>
+				<view class="bgfff mt10">
+					<view class="h40 row al col1">
+						<view class="stiao"/>
+						<view class="ml10"><text class="fs14 fc6767">第一方相关信息</text></view>
+					</view>
+					<view class="h40 row sb bb bt mh12 col1">
+						<text class="fs13 fc6767">姓名</text>
+						<text class="fs13 fc6767">张一山</text>
+					</view>
+					<view class="h40 row sb bb bt mh12 col1">
+						<text class="fs13 fc6767">手机号码</text>
+						<text class="fs13 fc6767">18290291928</text>
+					</view>
+					<view class="pt15 pb15 ph12">
+						<view class="row sb col1">
+							<input class="b fs13 fc999 lg codeinput" placeholder="请输入短信验证码"/>
+							<view class="row ar col1">
+								<view class="b getcode row ac">
+									<text class="fc999 fs13">59s</text>
+								</view>
+							</view>
+						</view>
+						<view class="row sb col1 mt10">
+							<view class="btn4 bgf00 row ac">
+								<text class="fs15 fcfff">拒绝</text>
+							</view>
+							<view class="btn4 bgFE7449  row ac">
+								<text class="fs15 fcfff">提交</text>
+							</view>
+						</view>
+					</view>
+				</view>
+
+				<view class="bgfff mt10">
+					<view class="h40 row al col1">
+						<view class="stiao"/>
+						<view class="ml10"><text class="fs14 fc6767">第二方相关信息</text></view>
+					</view>
+					<view class="h40 row sb bb bt mh12 col1">
+						<text class="fs13 fc6767">姓名</text>
+						<text class="fs13 fc6767">张一山</text>
+					</view>
+					<view class="h40 row sb bb bt mh12 col1">
+						<text class="fs13 fc6767">手机号码</text>
+						<text class="fs13 fc6767">18290291928</text>
+					</view>
+					<view class="pt15 pb15 ph12">
+						<view class="row sb col1">
+							<input class="b fs13 fc999 lg codeinput" placeholder="请输入短信验证码"/>
+							<view class="row ar col1">
+								<view class="b getcode row ac">
+									<text class="fc999 fs13">59s</text>
+								</view>
+							</view>
+						</view>
+						<view class="row sb col1 mt10">
+							<view class="btn4 bgf00 row ac">
+								<text class="fs15 fcfff">拒绝</text>
+							</view>
+							<view class="btn4 bgFE7449  row ac">
+								<text class="fs15 fcfff">提交</text>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+			<!--<view class="layerbg row ac">-->
+			<!--<view class="layercon1">-->
+			<!--<view class="row ac mh15 pt25 pb20 tc col1">-->
+			<!--<text class="fc333 fs15">当事人未输入验证码，表示不认同当前处理结果</text>-->
+			<!--</view>-->
+			<!--<view class="row al col1 bt">-->
+			<!--<view class="row ac h50 col1 br">-->
+			<!--<text class="fs16 fc00a1ff">再看看</text>-->
+			<!--</view>-->
+			<!--<view class="row ac h50 col1">-->
+			<!--<text class="fs16 fc00a1ff">确定</text>-->
+			<!--</view>-->
+			<!--</view>-->
+			<!--</view>-->
+			<!--</view>-->
+
+			<view class="layerbg row ac" if="{1==2}">
+				<view class="layercon1">
+					<view class="row ac mh15 pt25 pb20 tc col1">
+						<text class="fc333 fs15">已拒绝事故处理结果，如有异议请告知该当事人于十五日内向上级公安机关申请重新认定！</text>
+					</view>
+					<view class="row ac col1 h50 bt">
+						<text class="fs16 fc00a1ff">知道了</text>
+					</view>
+				</view>
+		 	</view>
+		</view>
+		<view class="h50"/>
+	</view>
+</content>
+</page>

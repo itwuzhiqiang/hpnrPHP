@@ -1,0 +1,202 @@
+<page>
+	<navbar title="登录"/>
+	<content>
+		<view class="bgfff">
+			<view class="header row bb">
+				<view class="headericon ac" onClick="goBack()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">信息填写</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h44">
+			</view>
+			<view class="mb10">
+				<view class="row al h40">
+					<view class="fillerline">
+					</view>
+					<view class="ml10">
+						<text class="fs14 fc676767">第{$apiOrder}方驾驶人及车辆信息</text>
+					</view>
+				</view>
+				<view>
+					<view class="ph15">
+						<view class="fillerbox row">
+							<view class="fillerbox row" if="{!$img}">
+								<image class="w h" src="assets://img/sf1.png"/>
+							</view>
+							<view class="fillerbox row" else="">
+								<image class="w h" src="{$img}"/>
+							</view>
+							<input ref="file" class="uploadbtn" onChange="uploadFile(1)" type="file" accept="image/*"
+									 defaultValue="从相册中选取"/>
+						</view>
+					</view>
+					<view class="">
+						<view class="row al bt pt10 mt10 pb10 bb">
+							<view class="y5">
+							</view>
+							<view>
+								<text class="fs12 fc797979">驾驶人</text>
+							</view>
+						</view>
+						<view class="ph15 bb">
+							<view class="row al pv10 bb">
+								<view class="col1">
+									<text class="fs12 fc797979">姓名</text>
+								</view>
+								<view class="">
+									<input class="fillerinput" placeholder="请输入姓名" onChange="setVal(e,'name')" value="{$name}"/>
+								</view>
+								<view if="{$checkName==1}" class="iconfont icon-chahao fs16 ml7 fcfe7b50">
+								</view>
+								<view if="{$checkName!=1}"
+										class="{'iconfont icon-wancheng fs16 ml7 ' +($name ? 'fcfe7b50' : 'fcd4d4d4')}">
+								</view>
+							</view>
+							<view class="row al pv10 bb">
+								<view class="col1">
+									<text class="fs12 fc797979">身份证号</text>
+								</view>
+								<view class="">
+									<input class="fillerinput bInput" placeholder="请输入身份证号" onChange="setVal(e,'card')"
+											 value="{$card}"/>
+								</view>
+								<view class="{'iconfont icon-wancheng fs16 ml7 ' +($card ? 'fcfe7b50' : 'fcd4d4d4')}">
+								</view>
+							</view>
+							<view class="row al pv10 bb">
+								<view class="col1">
+									<text class="fs12 fc797979">手机号</text>
+								</view>
+								<view class="">
+									<input class="fillerinput" placeholder="请输入手机号" onChange="setVal(e,'phone')"
+											 value="{$phone}"/>
+								</view>
+								<view class="{'iconfont icon-wancheng fs16 ml7 ' +($phone ? 'fcfe7b50' : 'fcd4d4d4')}">
+								</view>
+							</view>
+							<view class="row al pv10 bb">
+								<view class="col1 h25">
+									<text class="fs12 fc797979">准驾车型</text>
+								</view>
+								<view>
+									<text class="fs12 fc797979">{$vehicle_typeStr}</text>
+								</view>
+							</view>
+							<view class="row al pv10 bb">
+								<view class="col1 h25">
+									<text class="fs12 fc797979">驾驶证状态</text>
+								</view>
+								<view>
+									<text class="fs12 fc797979">{$vehicleStatus}</text>
+								</view>
+							</view>
+							<view class="row al pv10">
+								<view class="col1 h25">
+									<text class="fs12 fc797979">累计积分</text>
+								</view>
+								<view>
+									<text class="fs12 fc797979">{$ljjf}</text>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view>
+					<view class="ph15">
+						<view class="fillerbox row mt10 mb10">
+							<view class="fillerbox row" if="{!$img1}">
+								<image class="w h" src="assets://img/sf2.png"/>
+							</view>
+							<view class="fillerbox row" else="">
+								<image class="w h" src="{$img1}"/>
+							</view>
+							<input ref="file1" class="uploadbtn" onChange="uploadFile(2)" type="file" accept="image/*"
+									 defaultValue="从相册中选取"/>
+						</view>
+					</view>
+					<view class="">
+						<view class="row al bt pt10 mt10 pb10 bb">
+							<view class="y5">
+							</view>
+							<view>
+								<text class="fs12 fc797979">车辆</text>
+							</view>
+						</view>
+						<view class="ph15 bb">
+							<view class="row al pv10 bb">
+								<view class="col1 h25">
+									<text class="fs12 fc797979">号牌号码</text>
+								</view>
+								<view class="">
+									<input class="fillerinput" placeholder="请输入车牌号" onChange="setVal(e,'number')"
+											 value="{$number}"/>
+								</view>
+								<view class="{'iconfont icon-wancheng fs16 ml7 ' +($number ? 'fcfe7b50' : 'fcd4d4d4')}">
+								</view>
+							</view>
+							<view class="row al pv10 bb" onClick="goList(1)">
+								<view class="col1 h25">
+									<text class="fs12 fc797979">号牌种类</text>
+								</view>
+								<view class="fs12 fc797979">{$apiPtText?$apiPtText:'请选择'}</view>
+								<view class="iconfont icon-xiangyou fcd4d4d4 fs12 ml7">
+								</view>
+							</view>
+							<view class="row al pv10 bb" onClick="goList(2)">
+								<view class="col1 h25">
+									<text class="fs12 fc797979">保险公司</text>
+								</view>
+								<view class="fs12 fc797979">{$apiIcName?$apiIcName:'请选择'}</view>
+								<view class="iconfont icon-xiangyou fcd4d4d4 fs12 ml7">
+								</view>
+							</view>
+							<view class="row al pv10">
+								<view class="col1 h25">
+									<text class="fs12 fc797979">车辆状态</text>
+								</view>
+								<view>
+									<text class="fs12 fc797979">{$zjzt}</text>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view class="layerbg row ac" if="{$show}">
+					<view class="layercon1">
+						<view class="h45 row ac col1 mt15">
+							<text class="fs17 fc333 fw600">温馨提示</text>
+						</view>
+						<view class="row ac mh15 col1 mb20">
+							<text class="fc6767 fs14">请仔细核对车辆、驾驶人信息</text>
+						</view>
+						<view class="row ac col1 h50 bt" onClick="goCancel()">
+							<!--<view class="row ac btn3" onClick="goCancel()">-->
+							<!--<text class="fs15 fc2bd3df">取消</text>-->
+							<!--</view>-->
+							<text class="fs15 fc2bd3df">确定</text>
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="w h50 row col1 bgf8f8">
+				<view class="col1 ac ml10" onClick="goDelete()">
+					<view class="{'twobutton row ac ' + ($delete?'bg2bd3df':'bd5d5d5')}">
+						<view class="{'iconfont icon-guanbi  fs18 mr5 ' + ($delete?'fcfff':'fcdadada')}">
+						</view>
+						<text class="{'fs15 ' + ($delete?'fcfff':'fcdadada')}">删除</text>
+					</view>
+				</view>
+				<view class="col1 ac pr15 ml10" onClick="goCheck()">
+					<view class="twobutton bg2bd3df row ac">
+						<text class="fs15 fcfff">{$check?'确认':'信息核查'}</text>
+					</view>
+				</view>
+			</view>
+		</view>
+	</content>
+</page>

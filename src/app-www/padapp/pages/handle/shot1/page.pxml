@@ -1,0 +1,230 @@
+<page>
+	<navbar title="拍照取证"/>
+	<content>
+		<view class="mh bgf8f8">
+			<view class="header1 row">
+				<view class="headericon ac" onClick="goHistory()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">拍照取证</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view>
+				<view class="w h60 row ac col1 bgfff bt">
+					<view class="row ac col1 mh12">
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac lineorder1 col1">
+								</view>
+								<!--已完成-->
+								<!--<view class="">-->
+								<!--<icon icon="icon-wancheng" class="fcFE7449 f18"/>-->
+								<!--</view>-->
+								<!--未完成-->
+								<view class="circle1">
+								</view>
+								<!--未进行-->
+								<!--<view class="circle2"/>-->
+								<view class="row ac lineorder1 col1">
+								</view>
+							</view>
+							<view class="row ac h20">
+								<!--完成不需要mt12-->
+								<view class="mt12">
+									<text class="fc2bd3df fs12">拍照取证</text>
+								</view>
+							</view>
+						</view>
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac lineorder1 col1"/>
+								<view class="circle2"/>
+								<view class="row ac lineorder1 col1"/>
+							</view>
+							<view class="row ac h20">
+								<view class="mt12">
+									<text class="fc6767 fs12">事故描述</text>
+								</view>
+							</view>
+						</view>
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac col1 lineorder1"/>
+								<view class="circle2"/>
+								<view class="row ac col1 lineorder1"/>
+							</view>
+							<view class="row ac h20">
+								<view class="mt12">
+									<text class="fc6767 fs12">信息采集</text>
+								</view>
+							</view>
+						</view>
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac lineorder1 col1"/>
+								<view class="circle2"/>
+								<view class="row ac lineorder1 col1"/>
+							</view>
+							<view class="row ac h20">
+								<view class="mt12">
+									<text class="fc6767 fs12">责任划分</text>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+
+				<view class="row al ph12 h50">
+					<view class="mr10">
+						<icon icon="icon-shuoming1" class="fc2bd3df fs28"/>
+					</view>
+					<text class="fc6767 fs12">点击相机图标，模仿样图拍摄</text>
+				</view>
+				<view class="ml1vw row al wrap col1">
+					<view class="mb10" onClick="goDetail('front')">
+						<view class="carpbox row ac" if="{$imgs[0]}">
+							<image class="carp" src="{$imgs[0]}"/>
+						</view>
+						<view class="carpbox row ac" else="">
+							<image class="carp" src="assets://img/a19.png"/>
+						</view>
+						<view class="row ac col1">
+							<text class="fs12 fc6767">正前方</text>
+						</view>
+					</view>
+					<view class="mb10" onClick="goDetail('behind')">
+						<view class="carpbox row ac" if="{$imgs[1]}">
+							<image class="carp" src="{$imgs[1]}"/>
+						</view>
+						<view class="carpbox row ac" else="">
+							<image class="carp" src="assets://img/a20.png"/>
+						</view>
+						<view class="row ac col1">
+							<text class="fs12 fc6767">正后方</text>
+						</view>
+					</view>
+					<view class="mb10" onClick="goDetail('impact')">
+						<view class="carpbox row ac" if="{$imgs[2]}">
+							<image class="carp" src="{$imgs[2]}"/>
+						</view>
+						<view class="carpbox row ac" else="">
+							<image class="carp" src="assets://img/a21.png"/>
+						</view>
+						<view class="row ac col1">
+							<text class="fs12 fc6767">碰撞部位</text>
+						</view>
+					</view>
+					<view class="mb10" onClick="goDetail('impact')" if="{$type == 3}">
+						<view class="carpbox row ac" if="{$imgs['impact1']}">
+							<image class="carp" src="{$imgs['impact1']}"/>
+						</view>
+						<view class="carpbox row ac" else="">
+							<image class="carp" src="assets://img/a21.png"/>
+						</view>
+						<view class="row ac col1">
+							<text class="fs12 fc6767">碰撞部位</text>
+						</view>
+					</view>
+					<view class="mb10" onClick="goDetail('first')">
+						<view class="carpbox row ac" if="{$imgs[3]}">
+							<image class="carp" src="{$imgs[3]}"/>
+						</view>
+						<view class="carpbox row ac" else="">
+							<image class="carp" src="assets://img/a22.png"/>
+						</view>
+						<view class="row ac col1">
+							<text class="fs12 fc6767">{$type==1 ? '机动车号牌' : '第一方机动车号牌'}</text>
+						</view>
+					</view>
+					<view class="mb10" onClick="goDetail('vin')">
+                                   	<view class="carpbox row ac" if="{$imgs[7]}">
+                                   		<image class="carp" src="{$imgs[7]}"/>
+                                   	</view>
+                                   	<view class="carpbox row ac" else="">
+                                   		<image class="carp" src="assets://img/a19c.png"/>
+                                   	</view>
+                                   	<view class="row ac col1">
+                                   		<text class="fs12 fc6767">车辆识别代码</text>
+                                   		<text class="fs12 fc6767">(货车/大客车除外)</text>
+                                   	</view>
+                                   </view>
+
+					<view class="mb10">
+						<view class="carpbox row ac">
+							<view class="carpbox row ac" if="{$videoImg}">
+								<image class="carp" src="{$videoImg}"/>
+							</view>
+							<view class="carpbox row ac" else="">
+								<image class="carp" src="assets://img/a7.png"/>
+							</view>
+							<input ref="video" onChange="uploadVideo(-2)" class="uploadbtns" type="file" accept="video/*"
+									 defaultValue="拍摄"/>
+						</view>
+						<view class="row ac col1">
+							<text class="fs12 fc6767">其他现场视频</text>
+						</view>
+					</view>
+					<view class="mb10" if="{$otherImgs}" for="{$otherImgs}">
+						<view class="carpbox">
+							<view class="carpbox1 row ac">
+								<image class="carp" src="{item}"/>
+							</view>
+							<!--<view class="carpbox1 row ac" else="">-->
+							<!--<image class="carp" src="assets://img/a8.png"/>-->
+							<!--</view>-->
+							<!--<input ref="file" class="uploadbtns" onChange="uploadFile(1)" type="file" accept="image/*"-->
+							<!--defaultValue="从相册中选取"/>-->
+						</view>
+
+						<view class="row ac col1">
+							<text class="fs12 fc6767">其他现场照片</text>
+						</view>
+					</view>
+					<view class="mb10">
+						<view class="carpbox" onClick="goDetail('other')">
+							<view class="carpbox1 row ac" if="{$otherImg}">
+								<image class="carp" src="{$otherImg}"/>
+							</view>
+							<view class="carpbox1 row ac" else="">
+								<image class="carp" src="assets://img/a8.png"/>
+							</view>
+							<!--<input ref="file" class="uploadbtns" onChange="uploadFile(1)" type="file" accept="image/*"-->
+							<!--defaultValue="从相册中选取"/>-->
+						</view>
+
+						<view class="row ac col1">
+							<text class="fs12 fc6767">其他现场照片</text>
+						</view>
+					</view>
+				</view>
+
+				<view class="layerbg row ac" if="{$show}">
+					<view class="layercon1">
+						<view class="h45 row ac col1 mt15">
+							<text class="fs17 fc333 fw600">温馨提示</text>
+						</view>
+						<view class="row ac mh15 col1">
+							<text class="fc6767 fs14">拍摄已完成，请驾驶人注意过往车辆与人身安全。需要将照片提交到后台继续下一步？</text>
+						</view>
+						<view class="row sb mh15 col1 mt15 mb15">
+							<view class="row ac btn3" onClick="goCancel()">
+								<text class="fs15 fc2bd3df">取消</text>
+							</view>
+							<view class="row ac btn3" onClick="goRemind2()">
+								<text class="fs15 fc2bd3df">确定</text>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="footer1 row ac col1 bgf8f8" onClick="goFinish()">
+				<view class="{'btn1 row ac ' +($imgsLength >= $number ? 'bg2bd3df' : 'bgd0d0')}">  <!--bg2bd3df-->
+					<text class="fs15 fcfff">完成</text>
+				</view>
+			</view>
+		</view>
+	</content>
+</page>

@@ -1,0 +1,225 @@
+<page>
+	<navbar title="事故描述"/>
+	<content>
+		<view class="mh bgf8f8 column col1">
+			<view class="header row">
+				<view class="headericon ac" onClick="goHistory()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">事故描述</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h44"/>
+			<view class="col1">
+				<view class="tixing h60 row ac col1 bgfff bt">
+					<view class="row ac col1 mh12">
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac lineorder1 col1">
+								</view>
+								<!--已完成-->
+								<view class="">
+									<icon icon="icon-wancheng" class="fcFE7449 f18"/>
+								</view>
+								<!--未完成-->
+								<!--<view class="circle1">-->
+								<!--</view>-->
+								<!--未进行-->
+								<!--<view class="circle2"/>-->
+								<view class="row ac lineorder1 col1">
+								</view>
+							</view>
+							<view class="row ac h20">
+								<!--完成不需要mt12-->
+								<view class="">
+									<text class="fc6767 fs12">拍照取证</text>
+								</view>
+							</view>
+						</view>
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac lineorder1 col1"/>
+								<view class="circle1"/>
+								<view class="row ac lineorder1 col1"/>
+							</view>
+							<view class="row ac h20">
+								<view class="mt12">
+									<text class="fc2bd3df fs12">事故描述</text>
+								</view>
+							</view>
+						</view>
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac col1 lineorder1"/>
+								<view class="circle2"/>
+								<view class="row ac col1 lineorder1"/>
+							</view>
+							<view class="row ac h20">
+								<view class="mt12">
+									<text class="fc6767 fs12">信息采集</text>
+								</view>
+							</view>
+						</view>
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac lineorder1 col1"/>
+								<view class="circle2"/>
+								<view class="row ac lineorder1 col1"/>
+							</view>
+							<view class="row ac h20">
+								<view class="mt12">
+									<text class="fc6767 fs12">责任划分</text>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view class="w h60">
+				</view>
+				<view class="bgfff ph12 pb20">
+					<view class="row h40 bb bt sb col1">
+						<text class="fs14 fc6767">时间</text>
+						<view class="row al">
+							<input id="date-selector-input" type="text" class="tr fc999 fs14" placeholder="点我~~看固定效果"
+									 readOnly="readOnly" value="{$time}"/>
+							<icon icon="icon-xiangyou" class="fc999 fs14"/>
+						</view>
+					</view>
+					<view class="row h40 bt sb col1">
+						<text class="fs14 fc6767">收费站</text>
+						<select class="fc999 ml5 fs14 lg lg2" value="{$addressDescType}" onChange="setVal(e,1)">
+							<option value="1">收费站内</option>
+							<option value="2">收费站外</option>
+						</select>
+					</view>
+					<view class="row h40 sb col1" onClick="setShow()">
+						<view class="mw40"><text class="fs14 fc6767">地点</text></view>
+						<view class="row al">
+							<text class="fs13 fc999 liu1">{$address?$address:'请填写地点'}</text>
+							<icon icon="icon-xiangyou" class="fc999 fs14"/>
+						</view>
+					</view>
+					<view class="row al pb10" if="{$addressDescType==1}">
+						<input class="fc999 fs14 lg col1 lg1" value="{$lijiao1}" onChange="setVal(e,5)" placeholder=""/>
+						<view class="row al ml5  mt8">
+							<text class="fs14 fc6767">立交至</text>
+						</view>
+						<input class="fc999 fs14 lg col1 lg1" value="{$lijiao2}" onChange="setVal(e,6)"/>
+						<view class="ml5 mt8">
+							<text class="fs14 fc6767">立交</text>
+						</view>
+					</view>
+					<view class="pt10 pb10 bb" if="{$addressDescType==1}">
+						<view class="row al col1">
+							<select class="fc999 fs14 col1 lg1" value="{$gsgl}" onChange="setVal(e,3)">
+								<option for="{$roadData}" value="{item.roadid}">{item.roadname}</option>
+							</select>
+							<view class="ml5 w30 mt8">
+								<text class="fs14 fc6767">高速</text>
+							</view>
+							<select class="fc999 fs14 col1 lg1" value="{$glfx}" onChange="setVal(e,4)">
+								<option value="1">上行</option>
+								<option value="2">下行</option>
+							</select>
+						</view>
+
+
+						<view class="row al col1">
+							<input class="fc999 fs14 lg col1 lg1" value="{$zh_km}" onChange="setVal(e,7)"/>
+							<view class="ml5 w30 mt8">
+								<text class="fs14 fc6767">Km</text>
+							</view>
+							<input class="fc999 fs14 lg col1 lg1" value="{$zh_m}" onChange="setVal(e,8)"/>
+							<view class="mt8">
+								<text class="fs14 fc6767">m</text>
+							</view>
+						</view>
+
+
+					</view>
+					<!--<view class="row pt10 pb10 bb al wrap col1" if="{$addressDescType==2}">-->
+						<!--<input class="fc999 fs14 ml5 lg col1 lg1" value="{$address1}" onChange="setVal(e,9)"/>-->
+					<!--</view>-->
+					<!--<view class="row al h25 col1">-->
+					<!--<text class="fs12 fc999">{$str}</text>-->
+					<!--</view>-->
+					<view class="row bb h40 sb col1">
+						<text class="fs14 fc6767">车道</text>
+						<select class="fc999 ml5 fs14 lg lg2" value="{$chedao}" onChange="setVal1(e,1)">
+							<option for="{$chedaoData}" value="{key}">{item}</option>
+						</select>
+					</view>
+					<view class="row bb h40 sb col1">
+						<text class="fs14 fc6767">道路环境</text>
+						<select class="fc999 ml5 fs14 lg lg2" value="{$dlhj}" onChange="setVal1(e,2)">
+							<option for="{$dlhjData}" value="{key}">{item}</option>
+						</select>
+					</view>
+					<view class="row bb h40 sb col1">
+						<text class="fs14 fc6767">道路线形</text>
+						<select class="fc999 ml5 fs14 lg lg2" value="{$dlxx}" onChange="setVal1(e,3)">
+							<option for="{$dlxxData}" value="{key}">{item}</option>
+						</select>
+					</view>
+					<view class="row h40 bb al col1">
+						<text class="fs14 fc6767">情形描述</text>
+					</view>
+					<view class="row al col1">
+						<textarea class="lg b textarea col1" placeholder="300字以内" value="{$desc}" onChange="setVal(e,2)">
+						</textarea>
+					</view>
+					<!--<view class="mt20">-->
+					<!--<view class="row ac bfbtn">-->
+					<!--<view class="mr10">-->
+					<!--<icon icon="icon-icon-system-fn-play" class="fc2bd3df fs14"/>-->
+					<!--</view>-->
+					<!--<text class="fs13 fc2bd3df">00:03</text>-->
+					<!--<view class="bfclose">-->
+					<!--<icon icon="icon-guanbi1" class="fcFE7449 fs16"/>-->
+					<!--</view>-->
+					<!--</view>-->
+					<!--</view>-->
+				</view>
+
+				<view class="layerbg row ac" if="{$show}">
+					<view class="layercon1">
+						<view class="h45 row ac col1 mt15">
+							<text class="fs17 fc333 fw600">温馨提示</text>
+						</view>
+						<view class="row ac mh15 tc col1">
+							<text class="fc6767 fs14">你是需要手动输入，还是地图定位更改地址？</text>
+						</view>
+						<view class="row sb mh15 col1 mt15 mb15">
+							<view class="row ac btn3" onClick="goUpdate()">
+								<text class="fs15 fc2bd3df">手动输入</text>
+							</view>
+							<view class="row ac btn3" onClick="goMap()">
+								<text class="fs15 fc2bd3df">地图定位</text>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="w h50 bgf8f8">
+				<view class="row ac col1 mh12">
+					<!--<view class="btn4 b2bd3df row ac">-->
+					<!--<icon icon="icon-luyin" class="fc2bd3df fs16"/>-->
+					<!--<text class="fs15 fc2bd3df">按住说话</text>-->
+					<!--</view>-->
+					<!--<view class="btn4 bg2bd3df b2bd3df row ac" onClick="goInformation()">-->
+					<!--<text class="fs15 fcfff">完成</text>-->
+					<!--</view>-->
+					<view class="btn1 bg2bd3df b2bd3df row ac" onClick="goInformation()">
+						<text class="fs15 fcfff">完成</text>
+					</view>
+
+				</view>
+			</view>
+			<view id="targetContainer">
+			</view>
+		</view>
+	</content>
+</page>

@@ -1,0 +1,91 @@
+<page>
+	<navbar title="确认生成事故责任书"/>
+	<content>
+		<view class="mh bgf8f8">
+			<view class="header row bbddd">
+				<view class="headericon ac" onClick="goHistory()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">确认生成事故责任书</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h44">
+			</view>
+			<view>
+				<view class="row al h40 ph12">
+					<text class="fs14 fc6767">交通事故事实及责任</text>
+				</view>
+				<view class="row al col1 w">
+					<textarea class="ph12 pv10 h150 col1 fs13 fc6767 bgfff" value="{$rpaResponsibility}"
+								 onChange="onChangeVal(e,1)">
+					</textarea>
+				</view>
+
+				<view if="{$type != 1}">
+					<view class="bb">
+						<view class="mt10 bgfff h40 row al sb ph12">
+							<text class="fs14 fc6767">交通执法人员调解</text>
+							<view class="{ 'switch row ' + ($tem ? 'ar bg2bd3df' : 'al bgddd')}"
+									onClick="goTemplate()">  <!--bg2bd3df-->
+								<view class="switchyuan">
+								</view>
+							</view>
+						</view>
+					</view>
+
+					<view class="h150 bgfff row al col1 h150 pv10" if="{$tem}">
+						<textarea class="inputf ph12 pv10 h150 col1 fs13 fc6767 bgfff" value="{$template}"
+									 onChange="onChangeVal(e,2)">
+						</textarea>
+					</view>
+				</view>
+
+
+				<view class="layerbg row ac" if="{1==2}">
+					<view class="layercon2">
+						<view class="circle row ac">
+							<image class="vw25" src="assets://img/huiz.png"/>
+						</view>
+						<view class="row ac mh15 tc col1 mt23vw">
+							<text class="fc333 fs14">信息已发送至后台啦!</text>
+						</view>
+						<view class="row ac mh15 col1 mt15 mb15">
+							<view class="row ac btn2 bg2bd3df">
+								<text class="fs15 fcfff">返回首页</text>
+							</view>
+						</view>
+					</view>
+				</view>
+
+				<view class="layerbg row ac" if="{$show}">
+					<view class="layercon1">
+						<view class="h45 row ac col1 mt15">
+							<text class="fs17 fc333 fw600">确认生成</text>
+						</view>
+						<view class="row ac mh15 tc col1">
+							<text class="fc6767 fs14">确认信息无误，生成事故责任书吗？点击"好"以生成事故责任书</text>
+						</view>
+						<view class="row sb mh15 col1 mt15 mb15">
+							<view class="row ac btn3" onClick="goCancel()">
+								<text class="fs15 fc2bd3df">取消</text>
+							</view>
+							<view class="row ac btn3" onClick="goAccident()">
+								<text class="fs15 fc2bd3df">好</text>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="w h50 mt30 row ac col1 bgf8f8" onClick="goSure()">
+				<view class="btn1 bg2bd3df row ac">
+					<text class="fs15 fcfff">确认生成事故书</text>
+				</view>
+			</view>
+			<view class="h50">
+			</view>
+		</view>
+	</content>
+</page>

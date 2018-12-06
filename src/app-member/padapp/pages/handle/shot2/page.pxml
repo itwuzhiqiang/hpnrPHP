@@ -1,0 +1,115 @@
+<page>
+	<navbar title="拍照取证"/>
+	<content>
+		<view class="bgf8f8 h">
+			<view class="header1 row">
+				<view class="headericon ac" onClick="goBack()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">拍照取证</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view>
+				<view class="w h60 row ac col1 bgfff bt">
+					<view class="row ac col1 mh12">
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac lineorder1 col1"/>
+								<view class="">
+									<icon icon="icon-wancheng" class="fcFE7449 f18"/>
+								</view>
+								<view class="row ac lineorder1 col1"/>
+							</view>
+							<view class="row ac h20">
+								<view class="">
+									<text class="fc6767 fs12">位置采集</text>
+								</view>
+							</view>
+						</view>
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac lineorder1 col1"/>
+								<view class="">
+									<icon icon="icon-wancheng" class="fcFE7449 f18"/>
+								</view>
+								<view class="row ac lineorder1 col1"/>
+							</view>
+							<view class="row ac h20">
+								<view class="">
+									<text class="fc6767 fs12">拍照取证</text>
+								</view>
+							</view>
+						</view>
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac lineorder1 col1"/>
+								<view class="">
+									<icon icon="icon-wancheng" class="fcFE7449 f18"/>
+								</view>
+								<view class="row ac lineorder1 col1"/>
+							</view>
+							<view class="row ac h20">
+								<view class="">
+									<text class="fc6767 fs12">信息采集</text>
+								</view>
+							</view>
+						</view>
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac lineorder1 col1"/>
+								<view class="circle1"/>
+								<view class="row ac lineorder1 col1"/>
+							</view>
+							<view class="row ac h20">
+								<view class="mt12">
+									<text class="fc2bd3df fs12">责任划分</text>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view class="h35 row al ph12 bgfff bb mt10" onClick="goBack()">
+					<view class="mr5">
+						<icon icon="icon-xiangzuo" class="fcdadada fs14"/>
+					</view>
+					<text class="fs14 fc2bd3df">{$item.atName}</text>
+				</view>
+				<view class="bgfff ph12" if="{$data}" for="{$data}">
+					<view class="ph12 row al pv10 bb">
+						<text class="fs13 fc888">{item.atRegulations}</text>
+						<view class="ml15 col1 ar">
+							<icon icon="icon-xiangyou" class="fcdadada fs14"/>
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="layerbg column ac">
+				<view class="layercon">
+					<view class="row ac col1 mt15">
+						<image class="wb90" src="assets://img/s5.png"/>
+					</view>
+					<view class="row ac pv15 bb">
+						<text class="fs14 fc6767">请确认您在事故中是甲方还是乙方</text>
+					</view>
+					<view class="pv15 row ac">
+						<view class="wb80 row sb">
+							<view class="btn5 row ac bg2bd3df">
+								<text class="fs15 fcfff">甲方</text>
+							</view>
+							<view class="btn5 row ac bg2bd3df">
+								<text class="fs15 fcfff">乙方</text>
+							</view>
+						</view>
+
+					</view>
+				</view>
+				<view class="mt30 row ac">
+					<icon icon="icon-guanbi" class="fs30 fcfff"/>
+				</view>
+			</view>
+		</view>
+	</content>
+</page>

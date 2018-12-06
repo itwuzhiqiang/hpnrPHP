@@ -1,0 +1,94 @@
+<page>
+	<navbar title="选择事故处理方式"/>
+	<content>
+		<view class="mh bgf8f8">
+			<view class="header row">
+				<view class="headericon ac">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">选择事故处理方式</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h44"/>
+			<view>
+				<view class="tixing h60 row ac col1 bgfff bt">
+					<view class="row ac col1 mh12">
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac lineorder1 col1">
+								</view>
+								<!--已完成-->
+								<view class="">
+									<icon icon="icon-wancheng" class="fcFE7449 f18"/>
+								</view>
+								<!--未完成-->
+								<!--<view class="circle1">-->
+								<!--</view>-->
+								<!--未进行-->
+								<!--<view class="circle2"/>-->
+								<view class="row ac lineorder1 col1">
+								</view>
+							</view>
+							<view class="row ac h20">
+								<!--完成不需要mt12-->
+								<view class="">
+									<text class="fc6767 fs12">拍照取证</text>
+								</view>
+							</view>
+						</view>
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac lineorder1 col1"/>
+								<view class="">
+									<icon icon="icon-wancheng" class="fcFE7449 f18"/>
+								</view>
+								<view class="row ac lineorder1 col1"/>
+							</view>
+							<view class="row ac h20">
+								<view class="">
+									<text class="fc6767 fs12">事故描述</text>
+								</view>
+							</view>
+						</view>
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac col1 lineorder1"/>
+								<view class="">
+									<icon icon="icon-wancheng" class="fcFE7449 f18"/>
+								</view>
+								<view class="row ac col1 lineorder1"/>
+							</view>
+							<view class="row ac h20">
+								<view class="">
+									<text class="fc6767 fs12">信息采集</text>
+								</view>
+							</view>
+						</view>
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac lineorder1 col1"/>
+								<view class="circle2"/>
+								<view class="row ac lineorder1 col1"/>
+							</view>
+							<view class="row ac h20">
+								<view class="mt12">
+									<text class="fc2bd3df fs12">责任划分</text>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view class="w h60"/>
+				<view class="mt10 tc" onClick="goShot2()">
+					<image class="wb90 br5" src="assets://img/tp1.jpg"/>
+				</view>
+				<view class="mt10 tc" onClick="goCollection()">
+					<image class="wb90 br5" src="assets://img/tp2.jpg"/>
+				</view>
+			</view>
+		</view>
+	</content>
+</page>

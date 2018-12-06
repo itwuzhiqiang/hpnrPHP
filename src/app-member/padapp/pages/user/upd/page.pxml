@@ -1,0 +1,52 @@
+<page>
+	<navbar title="姓名"/>
+	<content>
+		<view class="mh col1 column bgf8f8">
+			<view class="header row bb">
+				<view class="headericon ac" onClick="goBack()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">{$typeName}</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h44"/>
+			<view class="ph15">
+				<view class="ph12 br5 h40 row al bgfff mt10" if="{$type!='sex'}">
+					<input class="fc999 fs14 lg" placeholder="{'请输入' + $typeName}" onChange="setVal(e)"/>
+				</view>
+				<view class="ph12 br5 h40 row al bgfff mt10" if="{$type=='sex'}" onClick="changeSex()">
+					<text class="fc797979 fs12">
+						{$val==1?'男':$val==2?'女':'请选择性别'}
+					</text>
+				</view>
+				<view class="mt30 row ac col1 h40 ph12 br38 bg2bd3df" onClick="goChange()">
+					<text class="fs14 fcfff">确定</text>
+				</view>
+			</view>
+			<view class="layerbg column ar" if="{$show}">
+				<view class="w bgfff">
+					<view class="h40 ph12 row sb col1 bgf8f8">
+						<view onClick="changeSex()">
+							<text class="fs13 fc00a1ff">取消</text>
+						</view>
+						<view>
+							<text class="fs14 fc333">性别</text>
+						</view>
+						<view onClick="changeSex1()">
+							<text class="fs13 fc00a1ff">确定</text>
+						</view>
+					</view>
+					<view class="row ac h40 col1 mt10 bb" onClick="setSex(1)">
+						<text class="{'fs14 ' + ($sex==1?'fc00a1ff':'fc333')}">男</text>
+					</view>
+					<view class="row ac h40 col1 bb mb30" onClick="setSex(2)">
+						<text class="{'fs14 ' + ($sex==2?'fc00a1ff':'fc333')}">女</text>
+					</view>
+				</view>
+			</view>
+		</view>
+	</content>
+</page>

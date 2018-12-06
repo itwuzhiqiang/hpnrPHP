@@ -1,0 +1,83 @@
+<page>
+	<navbar title="拍照取证"/>
+	<content>
+		<view class="bgf8f8 mh">
+			<view class="header1 row bbddd">
+				<view class="headericon ac">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">事故信息</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h45 row al col1 bbddd">
+				<view class="row ac col1 h45 b22bd3df"><text class="fs14 fc2bd3df">一方信息</text></view>
+				<view class="row ac col1 h45 b2f8f8"><text class="fs14 fc999">二方信息</text></view>
+				<view class="row ac col1 h45 b2f8f8"><text class="fs14 fc999">本方信息</text></view>
+			</view>
+			<view class="mb10">
+				<view class="bgfff">
+					<view class="h40 row al col1 bb">
+						<view>
+							<icon icon="icon-dian-copy-copy" class="fs16 fc2bd3df"/>
+						</view>
+						<view>
+							<text class="fs13 fc999">责任认定</text>
+						</view>
+						<view class="cmr12">
+							<text class="fs13 fc999">全责</text>
+						</view>
+					</view>
+					<view class="h40 row al col1">
+						<view>
+							<icon icon="icon-dian-copy-copy" class="fs16 fc2bd3df"/>
+						</view>
+						<view>
+							<text class="fs13 fc999">驾驶人</text>
+						</view>
+					</view>
+					<view class="h40 row sb bt mh15 col1">
+						<text class="fs13 fc999">姓名</text>
+						<text class="fs13 fc999">张一山</text>
+					</view>
+					<view class="h40 row sb bt mh15 col1">
+						<text class="fs13 fc999">身份证号</text>
+						<text class="fs13 fc999">******************</text>
+					</view>
+					<view class="h40 row sb bt bb mh15 col1">
+						<text class="fs13 fc999">准驾车型</text>
+						<text class="fs13 fc999">c1</text>
+					</view>
+					<view class="h40 row al col1 bb">
+						<view>
+							<icon icon="icon-dian-copy-copy" class="fs16 fc2bd3df"/>
+						</view>
+						<view>
+							<text class="fs13 fc999">车辆</text>
+						</view>
+					</view>
+					<view class="h40 row sb mh15 col1">
+						<text class="fs13 fc999">车牌号</text>
+						<text class="fs13 fc999">渝A2B000</text>
+					</view>
+					<view class="h40 row sb bt mh15 col1">
+						<text class="fs13 fc999">保险公司</text>
+						<text class="fs13 fc999">中国平安</text>
+					</view>
+					<view class="h40 row sb bt mh15 col1">
+						<text class="fs13 fc999">号牌种类</text>
+						<text class="fs13 fc999">小型普通客车</text>
+					</view>
+				</view>
+			</view>
+			<view class="footer row ac col1 bgf8f8">
+				<view class="row ac btn1 bg2bd3df b2bd3df mb10">
+					<text class="fs15 fcfff">返回</text>
+				</view>
+			</view>
+			<view class="h50"></view>
+		</view>
+	</content>
+</page>

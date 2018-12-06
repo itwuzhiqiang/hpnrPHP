@@ -1,0 +1,116 @@
+<page>
+	<navbar title="拍照取证"/>
+	<content>
+		<view class="bgf8f8 h">
+			<view class="header1 row">
+				<view class="headericon ac" onClick="goBack()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">拍照取证</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view>
+				<view class="w h60 row ac col1 bgfff bt">
+					<view class="row ac col1 mh12">
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac lineorder1 col1"/>
+								<view class="">
+									<icon icon="icon-wancheng" class="fcFE7449 f18"/>
+								</view>
+								<view class="row ac lineorder1 col1"/>
+							</view>
+							<view class="row ac h20">
+								<view class="">
+									<text class="fc6767 fs12">位置采集</text>
+								</view>
+							</view>
+						</view>
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac lineorder1 col1"/>
+								<view class="circle1"/>
+								<view class="row ac lineorder1 col1"/>
+							</view>
+							<view class="row ac h20">
+								<view class="mt12">
+									<text class="fc2bd3df fs12">拍照取证</text>
+								</view>
+							</view>
+						</view>
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac lineorder1 col1"/>
+								<view class="circle2"/>
+								<view class="row ac lineorder1 col1"/>
+							</view>
+							<view class="row ac h20">
+								<view class="mt12">
+									<text class="fc6767 fs12">信息采集</text>
+								</view>
+							</view>
+						</view>
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac lineorder1 col1"/>
+								<view class="circle2"/>
+								<view class="row ac lineorder1 col1"/>
+							</view>
+							<view class="row ac h20">
+								<view class="mt12">
+									<text class="fc6767 fs12">责任划分</text>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view class="col1 column hb80">
+					<view class="row ac col1">
+						<view class="shot3-bigc row ac positionr">
+							<view class="pw1">
+								<text class="fs20 fc2bd3df bgtr">{$per}%</text>
+							</view>
+							<view class="w rote rote1">
+								<view class="shot3-smallc"></view>
+							</view>
+						</view>
+					</view>
+					<view>
+						<view if="{$rpaProcessState == 13 || $rpaProcessState == 16}">
+							<view class="row ac">
+								<text class="fs14 fc999">请耐心等待</text>
+							</view>
+							<view class="row ac">
+								<text class="fs14 fc999">执法人员正在审核您的事故照片</text>
+							</view>
+						</view>
+						<view if="{$rpaProcessState == 14}">
+							<view class="row ac">
+								<text class="fs14 fc999">您的照片审核未通过</text>
+							</view>
+							<view class="row ac">
+								<text class="fs14 fc999">请重新拍照</text>
+							</view>
+						</view>
+						<view if="{$rpaProcessState != 14 && $rpaProcessState !=13 && $rpaProcessState !=16}">
+							<view class="row ac">
+								<text class="fs14 fc999">审核完成</text>
+							</view>
+							<view class="row ac">
+								<text class="fs14 fc999">执法人员审核完成您的事故照片</text>
+							</view>
+						</view>
+					</view>
+					<view class="row ac col1" onClick="goNext()">
+						<view class="{'btn4 row ac ' + ($rpaProcessState == 13 ? 'bgddd' : 'bg2bd3df')}">
+							<text class="fcfff fs15">{$stateName}</text>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</content>
+</page>

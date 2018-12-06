@@ -1,0 +1,23 @@
+CREATE TABLE `filedata` (
+  `id` char(32) NOT NULL,
+  `uploadName` varchar(128) NOT NULL,
+  `extName` char(32) NOT NULL,
+  `mineType` char(32) NOT NULL,
+  `size` int(11) unsigned NOT NULL DEFAULT '0',
+  `content` longblob,
+  `lastReadTime` int(11) unsigned NOT NULL DEFAULT '0',
+  `createTime` int(11) unsigned NOT NULL DEFAULT '0',
+  `updateTime` int(11) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `idx_extName` (`extName`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+CREATE TABLE `filedataRef` (
+  `id` char(32) NOT NULL,
+  `url` varchar(1024) NOT NULL,
+  `extName` char(32) NOT NULL,
+  `createTime` int(11) unsigned NOT NULL DEFAULT '0',
+  `updateTime` int(11) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+

@@ -1,0 +1,187 @@
+<page>
+<navbar title="信息查询"/>
+<content>
+	<view class="mh column col1 bgf8f8">
+		<view class="header1 row bbddd bgheader">
+			<view class="headericon ac" onClick="goHistory()">
+				<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+			</view>
+			<view class="col1 ac">
+				<view class="row ac col1 headsearch">
+					<icon icon="icon-sousuo" class="fs18 fc999"/>
+					<input class="fs14 fc999 tc bgf8f8 lg" placeholder="搜索事故编号" onChange="setVal(e,'keywords')" />
+				</view>
+			</view>
+
+			<view class="headericon ac">
+			</view>
+		</view>
+		<view>
+			<view class="w h45 row al col1 bgfff bbddd">
+				<view class="row ac col1" onClick="getAccidentList(1)">
+					<text class="{'fs14 '+($type==1?'fc2bd3df':'fc6767')}" >
+						待处理
+					</text>
+				</view>
+				<view class="row ac col1"  onClick="getAccidentList(2)">
+					<text class="{'fs14 '+($type==2?'fc2bd3df':'fc6767')}">
+						定责中
+					</text>
+				</view>
+				<view class="row ac col1" onClick="getAccidentList(3)">
+					<text class="{'fs14 '+($type==3?'fc2bd3df':'fc6767')}">
+						已处理
+					</text>
+				</view>
+				<!--<view class="row ac col1" onClick="getAccidentList(4)">-->
+					<!--<text class="{'fs14 '+($type==1?'fc2bd3df':'fc6767')}">-->
+						<!--一般事故-->
+					<!--</text>-->
+				<!--</view>-->
+			</view>
+			<view class="mb10">
+
+
+				<view class="mh12 row al col1 h100 hidden mt10 br5 bgfff" for="{$accidentList.data.list}" if="{$type==1 || $type==2}">
+					<view class="tiao2"></view>
+					<view class="ml10 mr10">
+						<icon icon="icon-location" class="fs20 fc2bd3df"/>
+					</view>
+					<view class="col1" onClick="goAccidentDetail(item.rpaId)">
+						<view class="row al">
+							<view class="mr10 caritem bgeee row ac" if="{item.rpaType==1}">
+								<text class="fs12 fc999">单车</text>
+							</view>
+							<view class="mr10 caritem bge6f7f8 row ac" if="{item.rpaType==2}">
+								<text class="fs12 fc2bd3df">两车</text>
+							</view>
+							<view class="mr10 caritem bgfae8e2 row ac" if="{item.rpaType==3}">
+								<text class="fs12 fcFE7449">多车</text>
+							</view>
+							<text class="fs13 fc999">{item.rpaOccurrenceTime}</text>
+						</view>
+						<view class="row al col1 mt5">
+							<text class="fs14 fc6767 liu2">{item.rpaAddress}</text>
+						</view>
+						<view class="row al mt5">
+							<text class="fs14 fc999">{item.rpaNumber}</text>
+						</view>
+					</view>
+					<view class="ml10 chulibtn mr10" onClick="goToProcess(item)">
+						<view class="row ac"><text class="fs14 fc2bd3df">继续</text></view>
+						<view class="row ac"><text class="fs14 fc2bd3df">处理</text></view>
+					</view>
+				</view>
+
+				<!--<view class="mh12 row al col1 h100 hidden mt10 br5 bgfff" for="{$accidentList.data.list}" if="{$type==2}">-->
+					<!--<view class="tiao2"></view>-->
+					<!--<view class="ml10 mr10">-->
+						<!--<icon icon="icon-location" class="fs20 fc2bd3df"/>-->
+					<!--</view>-->
+					<!--<view class="col1" onClick="goAccidentDetail(item.rpaId)">-->
+						<!--<view class="row al">-->
+							<!--<view class="mr10 caritem bgeee row ac" if="{item.rpaType==1}">-->
+								<!--<text class="fs12 fc999">单车</text>-->
+							<!--</view>-->
+							<!--<view class="mr10 caritem bge6f7f8 row ac" if="{item.rpaType==2}">-->
+								<!--<text class="fs12 fc2bd3df">两车</text>-->
+							<!--</view>-->
+							<!--<view class="mr10 caritem bgfae8e2 row ac" if="{item.rpaType==3}">-->
+								<!--<text class="fs12 fcFE7449">多车</text>-->
+							<!--</view>-->
+							<!--<text class="fs13 fc999">{item.rpaOccurrenceTime}</text>-->
+						<!--</view>-->
+						<!--<view class="row al col1 mt5">-->
+							<!--<text class="fs14 fc6767 liu2">{item.rpaAddress}</text>-->
+						<!--</view>-->
+						<!--<view class="row al mt5">-->
+							<!--<text class="fs14 fc999">{item.rpaNumber}</text>-->
+						<!--</view>-->
+					<!--</view>-->
+					<!--<view class="ml10" onClick="goAccidentDetail(item.rpaId)">-->
+						<!--<icon icon="icon-xiangyou" class="fs16 fc999"/>-->
+					<!--</view>-->
+				<!--</view>-->
+
+				<view class="mh12 row al col1 h100 hidden mt10 br5 bgfff" for="{$accidentList.data.list}" if="{$type==3}">
+					<view class="tiao2"></view>
+					<view class="ml10 mr10">
+						<icon icon="icon-location" class="fs20 fc2bd3df"/>
+					</view>
+					<view class="col1" onClick="goAccidentDetail(item.rpaId)">
+						<view class="row al">
+							<view class="mr10 caritem bgeee row ac" if="{item.rpaType==1}">
+								<text class="fs12 fc999">单车</text>
+							</view>
+							<view class="mr10 caritem bge6f7f8 row ac" if="{item.rpaType==2}">
+								<text class="fs12 fc2bd3df">两车</text>
+							</view>
+							<view class="mr10 caritem bgfae8e2 row ac" if="{item.rpaType==3}">
+								<text class="fs12 fcFE7449">多车</text>
+							</view>
+							<text class="fs13 fc999">{item.rpaOccurrenceTime}</text>
+						</view>
+						<view class="row al col1 mt5">
+							<text class="fs14 fc6767 liu2">{item.rpaAddress}</text>
+						</view>
+						<view class="row al mt5">
+							<text class="fs14 fc999">{item.rpaNumber}</text>
+						</view>
+					</view>
+				</view>
+
+				<view class="mh12 row al col1 h100 hidden mt10 br5 bgfff" for="{$accidentList.data.list}" if="{$type==5}">
+					<view class="tiao2"></view>
+					<view class="ml10 mr10">
+						<icon icon="icon-location" class="fs20 fc2bd3df"/>
+					</view>
+					<view class="row al col1 mr10" onClick="goAccidentDetail(item.rpaId)">
+						<view class="col1">
+							<view class="row al">
+								<view class="mr10 caritem bgeee row ac" if="{item.rpaType==1}">
+									<text class="fs12 fc999">单车</text>
+								</view>
+								<view class="mr10 caritem bge6f7f8 row ac" if="{item.rpaType==2}">
+									<text class="fs12 fc2bd3df">两车</text>
+								</view>
+								<view class="mr10 caritem bgfae8e2 row ac" if="{item.rpaType==3}">
+									<text class="fs12 fcFE7449">多车</text>
+								</view>
+								<text class="fs13 fc999">{item.rpaOccurrenceTime}</text>
+							</view>
+							<view class="row al col1 mt5">
+								<text class="fs14 fc6767 liu2">{item.rpaAddress}</text>
+							</view>
+							<view class="row al mt5">
+								<text class="fs14 fc999">{item.rpaNumber}</text>
+							</view>
+						</view>
+						<!--<view class="ml10" if="{item.rpaProcessState < 33 && item.rpaProcessState > 30}" onClick="goAccidentDetail(item.rpaId)">-->
+							<!--<icon icon="icon-xiangyou" class="fs16 fc999"/>-->
+						<!--</view>-->
+						<view class="ml10 chulibtn mr10" if="{item.rpaProcessState<20 || item.rpaProcessState==34 || (item.rpaProcessState < 33 && item.rpaProcessState > 30)}" onClick="goToProcess(item)">
+							<view class="row ac"><text class="fs14 fc2bd3df">继续</text></view>
+							<view class="row ac"><text class="fs14 fc2bd3df">处理</text></view>
+						</view>
+					</view>
+				</view>
+
+			</view>
+		</view>
+		<view class="col1 bgfff"  if="{$show}">
+			<view class="row ac col1 hb70">
+				<view>
+					<view>
+						<icon icon="icon-zanwushuju" class="fs100 fc999"/>
+					</view>
+					<view class="row ac col1"><text class="fs14 fc333 fw600">暂无数据</text></view>
+				</view>
+			</view>
+		</view>
+		<view onClick="nextPage()" if="{$hasNextPage}"
+				class="mt25 mb25 row ac col1">
+			<text class="fc999">点击加载更多</text>
+		</view>
+</view>
+</content>
+</page>

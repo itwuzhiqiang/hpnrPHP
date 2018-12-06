@@ -1,0 +1,45 @@
+<page>
+	<navbar title="登录"/>
+	<content>
+		<view class="mh bgf8f8">
+			<view class="header row">
+				<view class="headericon ac" onClick="goBack()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">请选择对应的事故情形</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h44">
+			</view>
+			<view class="bgfff ph12" for="{$handleAccidentType.data}">
+				<view class="row sb col1 bb pt10 pb10" if="{$type==1 && item.atCode==99}">
+					<view class="row al col1 mr10">
+						<view class="pr10" onClick="goDetail(item)">
+							<icon icon="icon-wenhao" class="fc999 fs15"/>
+						</view>
+						<view onClick="goChoose()">
+							<text class="fs14 fc6767">{item.atName}</text>
+						</view>
+					</view>
+					<view class="circle3" onClick="goChoose(item)">
+					</view>
+				</view>
+				<view class="row sb col1 bb pt10 pb10" if="{$type==2 || $type==3}">
+					<view class="row al col1 mr10">
+						<view class="pr10" onClick="goDetail(item)">
+							<icon icon="icon-wenhao" class="fc999 fs15"/>
+						</view>
+						<view onClick="goChoose()">
+							<text class="fs14 fc6767">{item.atName}</text>
+						</view>
+					</view>
+					<view class="circle3" onClick="goChoose(item)">
+					</view>
+				</view>
+			</view>
+		</view>
+	</content>
+</page>

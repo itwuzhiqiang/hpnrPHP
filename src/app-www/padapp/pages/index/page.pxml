@@ -1,0 +1,11 @@
+<page>
+	<navbar title="首页" disableTree="true"/>
+	<content>
+		<view onClick="goLogin()">
+			<text>dddddddddddddd</text>
+		</view>
+		<view>
+			<text>2342343</text>
+		</view>
+	</content>
+</page>

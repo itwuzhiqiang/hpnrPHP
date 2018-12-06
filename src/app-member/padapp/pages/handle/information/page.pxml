@@ -1,0 +1,167 @@
+<page>
+	<navbar title="信息采集"/>
+	<content>
+		<view class="mh bgf8f8">
+			<view class="header row">
+				<view class="headericon ac" onClick="goHistory()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">信息采集</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h44">
+			</view>
+			<view>
+				<view class="tixing h60 row ac col1 bgfff bt">
+					<view class="row ac col1 mh12">
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac lineorder1 col1">
+								</view>
+								<!--已完成-->
+								<view class="">
+									<icon icon="icon-wancheng" class="fcFE7449 f18"/>
+								</view>
+								<!--未完成-->
+								<!--<view class="circle1">-->
+								<!--</view>-->
+								<!--未进行-->
+								<!--<view class="circle2"/>-->
+								<view class="row ac lineorder1 col1">
+								</view>
+							</view>
+							<view class="row ac h20">
+								<view class="">
+									<text class="fc6767 fs12">拍照取证</text>
+								</view>
+							</view>
+						</view>
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac lineorder1 col1"/>
+								<view class="">
+									<icon icon="icon-wancheng" class="fcFE7449 f18"/>
+								</view>
+								<view class="row ac lineorder1 col1"/>
+							</view>
+							<view class="row ac h20">
+								<view class="">
+									<text class="fc6767 fs12">事故描述</text>
+								</view>
+							</view>
+						</view>
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac col1 lineorder1"/>
+								<view class="circle1"/>
+								<view class="row ac col1 lineorder1"/>
+							</view>
+							<view class="row ac h20">
+								<view class="mt12">
+									<text class="fc2bd3df fs12">信息采集</text>
+								</view>
+							</view>
+						</view>
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac lineorder1 col1"/>
+								<view class="circle2"/>
+								<view class="row ac lineorder1 col1"/>
+							</view>
+							<view class="row ac h20">
+								<view class="mt12">
+									<text class="fc6767 fs12">责任划分</text>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view class="w h60">
+				</view>
+				<view if="{$handleConfirmConsultation.data.length}">
+					<view class="bgfff mt10" for="{$handleConfirmConsultation.data}" onClick="goCreate1(item)">
+						<view class="h40 row al col1">
+							<view class="stiao">
+							</view>
+							<view class="ml10">
+								<text class="fs14 fc6767">第{item.apInputOrder}方驾驶人及车辆信息</text>
+							</view>
+						</view>
+						<view class="h40 row sb bb bt mh12 col1">
+							<text class="fs13 fc6767">姓名</text>
+							<text class="fs13 fc6767">{item.apPartiesName}</text>
+						</view>
+						<view class="h40 row sb bb mh12 col1">
+							<text class="fs13 fc6767">车牌号</text>
+							<text class="fs13 fc6767">{item.aviPlateNumber}</text>
+						</view>
+						<view class="h40 row sb bb mh12 col1">
+							<text class="fs13 fc6767">驾驶状态</text>
+							<text class="fs13 fc6767">{item.apLicenseState==undefined?'暂无':item.apLicenseState}</text>
+						</view>
+						<view class="h40 row sb bb mh12 col1">
+							<text class="fs13 fc6767">车辆状态</text>
+							<text class="fs13 fc6767">{item.aviLicenseState==undefined?'暂无':item.aviLicenseState}</text>
+						</view>
+						<view class="pt10 pb20 row ac col1">
+							<view class="pic1 br5">
+								<image class="pic1" src="{item.aviLicensePhotos}"/>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view if="{$type!=3}">
+					<view if="{$number-1 < $type}">
+						<view if="{!$handleConfirmConsultation.data.length}">
+							<view class="mt60 row ac col1">
+								<image class="w120" src="assets://img/jsr.png"/>
+							</view>
+							<view class="h60 row ac col1">
+								<text class="fs14 fc6767">添加驾驶人信息</text>
+							</view>
+						</view>
+
+						<view class="row ac col1 mt30" onClick="goCreate()">
+							<view class="btn1 bg55e0ea row ac">
+								<view class="mr10">
+									<icon icon="icon-add" class="fcfff fs20"/>
+								</view>
+								<text class="fs15 fcfff">添加信息</text>
+							</view>
+						</view>
+					</view>
+					<view class="row ac col1 mt30" else="" onClick="goDuty()">
+						<view class="btn1 bg55e0ea row ac">
+							<text class="fs15 fcfff">完成</text>
+						</view>
+					</view>
+				</view>
+				<view else="">
+					<view if="{!$handleConfirmConsultation.data.length}">
+						<view class="mt60 row ac col1">
+							<image class="w120" src="assets://img/jsr.png"/>
+						</view>
+						<view class="h60 row ac col1">
+							<text class="fs14 fc6767">添加驾驶人信息</text>
+						</view>
+					</view>
+					<view class="row ac col1 mt10">
+						<view class="btn2 bg55e0ea row ac" onClick="goCreate()">
+							<view class="mr10">
+								<icon icon="icon-add" class="fcfff fs20"/>
+							</view>
+							<text class="fs15 fcfff">添加信息</text>
+						</view>
+						<view class="btn2 bg55e0ea row ac ml15" if="{$handleConfirmConsultation.data.length>2}"
+								onClick="goDuty()">
+							<text class="fs15 fcfff">完成</text>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</content>
+</page>

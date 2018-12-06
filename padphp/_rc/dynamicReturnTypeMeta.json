@@ -1,0 +1,31 @@
+{
+  "methodCalls": [
+    {
+      "class": "\\PadCptModelAbstract",
+      "method": "ety",
+      "position": 0,
+      "fileReturnTypeReplacementCall": [
+        "dynamicReturnTypeMeta.js",
+        "getCptEntityModel"
+      ]
+    }
+  ],
+  "functionCalls": [
+    {
+      "function": "\\ety",
+      "position": 0,
+      "fileReturnTypeReplacementCall": [
+        "dynamicReturnTypeMeta.js",
+        "getEntityModel"
+      ]
+    },
+    {
+      "function": "\\cpt",
+      "position": 0,
+      "fileReturnTypeReplacementCall": [
+        "dynamicReturnTypeMeta.js",
+        "getCptModel"
+      ]
+    }
+  ]
+}

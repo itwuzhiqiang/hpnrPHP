@@ -1,0 +1,26 @@
+<page>
+	<navbar title="更改地址"/>
+	<content>
+		<view class="mh col1 column bgf8f8">
+			<view class="header row bb">
+				<view class="headericon ac" onClick="goBack()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">更改地址</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h44"/>
+			<view class="ph15">
+				<view class="ph12 br5 h40 row al bgfff mt10">
+					<input class="fc999 fs14 lg" placeholder="请输入地址" onChange="setVal(e)"/>
+				</view>
+				<view class="mt30 row ac col1 h40 ph12 br38 bg2bd3df" onClick="goSure()">
+					<text class="fs14 fcfff">确定</text>
+				</view>
+			</view>
+		</view>
+	</content>
+</page>

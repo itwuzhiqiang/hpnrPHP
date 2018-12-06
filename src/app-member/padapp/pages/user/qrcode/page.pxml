@@ -1,0 +1,34 @@
+<page>
+	<navbar title="二维码"/>
+	<content>
+		<view class="mh col1 column bgf8f8">
+			<view class="header row bb">
+				<view class="headericon ac">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"></icon>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">二维码</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h44"/>
+			<view class="row ac">
+				<view class="layercon mt50">
+					<view class="ml30 row al mt20">
+						<view class="y50 hidden mr10">
+							<image class="w" src="assets://img/police.png"/>
+						</view>
+						<text class="fs14 fc666">158****8557</text>
+					</view>
+					<view class="row ac col1 mt30">
+						<image class="w180" src="assets://img/banner.png"/>
+					</view>
+					<view class="mt30 mb20 row ac col1">
+						<text class="fc666 fs14">扫一扫二维码</text>
+					</view>
+				</view>
+			</view>
+		</view>
+	</content>
+</page>

@@ -1,0 +1,108 @@
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui, maximum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+
+	<title>路书</title>
+	<style>
+		body, html {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			font-family: "微软雅黑";
+			font-size: 14px;
+		}
+
+		#map {
+			height: 100%;
+			width: 100%;
+		}
+	</style>
+	<script src="http://api.map.baidu.com/api?v=2.0&ak=9111654c94324102ef8d63b242868319"></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/library/AreaRestriction/1.2/src/AreaRestriction_min.js"></script>
+</head>
+<body>
+<div id="map"></div>
+<script type="text/javascript">
+	var pEnd, carMarker, distrance, label;
+
+	var map = new BMap.Map('map');
+	map.enableScrollWheelZoom();
+	var geolocationControl = new BMap.GeolocationControl();
+	map.addControl(geolocationControl);
+	var navigationControl = new BMap.NavigationControl({
+		anchor: BMAP_ANCHOR_BOTTOM_RIGHT,
+		type: BMAP_NAVIGATION_CONTROL_ZOOM,
+		enableGeolocation: false
+	});
+	map.addControl(navigationControl);
+
+	window.addEventListener('message',function(e){
+		if(e.source!=window.parent) return;
+		var datas = e.data;
+		console.log(datas);
+		if(datas.startPoint && datas.endPoint && datas.trailPoint) {
+			var pStart = new BMap.Point(datas.startPoint.lng ,datas.startPoint.lat);
+			pEnd = new BMap.Point(datas.endPoint.lng, datas.endPoint.lat);
+			var carPo = new BMap.Point(datas.trailPoint.lng, datas.trailPoint.lat);
+
+			map.centerAndZoom(pStart, 16);
+			map.addOverlay(new BMap.Marker(pStart,{icon: new BMap.Icon("../assets/mapview/img/start.png", new BMap.Size(60,60))}));
+			map.addOverlay(new BMap.Marker(pEnd,{icon: new BMap.Icon("../assets/mapview/img/end.png", new BMap.Size(60,60))}));
+
+			carMarker = new BMap.Marker(carPo, {icon: new BMap.Icon("../assets/mapview/img/car.gif", new BMap.Size(100,160))});
+			map.addOverlay(carMarker);
+
+			distrance = computingDistance(carPo, pEnd);
+			label = setLabel(carMarker, '距您' + distrance, {offset: new BMap.Size(10, -30)});
+
+		}else if(datas.trailPoint){
+			changePosition(datas.trailPoint);
+		}
+	},false);
+
+	function changePosition (point) {
+		var carP = new BMap.Point(point.lng, point.lat);
+//		var b = new BMap.Bounds(carP, pEnd);
+//		try {
+//			BMapLib.AreaRestriction.setBounds(map, b);
+//		} catch (e) {
+//			alert(e);
+//		}
+		carMarker.setPosition(carP);
+		distrance = computingDistance(carP, pEnd);
+		label.setContent('距您' + distrance);
+//		map.panTo(point.lng, point.lat);
+	}
+
+	function computingDistance (startPoint, endPoint) {
+		var distrance = map.getDistance(startPoint, endPoint);
+		if(distrance > 1000) {
+			distrance = (distrance / 1000).toFixed(2) + 'km';
+		}else {
+			distrance = parseInt(distrance) + 'm';
+		}
+		return distrance;
+	}
+
+	function setLabel(marker, content, options) {
+		options = options || {};
+
+		var label = new BMap.Label(content, options);
+		label.setStyle({
+			fontSize : "0.6em",
+			border:0,
+			fontFamily:"微软雅黑",
+			"border-radius": "20px",
+			padding:"0.3em 0.4em"
+		});
+
+		marker.setLabel(label);
+		return label;
+	}
+</script>
+</body>
+</html>

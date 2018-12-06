@@ -1,0 +1,24 @@
+{
+	"projectKey":"kyp",
+	"waf": [{
+	    "bind": 8080,
+		"bindDefault": true,
+		"rules": [{
+			"backend": {
+				"headers": {
+					"Host": "www.padapp"
+				}
+			}
+		}]
+	},{
+	    "bind": 8090,
+		"bindDefault": true,
+		"rules": [{
+			"backend": {
+				"headers": {
+					"Host": "member.padapp"
+				}
+			}
+		}]
+	}]
+}

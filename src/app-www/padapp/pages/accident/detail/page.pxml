@@ -1,0 +1,185 @@
+<page>
+	<navbar title="事故详情"/>
+	<content>
+		<view class="mh bgf8f8 column col1">
+			<view class="header row bbddd">
+				<view class="headericon ac" onClick="goHistory()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df f18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">事故详情</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h44"/>
+			<view class="col1">
+				<view class="tixing h60 row ac tc bbFE7449 bgfff bt">
+					<view class="mr10">
+						<icon icon="icon-shuoming1" class="fcFE7449 fs28"/>
+					</view>
+					<text class="fs14 fcFE7449">请仔细阅读，确认无误后请推送给相关当事人</text>
+				</view>
+				<view class="w h60"></view>
+				<view>
+					<view class="bgfff mt10" if="{$handleAccident.data.accident}">
+						<view class="h40 row al col1">
+							<view class="stiao"></view>
+							<view class="ml10">
+								<text class="fs14 fc6767">事故基本信息</text>
+							</view>
+						</view>
+						<view class="h40 row al bb bt mh12 col1">
+							<text class="fs13 fc6767">时间天气：</text>
+							<text class="fs13 fc6767">{$handleAccident.data.accident.rpaOccurrenceTime +
+								$handleAccident.data.accident.rpaWeather}
+							</text>
+						</view>
+						<view class="pt10 pb10 row als bb mh12 col1">
+							<text class="fs13 fc6767">事故地点：</text>
+							<view class="col1">
+								<text class="fs13 fc6767">{$handleAccident.data.accident.rpaAddress}</text>
+							</view>
+						</view>
+						<view class="h40 row al bb mh12 col1">
+							<text class="fs13 fc6767">事故类型：</text>
+							<text class="fs13 fc6767">{$handleAccident.data.accident.rpaTypeText}</text>
+						</view>
+						<view class="pt10 pb10 row als bb mh12 col1">
+							<text class="fs13 fc6767">事故原因：</text>
+							<text class="fs13 fc6767">{$handleAccident.data.accident.rpaMangerText}</text>
+							<!--<text class="fs13 fc6767">疏忽大意</text>-->
+						</view>
+						<view class="h40 row al bb mh12 col1">
+							<text class="fs13 fc6767">案件状态：</text>
+							<text class="fs13 fcFE7449">{$handleAccident.data.accident.rpaStateDescription}</text>
+							<!--<text class="fs13 fcFE7449">责任认定结束</text>-->
+						</view>
+					</view>
+					<view if="{$type==1}" for="{$handleAccident.data.parties}">
+						<view class="bgfff mt10">
+							<view class="h40 row al col1">
+								<view class="stiao"/>
+								<view class="ml10">
+									<text class="fs14 fc6767">第{item.apInputOrder}方相关信息</text>
+								</view>
+							</view>
+							<view class="h40 row sb bb bt mh12 col1">
+								<text class="fs13 fc6767">姓名</text>
+								<text class="fs13 fc6767">{item.apPartiesName}</text>
+							</view>
+							<view class="h40 row sb bb bt mh12 col1">
+								<text class="fs13 fc6767">身份证号</text>
+								<text class="fs13 fc6767">{item.apLicenseNo}</text>
+							</view>
+							<view class="h40 row sb bb bt mh12 col1">
+								<text class="fs13 fc6767">手机号码</text>
+								<text class="fs13 fc6767">{item.apPartiesPhone}</text>
+							</view>
+							<view class="h40 row sb bb mh12 col1">
+								<text class="fs13 fc6767">车牌号</text>
+								<text class="fs13 fc6767">{item.aviPlateNumber}</text>
+							</view>
+							<view class="h40 row sb bb mh12 col1">
+								<text class="fs13 fc6767">保险公司</text>
+								<text class="fs13 fc6767">{item.aviInsuranceCompanyName}</text>
+							</view>
+							<view class="h40 row sb bb mh12 col1">
+								<text class="fs13 fc6767">责任划分</text>
+								<text class="fs13 fcFE7449">{item.apResponsibilityText}</text>
+							</view>
+						</view>
+					</view>
+					<!--<iframe src="http://120.27.154.154/group1/M00/00/82/cjeE8lpV0gqAaZ24AAZ_yRzGJ5A520.pdf">-->
+					<!--</iframe>-->
+
+					<view if="{$type==2}" for="{$handleAccident.data.parties}">
+						<view class="bgfff mt10">
+							<view class="h40 row al col1">
+								<view class="stiao"/>
+								<view class="ml10">
+									<text class="fs14 fc6767">第{item.apInputOrder}方相关信息</text>
+								</view>
+							</view>
+							<view class="h40 row sb bb bt mh12 col1">
+								<text class="fs13 fc6767">姓名</text>
+								<text class="fs13 fc6767">{item.apPartiesName}</text>
+							</view>
+							<view class="h40 row sb bb bt mh12 col1">
+								<text class="fs13 fc6767">手机号码</text>
+								<text class="fs13 fc6767">{item.apPartiesPhone}</text>
+							</view>
+							<view class="pt15 pb15 ph12">
+								<view if="{$isChoice[item.apInputOrder]}">
+									<view class="btn4 bgFE7449  row ac" if="{$isChoice[item.apInputOrder]=='comfirm'}">
+										<text class="fs15 fcfff">已确认</text>
+									</view>
+									<view class="btn4 bgFE7449  row ac" if="{$isChoice[item.apInputOrder]=='refuse'}">
+										<text class="fs15 fcfff">已拒绝</text>
+									</view>
+								</view>
+								<view else="">
+									<view class="row sb col1">
+										<input class="b fs13 fc999 lg codeinput" placeholder="请输入短信验证码" onChange="setVerific(e,item.apInputOrder)"/>
+										<view class="row ar col1">
+											<view class="b getcode row ac" if="{$time[item.apInputOrder] > 0}">
+												<text class="fc999 fs13">{$time[item.apInputOrder]}s</text>
+											</view>
+											<view class="b2bd3df 2bd3df getcode row ac" else=""
+													onClick="goRetransmission(item.apInputOrder,item.apPartiesPhone)">
+												<text class="fc2bd3df fs13">重发</text>
+											</view>
+										</view>
+									</view>
+									<view class="row sb col1 mt10">
+										<view class="btn4 bgf00 row ac" onClick="goRefuse(item)">
+											<text class="fs15 fcfff">拒绝</text>
+										</view>
+										<view class="btn4 bgFE7449  row ac" onClick="goCheck(item.apId,item.apPartiesPhone,item.apInputOrder)">
+											<text class="fs15 fcfff">提交</text>
+										</view>
+									</view>
+								</view>
+
+							</view>
+						</view>
+					</view>
+				</view>
+				<view class="layerbg row ac" if="{$show1}">
+					<view class="layercon1">
+						<view class="row ac mh15 pt25 pb20 tc col1">
+							<text class="fc333 fs15">当事人未输入验证码，表示不认同当前处理结果</text>
+						</view>
+						<view class="row al col1 bt">
+							<view class="row ac h50 col1 br" onClick="goCancel()">
+								<text class="fs16 fc00a1ff">再看看</text>
+							</view>
+							<view class="row ac h50 col1" onClick="goRefused()">
+								<text class="fs16 fc00a1ff">确定</text>
+							</view>
+						</view>
+					</view>
+				</view>
+
+				<view class="layerbg row ac" if="{$show}">
+					<view class="layercon1">
+						<view class="row ac mh15 pt25 pb20 tc col1">
+							<text class="fc333 fs15">已拒绝事故处理结果，如有异议请告知该当事人于十五日内向上级公安机关申请重新认定！</text>
+						</view>
+						<view class="row ac col1 h50 bt" onClick="goYes()">
+							<text class="fs16 fc00a1ff">知道了</text>
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="w h50 mt30 row ac col1 bgf8f8">
+				<view class="mr12 ml12 br38 h40 bgfea851 row ac col1" if="{$type==1}" onClick="goPush()">
+					<text class="fs15 fcfff">推送给事故相关当事人</text>
+				</view>
+				<view class="mr12 ml12 br38 h40 bgFE7449 row ac col1" else="" onClick="goSure()">
+					<text class="fs15 fcfff">确定</text>
+				</view>
+			</view>
+		</view>
+	</content>
+</page>

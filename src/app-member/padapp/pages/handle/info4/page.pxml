@@ -1,0 +1,76 @@
+<page>
+	<navbar title="事故详情"/>
+	<content>
+		<view class="bgf8f8 mh">
+			<view class="header1 row bbddd">
+				<view class="headericon ac">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">事故详情</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view>
+				<view class="bgfff mt10">
+					<view class="h40 row al col1">
+						<view class="stiao"/>
+						<view class="ml10">
+							<text class="fs14 fc6767">事故第一方当事人相关信息</text>
+						</view>
+					</view>
+					<view class="h40 row sb bb bt mh12 col1">
+						<text class="fs13 fc6767">姓名</text>
+						<text class="fs13 fc6767">张一山</text>
+					</view>
+					<view class="h40 row sb bb bt mh12 col1">
+						<text class="fs13 fc6767">手机号码</text>
+						<text class="fs13 fc6767">18290291928</text>
+					</view>
+					<view class="h40 row sb bb mh12 col1">
+						<text class="fs13 fc6767">车牌号码</text>
+						<text class="fs13 fc6767">渝a2b000</text>
+					</view>
+					<view class="h40 row sb bb mh12 col1">
+						<text class="fs13 fc6767">保险公司</text>
+						<text class="fs13 fc6767">中国平安</text>
+					</view>
+					<view class="h40 row sb  mh12 col1">
+						<text class="fs13 fc6767">责任认定</text>
+						<text class="fs13 fcFE7449">主要责任</text>
+					</view>
+				</view>
+
+				<view class="bgfff mt10">
+					<view class="h40 row al col1">
+						<view class="stiao"></view>
+						<view class="ml10">
+							<text class="fs14 fc6767">事故第二方当事人相关信息</text>
+						</view>
+					</view>
+					<view class="h40 row sb bb bt mh12 col1">
+						<text class="fs13 fc6767">姓名</text>
+						<text class="fs13 fc6767">张一山</text>
+					</view>
+					<view class="h40 row sb bb bt mh12 col1">
+						<text class="fs13 fc6767">手机号码</text>
+						<text class="fs13 fc6767">18290291928</text>
+					</view>
+					<view class="h40 row sb bb mh12 col1">
+						<text class="fs13 fc6767">车牌号码</text>
+						<text class="fs13 fc6767">渝a2b000</text>
+					</view>
+					<view class="h40 row sb bb mh12 col1">
+						<text class="fs13 fc6767">保险公司</text>
+						<text class="fs13 fc6767">中国平安</text>
+					</view>
+					<view class="h40 row sb mh12 col1">
+						<text class="fs13 fc6767">责任认定</text>
+						<text class="fs13 fcFE7449">次要责任</text>
+					</view>
+				</view>
+			</view>
+		</view>
+	</content>
+</page>

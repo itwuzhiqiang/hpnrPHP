@@ -1,0 +1,105 @@
+<page>
+	<navbar title="温馨提醒"/>
+	<content>
+		<view class="mh bgf8f8">
+			<view class="header row">
+				<view class="headericon ac" onClick="goBack()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">挪车</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h44">
+			</view>
+			<view>
+				<view class="w h60 row ac col1 bgfff bt">
+					<view class="row ac col1 mh12">
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac lineorder1 col1">
+								</view>
+								<!--已完成-->
+								<view class="">
+									<icon icon="icon-wancheng" class="fcFE7449 f18"/>
+								</view>
+								<!--未完成-->
+								<!--<view class="circle1">-->
+								<!--</view>-->
+								<!--未进行-->
+								<!--<view class="circle2"/>-->
+								<view class="row ac lineorder1 col1">
+								</view>
+							</view>
+							<view class="row ac h20">
+								<view class="">
+									<text class="fc6767 fs12">拍照取证</text>
+								</view>
+							</view>
+						</view>
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac lineorder1 col1"/>
+								<view class="circle2"/>
+								<view class="row ac lineorder1 col1"/>
+							</view>
+							<view class="row ac h20">
+								<view class="mt12">
+									<text class="fc6767 fs12">事故描述</text>
+								</view>
+							</view>
+						</view>
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac lineorder1 col1"/>
+								<view class="circle2"/>
+								<view class="row ac lineorder1 col1"/>
+							</view>
+							<view class="row ac h20">
+								<view class="mt12">
+									<text class="fc6767 fs12">信息采集</text>
+								</view>
+							</view>
+						</view>
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac lineorder1 col1"/>
+								<view class="circle2"/>
+								<view class="row ac lineorder1 col1"/>
+							</view>
+							<view class="row ac h20">
+								<view class="mt12">
+									<text class="fc6767 fs12">责任划分</text>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view class="mt75 row ac">
+					<view class="wb80">
+						<text class="fs14 fc6767">请主动将车挪至不影响交通的安全地点，若不撤离将按照《重庆市道路交通安全条例》
+							第八十七条规定，</text>
+						<text class="fs14 fcFE7449">处200元罚款</text>
+						<text class="fs14 fc6767">。引起交通拥堵，并处引起交通拥堵，</text>
+						<text class="fs14 fcFE7449">并处暂扣驾驶证1个月</text>
+						<text class="fs14 fc6767">！请将以上要求通知其他事故当事人！</text>
+					</view>
+				</view>
+				<view class="row ac col1 mt50">
+					<view class="vw67 tc">
+						<image class="wb50" src="assets://img/pr1.png"/>
+					</view>
+				</view>
+			</view>
+			<view class="footer row ac col1 bgf8f8" onClick="goDesc()">
+				<view class="btn1 bg2bd3df row ac">
+					<text class="fs15 fcfff">已挪车</text>
+				</view>
+			</view>
+			<view class="h50">
+			</view>
+		</view>
+	</content>
+</page>

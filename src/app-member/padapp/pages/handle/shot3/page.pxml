@@ -1,0 +1,151 @@
+<page>
+	<navbar title="拍照取证"/>
+	<content>
+		<view class="mh bgf8f8">
+			<view class="header row bbddd">
+				<view class="headericon ac" onClick="goBack()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">事故原因</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h44">
+			</view>
+			<view class="w h60 row ac col1 bgfff bt bbddd">
+				<view class="row ac col1 mh12">
+					<view class="col1">
+						<view class="row al col1">
+							<view class="row ac lineorder1 col1"/>
+							<view class="">
+								<icon icon="icon-wancheng" class="fcFE7449 f18"/>
+							</view>
+							<view class="row ac lineorder1 col1"/>
+						</view>
+						<view class="row ac h20">
+							<view class="">
+								<text class="fc6767 fs12">位置采集</text>
+							</view>
+						</view>
+					</view>
+					<view class="col1">
+						<view class="row al col1">
+							<view class="row ac lineorder1 col1"/>
+							<view class="">
+								<icon icon="icon-wancheng" class="fcFE7449 f18"/>
+							</view>
+							<view class="row ac lineorder1 col1"/>
+						</view>
+						<view class="row ac h20">
+							<view class="">
+								<text class="fc6767 fs12">拍照取证</text>
+							</view>
+						</view>
+					</view>
+					<view class="col1">
+						<view class="row al col1">
+							<view class="row ac lineorder1 col1"/>
+							<view class="">
+								<icon icon="icon-wancheng" class="fcFE7449 f18"/>
+							</view>
+							<view class="row ac lineorder1 col1"/>
+						</view>
+						<view class="row ac h20">
+							<view class="">
+								<text class="fc6767 fs12">信息采集</text>
+							</view>
+						</view>
+					</view>
+					<view class="col1">
+						<view class="row al col1">
+							<view class="row ac lineorder1 col1"/>
+							<view class="circle1"/>
+							<view class="row ac lineorder1 col1"/>
+						</view>
+						<view class="row ac h20">
+							<view class="mt12">
+								<text class="fc2bd3df fs12">责任划分</text>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="bgfff ph12">
+				<view class="row al col1 bb pt10 pb10">
+					<view class="w20 row al">
+						<icon icon="icon-dian-copy-copy" class="fc2bd3df f14"/>
+					</view>
+					<text class="fs13 fc6767">事故情形</text>
+				</view>
+				<view class="row al col1 bb pt10 pb10">
+					<view class="w20 row al">
+					</view>
+					<text class="fs13 fc6767">{$atName}</text>
+				</view>
+				<view class="w pt10 bt pb20">
+					<image class="w" src="assets://img/s3.png"/>
+				</view>
+				<view class="w pt10 bt pb20" if="1==0">
+					<image class="w" src="{$atPictureAddress}"/>
+				</view>
+				<view class="row al col1 bb pt10 pb10">
+					<view class="w20 row al">
+						<icon icon="icon-dian-copy-copy" class="fc2bd3df f14"/>
+					</view>
+					<text class="fs13 fc6767">责任划分</text>
+				</view>
+				<view class="row al col1 bb pt10 pb10" if="{$arr[0]}">
+					<view class="w20 row al">
+					</view>
+					<text class="fs13 fc6767">甲方（{$arr[0].name}）：</text>
+					<text class="fs13 fcFE7449">{$arr[0].typeName}</text>
+				</view>
+				<view class="row al col1 bb pt10 pb10" if="{$type>1 && $arr[1]}">
+					<view class="w20 row al">
+					</view>
+					<text class="fs13 fc6767">乙方（{$arr[1].name}）：</text>
+					<text class="fs13 fc2bd3df">{$arr[1].typeName}</text>
+				</view>
+				<view class="row al col1 bb pt10 pb10" if="{$type>2 && $arr[2]}">
+					<view class="w20 row al">
+					</view>
+					<text class="fs13 fc6767">乙方（{$arr[2].name}）：</text>
+					<text class="fs13 fc2bd3df">{$arr[2].typeName}</text>
+				</view>
+				<view class="row al col1 bb pt10 pb10">
+					<view class="w20 row al">
+						<icon icon="icon-dian-copy-copy" class="fc2bd3df f14"/>
+					</view>
+					<text class="fs13 fc6767">法律条款</text>
+				</view>
+				<view class="row al col1 bb pt10 pb10">
+					<view class="w20 row al">
+					</view>
+					<text class="fs13 fc6767">{$atStatute}</text>
+				</view>
+
+				<view class="row al col1 bb pt10 pb10">
+					<view class="w20 row al">
+						<icon icon="icon-dian-copy-copy" class="fc2bd3df f14"/>
+					</view>
+					<text class="fs13 fc6767">法律规定</text>
+				</view>
+				<view class="row al col1 bb pt10 pb10">
+					<view class="w20 row al">
+					</view>
+					<text class="fs13 fc6767">{$atRegulations}</text>
+				</view>
+				<view class="row sb mt20 pb20">
+					<view class="btn2 b2bd3df row ac">
+						<text class="fs15 fc2bd3df">不认可协商结果</text>
+					</view>
+					<view class="btn2 bg2bd3df row ac" onClick="goDetail()">
+						<text class="fs15 fcfff">认可协商结果</text>
+					</view>
+				</view>
+			</view>
+		</view>
+	</content>
+</page>

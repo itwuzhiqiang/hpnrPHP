@@ -1,0 +1,191 @@
+<page>
+	<navbar title="登录"/>
+	<content>
+		<view>
+			<view class="header1 row bbFE7449">
+				<view class="headericon ac" onClick="goBack()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">{$title}</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view>
+				<view class="row ac col1 ph12 bgfff pv15 bbFE7449">
+					<view class="mr10">
+						<icon icon="icon-shuoming1" class="fcFE7449 fs32"/>
+					</view>
+					<view if="{$type=='first' || $type == 'second' || $type == 'third'}">
+						<text>机动车号牌拍照时，注意保证车辆号牌的完整！</text>
+					</view>
+					<view if="{$type=='front'||$type=='behind'}">
+						<text class="fs14 fc6767">
+							请在事故车辆
+						</text>
+						<text class="fs14 fcFE7449">
+							前方大约15米左右处拍全景照。图片应尽量展示事故现场。
+						</text>
+						<text class="fs14 fc6767">
+							如路口形态、道路上的标志标线，车辆行驶方向，车牌信息，以及有可能出现的刹车印痕等信息。
+						</text>
+					</view>
+					<view if="{$type=='impact' || $type=='impact1'}">
+						<text class="fs14 fcFE7449">
+							请在事故现场稍近距离从左右两侧拍中心照。图片应能反映事故车辆号牌、接触部位及损坏情况
+						</text>
+					</view>
+					<view if="{$type=='other'}">
+						<text class="fs14 fcFE7449">
+							补充照片拍摄
+						</text>
+					</view>
+				</view>
+				<view if="{$type=='front'}">
+					<view class="mt10 row ac col1">
+						<view class="pic1">
+							<image class="pic1" src="assets://img/a9.jpg"/>
+						</view>
+					</view>
+					<view class="h50 row ac col1">
+						<text class="fs14 fc6767">正前方示例图</text>
+					</view>
+					<view class="row ac col1">
+						<view class="pic1">
+							<image class="pic1" src="assets://img/a10.jpg"/>
+							<input ref="file" onChange="uploadFile(1)" class="uploadbtnb" type="file" accept="image/*"
+									 capture="camera" defaultValue="从相册中选取"/>
+						</view>
+					</view>
+				</view>
+				<view if="{$type=='behind'}">
+					<view class="mt10 row ac col1">
+						<view class="pic1">
+							<image class="pic1" src="assets://img/a13.jpg"/>
+						</view>
+					</view>
+					<view class="h50 row ac col1">
+						<text class="fs14 fc6767">正后方示例图</text>
+					</view>
+					<view class="row ac col1">
+						<view class="pic1">
+							<image class="pic1" src="assets://img/a14.jpg"/>
+							<input ref="file" onChange="uploadFile(1)" class="uploadbtnb" type="file" accept="image/*"
+									 capture="camera" defaultValue="从相册中选取"/>
+						</view>
+					</view>
+				</view>
+								<view if="{$type=='vin'}">
+                					<view class="mt10 row ac col1">
+                						<view class="pic1">
+                							<image class="pic1" src="assets://img/a9c.png"/>
+                						</view>
+                					</view>
+                					<view class="h50 row ac col1">
+                						<text class="fs14 fc6767">正后方示例图</text>
+                					</view>
+                					<view class="row ac col1">
+                						<view class="pic1">
+                							<image class="pic1" src="assets://img/a10.jpg"/>
+                							<input ref="file" onChange="uploadFile(1)" class="uploadbtnb" type="file" accept="image/*"
+                									 capture="camera" defaultValue="从相册中选取"/>
+                						</view>
+                					</view>
+                				</view>
+				<view if="{$type=='first'}">
+					<view class="mt10 row ac col1">
+						<view class="pic1">
+							<image class="pic1" src="assets://img/a11.jpg"/>
+						</view>
+					</view>
+					<view class="h50 row ac col1">
+						<text class="fs14 fc6767">第一方机动车号牌示例图</text>
+					</view>
+					<view class="row ac col1">
+						<view class="pic1">
+							<image class="pic1" src="assets://img/a12.jpg"/>
+							<input ref="file" onChange="uploadFile(1)" class="uploadbtnb" type="file" accept="image/*"
+									 capture="camera" defaultValue="从相册中选取"/>
+						</view>
+					</view>
+				</view>
+				<view if="{$type=='second'}">
+					<view class="mt10 row ac col1">
+						<view class="pic1">
+							<image class="pic1" src="assets://img/a18.jpg"/>
+						</view>
+					</view>
+					<view class="h50 row ac col1">
+						<text class="fs14 fc6767">第二方机动车号牌示例图</text>
+					</view>
+					<view class="row ac col1">
+						<view class="pic1">
+							<image class="pic1" src="assets://img/a17.jpg"/>
+							<input ref="file" onChange="uploadFile(1)" class="uploadbtnb" type="file" accept="image/*"
+									 capture="camera" defaultValue="从相册中选取"/>
+						</view>
+					</view>
+				</view>
+				<view if="{$type=='third'}">
+					<view class="mt10 row ac col1">
+						<view class="pic1">
+							<image class="pic1" src="assets://img/a18.jpg"/>
+						</view>
+					</view>
+					<view class="h50 row ac col1">
+						<text class="fs14 fc6767">第三方机动车号牌示例图</text>
+					</view>
+					<view class="row ac col1">
+						<view class="pic1">
+							<image class="pic1" src="assets://img/a17.jpg"/>
+							<input ref="file" onChange="uploadFile(1)" class="uploadbtnb" type="file" accept="image/*"
+									 capture="camera" defaultValue="从相册中选取"/>
+						</view>
+					</view>
+				</view>
+				<view if="{$type=='impact' || $type == 'impact1'}">
+					<view class="mt10 row ac col1">
+						<view class="pic1">
+							<image class="pic1" src="assets://img/a15.jpg"/>
+						</view>
+					</view>
+					<view class="h50 row ac col1">
+						<text class="fs14 fc6767">碰撞部位示例图</text>
+					</view>
+					<view class="row ac col1">
+						<view class="pic1">
+							<image class="pic1" src="assets://img/a16.jpg"/>
+							<input ref="file" onChange="uploadFile(1)" class="uploadbtnb" type="file" accept="image/*"
+									 capture="camera" defaultValue="从相册中选取"/>
+						</view>
+					</view>
+				</view>
+				<view if="{$type=='other'}">
+					<view class="mt10 row ac col1">
+						<view class="pic1">
+							<image class="pic1" src="assets://img/a15.jpg"/>
+						</view>
+					</view>
+					<view class="h50 row ac col1">
+						<text class="fs14 fc6767">补充照片拍摄</text>
+					</view>
+					<view class="row ac col1">
+						<view class="pic1">
+							<image class="pic1" src="assets://img/a16.jpg"/>
+							<input ref="file" onChange="uploadFile(1)" class="uploadbtnb" type="file" accept="image/*"
+									 capture="camera" defaultValue="从相册中选取"/>
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="footer1 row ac mt10 col1 bgf8f8">
+				<view class="btn1 bg2bd3df row ac hidden positionr">
+					<input ref="file1" class="uploadbtnsm" onChange="uploadFile(2)" type="file" accept="image/*"
+							 defaultValue="从相册中选择"/>
+					<text class="fcfff fs15">从相册选择</text>
+				</view>
+			</view>
+		</view>
+	</content>
+</page>

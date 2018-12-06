@@ -1,0 +1,36 @@
+<page>
+	<navbar title="说明"/>
+	<content>
+		<view class="mh col1 column bgf8f8">
+			<view class="header row bb">
+				<view class="headericon ac" onClick="goBack()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">说明</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h44"/>
+			<view class="column al col1 ph12">
+				<view class="mt100">
+					<icon icon="icon-tixing" class="fc55e0ea fs120"/>
+				</view>
+				<view class="tc">
+					<text class="fs16 fcfe7b50 wr" id="btn">
+						{$url}
+					</text>
+				</view>
+				<view class="mt10">
+					<text class="fs14 fc6767">请复制链接到浏览器打开</text>
+				</view>
+				<!--<view class="row ac mt10">-->
+					<!--<view class="btn3 bg2bd3df row ac">-->
+						<!--<text class="fcfff fs13">一键复制</text>-->
+					<!--</view>-->
+				<!--</view>-->
+			</view>
+		</view>
+	</content>
+</page>

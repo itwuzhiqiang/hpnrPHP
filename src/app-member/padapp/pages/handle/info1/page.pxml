@@ -1,0 +1,127 @@
+<page>
+	<navbar title="拍照取证"/>
+	<content>
+		<view class="bgf8f8 mh">
+			<view class="header1 row bbddd">
+				<view class="headericon ac">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">事故信息</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view>
+				<view class="mh12 row col1 b box1 mt10 bgfff">
+					<view class="col1">
+						<view class="h40 row sb col1 bb">
+							<view class="row al col1">
+								<view class="stiao1"></view>
+								<view class="ml10"><text class="fs14 fc999">对方信息</text></view>
+							</view>
+							<view class="mr12"><text class="fs12 fc999">查看详情</text><icon icon="icon-xiangyou" class="fs12 fc999"/></view>
+						</view>
+						<view class="row sb ph12">
+							<view>
+								<view class="row al h40">
+									<view class="w20 row al">
+										<icon icon="icon-dian-copy-copy" class="fc2bd3df f14"/>
+									</view>
+									<text class="fs13 fc999">姓名：张一山</text>
+								</view>
+								<view class="row al pb15">
+									<view class="w20 row al"></view>
+									<text class="fs13 fc999">号牌号码：渝A2B000</text>
+								</view>
+							</view>
+							<view><image class="w40" src="assets://img/z1.png"/></view>
+						</view>
+					</view>
+				</view>
+
+				<view class="mh12 row col1 b box1 mt10 bgfff">
+					<view class="col1">
+						<view class="h40 row sb col1 bb">
+							<view class="row al col1">
+								<view class="stiao1"></view>
+								<view class="ml10"><text class="fs14 fc999">本方信息</text></view>
+							</view>
+							<view class="mr12"><text class="fs12 fc999">查看详情</text><icon icon="icon-xiangyou" class="fs12 fc999"/></view>
+						</view>
+						<view class="row sb ph12">
+							<view>
+								<view class="row al h40">
+									<view class="w20 row al">
+										<icon icon="icon-dian-copy-copy" class="fc2bd3df f14"/>
+									</view>
+									<text class="fs13 fc999">姓名：张一山</text>
+								</view>
+								<view class="row al pb15">
+									<view class="w20 row al"></view>
+									<text class="fs13 fc999">号牌号码：渝A2B000</text>
+								</view>
+							</view>
+							<view><image class="w40" src="assets://img/z2.png"/></view>
+						</view>
+					</view>
+				</view>
+
+
+				<view class="mt10" if="{1==2}">
+					<view class="bgfff mt10">
+						<view class="h40 row al col1">
+							<view class="stiao1">
+							</view>
+							<view class="ml10 col1">
+								<text class="fs14 fc999">第二方信息</text>
+							</view>
+							<view class="mr12"><text class="fs12 fc999">查看详情</text><icon icon="icon-xiangyou" class="fs12 fc999"/></view>
+						</view>
+						<view class="h40 row sb bt mh12 col1">
+							<text class="fs13 fc999">责任认定</text>
+							<text class="fs13 fc999">全责</text>
+						</view>
+						<view class="h40 row sb bt mh12 col1">
+							<text class="fs13 fc999">姓名</text>
+							<text class="fs13 fc999">张一山</text>
+						</view>
+						<view class="h40 row sb bt mh12 col1">
+							<text class="fs13 fc999">车牌号</text>
+							<text class="fs13 fc999">渝AB000</text>
+						</view>
+					</view>
+
+					<view class="bgfff mt10">
+						<view class="h40 row al col1">
+							<view class="stiao1">
+							</view>
+							<view class="ml10 col1">
+								<text class="fs14 fc999">本方信息</text>
+							</view>
+							<view class="mr12"><text class="fs12 fc999">查看详情</text><icon icon="icon-xiangyou" class="fs12 fc999"/></view>
+						</view>
+						<view class="h40 row sb bt mh12 col1">
+							<text class="fs13 fc999">责任认定</text>
+							<text class="fs13 fc999">全责</text>
+						</view>
+						<view class="h40 row sb bt mh12 col1">
+							<text class="fs13 fc999">姓名</text>
+							<text class="fs13 fc999">张一山</text>
+						</view>
+						<view class="h40 row sb bt mh12 col1">
+							<text class="fs13 fc999">车牌号</text>
+							<text class="fs13 fc999">渝AB000</text>
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="footer row ac col1 bgf8f8">
+				<view class="row ac btn1 bg2bd3df b2bd3df mb10">
+					<text class="fs15 fcfff">返回</text>
+				</view>
+			</view>
+			<view class="h50"></view>
+		</view>
+	</content>
+</page>

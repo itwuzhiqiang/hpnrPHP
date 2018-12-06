@@ -1,0 +1,48 @@
+<page>
+	<navbar title="忘记密码"/>
+	<content>
+		<view class="mh bgfff">
+			<view class="header row">
+				<view class="headericon ac" onClick="goBack()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">忘记密码</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h44"/>
+			<view>
+				<view class="pl20 pr20 bgfff">
+					<view class="row sb col1 h45 bbddd">
+						<text class="fs14 fc666">手机号</text>
+						<input type="text" class="col1 lg tr fs14 fc333" placeholder="请输入手机号" onChange="setVal(e,'duAccount')"/>
+					</view>
+					<view class="row sb col1 h45 bbddd">
+						<text class="fs14 fc666">新密码</text>
+						<input type="password" class="col1 lg tr fs14 fc333" placeholder="请输入新密码"
+								 onChange="setVal(e,'password')"/>
+					</view>
+					<view class="row sb col1 h50 bbddd">
+						<view>
+							<view class="row ac getcode1 bg2bd3df" onClick="goSendCode()" if="{$time==60}">
+								<text class="fcfff fs14">获取验证码</text>
+							</view>
+							<view class="row ac getcode1 bg2bd3df" else="">
+								<text class="fcfff fs14">{$time}s</text>
+							</view>
+						</view>
+						<input type="text" class="lg fs14 tc fc333 b getcode1" placeholder="验证码"
+								 onChange="setVal(e,'verification')"/>
+					</view>
+				</view>
+				<view class="row ac col1 mt50" onClick="goRegister()">
+					<view class="row ac btn1 bg2bd3df">
+						<text class="fcfff fs15">确定</text>
+					</view>
+				</view>
+			</view>
+		</view>
+	</content>
+</page>

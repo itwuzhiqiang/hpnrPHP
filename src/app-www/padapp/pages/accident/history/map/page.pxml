@@ -1,0 +1,26 @@
+<page>
+	<navbar title="登录"/>
+	<content>
+		<view class="h">
+			<view class="header row bb">
+				<view class="headericon ac" onClick="goHistory()">
+					<icon icon="icon-xiangzuo" class="fc333 fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">坐标采集</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h44">
+			</view>
+			<view>
+				<view class="ph12">
+					<view class="bgtest">
+						<map showType="picker" onChange="setAddree(e)" startPoint="{$startPoint}" showLable="false"/>
+					</view>
+				</view>
+			</view>
+		</view>
+	</content>
+</page>

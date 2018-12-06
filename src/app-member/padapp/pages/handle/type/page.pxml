@@ -1,0 +1,36 @@
+<page>
+	<navbar title="请选择"/>
+	<content>
+		<view class="mh bgf8f8">
+			<view class="header row">
+				<view class="headericon ac" onClick="goHistory()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">请选择</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h44"/>
+			<view>
+				<view class="tixing h60 row ac bbFE7449 bgfff bt">
+					<view class="mr10">
+						<icon icon="icon-shuoming1" class="fcFE7449 fs28"/>
+					</view>
+					<text class="fs14 fcFE7449">请选择事故类型!</text>
+				</view>
+				<view class="w h60"/>
+				<view class="mt10" onClick="goShot1(1)">
+					<image class="w" src="assets://img/car1.jpg"/>
+				</view>
+				<view onClick="goShot1(2)">
+					<image class="w" src="assets://img/car2.jpg"/>
+				</view>
+				<view onClick="goShot1(3)">
+					<image class="w" src="assets://img/car3.jpg"/>
+				</view>
+			</view>
+		</view>
+	</content>
+</page>

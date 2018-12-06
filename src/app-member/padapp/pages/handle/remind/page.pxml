@@ -1,0 +1,64 @@
+<page>
+	<navbar title="温馨提醒"/>
+	<content>
+		<view class="mh bgf8f8">
+			<view class="header row bbddd">
+				<view class="headericon ac">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">温馨提醒</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h44"/>
+			<view>
+				<view class="tixing h60 row ac bbFE7449 bgfff">
+					<view class="mr10">
+						<icon icon="icon-shuoming1" class="fcFE7449 fs28"/>
+					</view>
+					<view>
+						<view>
+							<text class="fs14 fcFE7449">有以下情形之一应立即报道110！</text>
+						</view>
+						<view>
+							<text class="fs14 fcFE7449">有以下情形请联系交通执法人员处理!</text>
+						</view>
+					</view>
+				</view>
+				<view class="w h60"/>
+				<view class="row ac hb70 col1 mt10">
+					<image class="vw80" src="assets://img/tx1.png"/>
+				</view>
+			</view>
+			<view class="layerbg row ac" if="{$show}">
+				<view class="layercon1">
+					<view class="row ac mh15 tc col1 pt20 pb20">
+						<text class="fc6767 fs14">本系统只适用于财产损失事故，设计人员伤亡请报警！</text>
+					</view>
+					<view class="row al col1 bt">
+						<view class="row ac h50 col1 br" onClick="setShow()">
+							<text class="fs15 fc00a1ff">取消</text>
+						</view>
+						<view class="row ac h50 col1" onClick="goRemind1()">
+							<text class="fs15 fc00a1ff">知道了</text>
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="footer row al col1 bgf8f8">
+				<view class="row sb col1 ph12">
+					<view class="btn4 b2bd3df row ac">
+						<text class="fs14 fc2bd3df">立即报警</text>
+					</view>
+					<view class="btn4 bg2bd3df row ac" onClick="setShow()">
+						<text class="fs14 fcfff">继续处理</text>
+					</view>
+				</view>
+			</view>
+			<view class="h50"/>
+		</view>
+
+	</content>
+</page>

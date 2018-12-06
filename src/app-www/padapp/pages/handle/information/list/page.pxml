@@ -1,0 +1,30 @@
+<page>
+	<navbar title="请选择号牌种类"/>
+	<content>
+		<view>
+			<view class="header row">
+				<view class="headericon ac" onClick="goBack()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">请选择号牌种类</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h44">
+			</view>
+			<view class="bgfff ph12" for="{$handlePlateType.data}">
+				<view class="row sb col1 bb pt10 pb10">
+					<view class="row al col1 mr10">
+						<view onClick="goChoose(item)">
+							<text class="fs14 fc6767">{item.instructions}</text>
+						</view>
+					</view>
+					<view class="circle3" onClick="goChoose(item)">
+					</view>
+				</view>
+			</view>
+		</view>
+	</content>
+</page>

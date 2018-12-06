@@ -1,0 +1,144 @@
+<app>
+	<configs>
+		<config key="server" env="dev" value=""/>
+		<config key="server" env="tdev" value=""/>
+		<config key="server" env="product" value=""/>
+		<config key="rpapi" env="dev" value="http://test.fastepay.cn"/>
+		<config key="rpapi" env="tdev" value="http://test.fastepay.cn"/>
+		<config key="rpapi" env="product" value="http://218.70.37.217:28769"/>
+	</configs>
+	<pages>
+		<page dir="index"/>
+		<page dir="workbench"/>
+		<page dir="login"/>
+		<page dir="forget"/>
+		<page dir="home"/>
+		<page dir="register"/>
+		<page dir="append"/><!--提醒-->
+
+		<!--事故处理-->
+		<page dir="handle/remind"/><!--温馨提醒-->
+		<page dir="handle/remind1"/><!--温馨提醒-->
+		<page dir="handle/remind2"/><!--挪车-->
+		<page dir="handle/info1"/><!--信息事故-->
+		<page dir="handle/info2"/><!--信息事故2-->
+		<page dir="handle/info3"/><!--案件详情-->
+		<page dir="handle/info4"/><!--事故详情-->
+		<page dir="handle/info5"/><!--事故照片-->
+		<page dir="handle/search1"/><!--信息查询-->
+		<page dir="handle/search1/detail"/><!--信息查询-->
+		<page dir="handle/search1/detail/parties"/><!--信息查询-->
+		<page dir="handle/search1/detail/evidences"/><!--信息查询-->
+
+		<page dir="handle/search2"/><!--案件查询-->
+		<page dir="handle/type"/><!--选择类型-->
+		<page dir="handle/type1"/><!--选择类型-->
+		<page dir="handle/shot"/><!--拍摄照片-->
+		<page dir="handle/shot1"/><!--拍摄照片-->
+		<page dir="handle/shot2"/><!--拍摄照片-->
+		<page dir="handle/shot3"/><!--事故形态-->
+		<page dir="handle/shot4"/><!--照片审核-->
+		<page dir="handle/shot5"/><!--照片审核-->
+
+		<page dir="handle/desc"/><!--事故描述-->
+		<page dir="handle/desc/map"/><!--地图-->
+		<page dir="handle/desc/update"/><!--地图-->
+
+		<page dir="handle/information"/><!--信息采集-->
+		<page dir="handle/information/create"/><!--信息采集-->
+		<page dir="handle/information/list"/><!--信息采集-->
+		<page dir="handle/information/list1"/><!--信息采集-->
+
+		<page dir="handle/detail"/><!--信息采集-->
+		<page dir="handle/accident"/><!--事故情形-->
+		<page dir="handle/accident/detail"/><!--事故情形-->
+
+		<page dir="handle/duty"/><!--事故情形-->
+		<page dir="handle/duty/detail"/><!--事故情形-->
+		<page dir="handle/duty/accident"/><!--事故情形-->
+
+		<page dir="handle/responsibility"/><!--事故情形-->
+		<page dir="handle/responsibility/template"/><!--事故情形-->
+
+		<page dir="user/msg/list"/><!--消息列表-->
+		<page dir="user/msg/notice"/><!--官方公告-->
+		<page dir="user/feedback"/><!--官方公告-->
+		<page dir="user/index"/><!--我的-->
+		<page dir="user/info"/><!--个人信息-->
+		<page dir="user/info/update"/><!--修改个人信息-->
+		<page dir="user/pwd"/><!--修改密码-->
+		<page dir="user/qrcode"/><!--二维码-->
+		<page dir="user/upd"/><!--姓名修改-->
+		<page dir="user/jzmsg"/><!--驾照信息-->
+		<page dir="user/set"/><!--设置-->
+		<page dir="user/clmsg"/><!--车辆信息-->
+		<page dir="user/clmsg/create"/><!--添加车辆信息-->
+		<page dir="user/clmsg/list"/><!--车辆号牌-->
+		<page dir="user/bxmsg"/><!--添加保险信息-->
+		<page dir="user/use"/><!--使用说明-->
+		<page dir="user/driver"/><!--驾驶人信息-->
+		<page dir="user/driver/create"/><!--添加驾驶人信息-->
+		<!--<page dir="handle/shot"/>&lt;!&ndash;拍摄照片&ndash;&gt;-->
+	</pages>
+
+	<dataqls>
+		<!--<dataql key="bannerList" from="controller" ql="banner.list" dataType="dataList" />-->
+		<!--<dataql key="articleList" from="controller" ql="article.list" dataType="dataPageList" />-->
+		<dataql key="memberLogin" from="controller" ql="api.login" dataType="data"/><!--登录-->
+		<dataql key="memberLogout" from="controller" ql="api.logout" dataType="data"/><!--退出-->
+		<dataql key="register" from="controller" ql="api.register" dataType="data"/><!--注册-->
+		<dataql key="sendCode" from="controller" ql="api.sendCode" dataType="data"/><!--发送验证码-->
+
+		<dataql key="apiTest" from="controller" ql="api.test" dataType="data"/>
+
+		<dataql key="userInfo" from="controller" ql="user.info" dataType="data"/>
+		<dataql key="userUpdate" from="controller" ql="user.update" dataType="data"/>
+		<dataql key="updatePassword" from="controller" ql="user.updatePassword" dataType="data"/>
+		<dataql key="forgetPassword" from="controller" ql="api.forget" dataType="data"/>
+		<dataql key="userFeedback" from="controller" ql="user.feedback" dataType="data"/>
+
+		<dataql key="userCarList" from="controller" ql="car.carList" dataType="dataList"/>
+		<!--<dataql key="handlePlateType" from="controller" ql="car.plateType" dataType="data"/>&lt;!&ndash;事故车牌类型&ndash;&gt;-->
+		<dataql key="bindLicense" from="controller" ql="car.bindLicense" dataType="data"/><!--绑定驾驶证-->
+		<dataql key="licenseList" from="controller" ql="car.licenseList" dataType="dataList"/><!--绑定驾驶证-->
+		<dataql key="bindingVehicle" from="controller" ql="car.bindingVehicle" dataType="dataList"/><!--绑定车辆-->
+
+		<dataql key="handleReport" from="controller" ql="handle.report" dataType="data"/><!--基础数据填报-->
+		<dataql key="handleSubmitevidence" from="controller" ql="handle.submitevidence" dataType="data"/><!--事故证据提交-->
+		<dataql key="handleAccident" from="controller" ql="handle.accident" dataType="data"/><!--事故详情-->
+		<dataql key="handleConfirmConsultation" from="controller" ql="handle.confirmConsultation"
+				  dataType="data"/><!--事故当事人-->
+		<dataql key="handleSaveParty" from="controller" ql="handle.saveParty" dataType="data"/><!--事故逐个录入当事人-->
+		<dataql key="handleRemoveParty" from="controller" ql="handle.removeParty" dataType="data"/><!--移除当事人-->
+		<dataql key="handleDriverInfo" from="controller" ql="handle.driverInfo" dataType="data"/><!--根据身份证获取信息-->
+		<dataql key="handleCarInfo" from="controller" ql="handle.carInfo" dataType="data"/><!--根据车牌号获取车辆信息-->
+		<dataql key="handlePlateType" from="controller" ql="handle.plateType" dataType="data"/><!--事故车牌类型-->
+		<dataql key="handleQueryAll" from="controller" ql="handle.queryAll" dataType="data"/><!--保险公司-->
+		<dataql key="handleMoveCare" from="controller" ql="handle.moveCare" dataType="data"/><!--挪车-->
+		<dataql key="handleCollection" from="controller" ql="handle.collection" dataType="data"/><!--由交警定责-->
+		<dataql key="handleUnCollection" from="controller" ql="handle.unCollection" dataType="data"/><!--由用户自行定责-->
+		<dataql key="handleAccidentType" from="controller" ql="handle.accidentType" dataType="data"/><!--事故情形-->
+		<dataql key="handleAccidentTypeDetails" from="controller" ql="handle.accidentTypeDetails" dataType="data"/><!--事故情形详情-->
+		<dataql key="handleSendToParty" from="controller" ql="handle.sendToParty" dataType="data"/><!--推送事故给当事人-->
+
+		<dataql key="handleSend" from="controller" ql="handle.send" dataType="data"/><!--事故给当事人发送验证码-->
+		<dataql key="handleSendOnly" from="controller" ql="handle.sendOnly" dataType="data"/><!--发送验证码-->
+		<dataql key="handleVerificAndPhone" from="controller" ql="handle.verificAndPhone" dataType="data"/><!--验证码比对-->
+		<dataql key="handleRefused" from="controller" ql="handle.refused" dataType="data"/><!--用户拒绝-->
+		<dataql key="handleComfirm" from="controller" ql="handle.comfirm" dataType="data"/><!--用户确认-->
+		<dataql key="handlePartyComfirm" from="controller" ql="handle.partyComfirm" dataType="data"/><!--用户确认-->
+
+		<dataql key="handleCognizance" from="controller" ql="handle.cognizance" dataType="data"/><!--生成事故责任书-->
+
+		<dataql key="accidentHistoryGetAll" from="controller" ql="accident.historyGetAll" dataType="dataList"/><!--已处理历史事故列表-->
+		<dataql key="accidentHistoryCondition" from="controller" ql="accident.historyCondition" dataType="data"/><!--已处理历史事故列表-->
+		<dataql key="accidentHistoryProcessed" from="controller" ql="accident.historyProcessed" dataType="dataList"/><!--已处理历史事故列表-->
+		<dataql key="accidentSearchList" from="controller" ql="accident.searchList" dataType="dataList"/><!--已处理历史事故列表-->
+		<dataql key="accidentDetail" from="controller" ql="accident.obtain" dataType="data"/><!--获取案件详情-->
+
+		<dataql key="msgQueryByType" from="controller" ql="msg.queryByType" dataType="data"/><!--根据消息类型获取消息列表-->
+		<dataql key="msgQueryByParentId" from="controller" ql="msg.queryByParentId" dataType="data"/><!--获取消息顶级栏目-->
+		<dataql key="msgQueryByDetils" from="controller" ql="msg.QueryByDetils" dataType="data"/><!--消息详情-->
+		<dataql key="eventMsg" from="controller" ql="msg.eventMsg" dataType="data"/><!--用户事件消息-->
+	</dataqls>
+</app>

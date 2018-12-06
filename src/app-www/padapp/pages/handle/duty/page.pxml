@@ -1,0 +1,197 @@
+<page>
+	<navbar title="责任划分"/>
+	<content>
+		<view class="mh bgf8f8">
+			<view class="header1 row">
+				<view class="headericon ac" onClick="goHistory()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">责任划分</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view>
+				<view class="w h60 row ac col1 bgfff bt">
+					<view class="row ac col1 mh12">
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac lineorder1 col1">
+								</view>
+								<!--已完成-->
+								<view class="">
+									<icon icon="icon-wancheng" class="fcFE7449 f18"/>
+								</view>
+								<!--未完成-->
+								<!--<view class="circle1">-->
+								<!--</view>-->
+								<!--未进行-->
+								<!--<view class="circle2"/>-->
+								<view class="row ac lineorder1 col1">
+								</view>
+							</view>
+							<view class="row ac h20">
+								<view class="">
+									<text class="fc6767 fs12">拍照取证</text>
+								</view>
+							</view>
+						</view>
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac lineorder1 col1"/>
+								<view class="">
+									<icon icon="icon-wancheng" class="fcFE7449 f18"/>
+								</view>
+								<view class="row ac lineorder1 col1"/>
+							</view>
+							<view class="row ac h20">
+								<view class="">
+									<text class="fc6767 fs12">事故描述</text>
+								</view>
+							</view>
+						</view>
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac col1 lineorder1"/>
+								<view class="">
+									<icon icon="icon-wancheng" class="fcFE7449 f18"/>
+								</view>
+								<view class="row ac col1 lineorder1"/>
+							</view>
+							<view class="row ac h20">
+								<view class="">
+									<text class="fc6767 fs12">信息采集</text>
+								</view>
+							</view>
+						</view>
+						<view class="col1">
+							<view class="row al col1">
+								<view class="row ac lineorder1 col1"/>
+								<view class="circle1"/>
+								<view class="row ac lineorder1 col1"/>
+							</view>
+							<view class="row ac h20">
+								<view class="">
+									<text class="fc2bd3df fs12">责任划分</text>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view>
+					<view class="row sb h40 bgfff col1 ph12 bt">
+						<text class="fs13 fc6767">事故原因</text>
+						<view class="row al" onClick="goAccident()">
+							<text class="fs13 fc6767">{$accidentTitle}</text>
+							<icon icon="icon-xiangyou" class="fc999 fs14"/>
+						</view>
+					</view>
+				</view>
+				<view if="{$handleConfirmConsultation.data}">
+					<view class="bgfff mt10" for="{$handleConfirmConsultation.data}">
+						<view class="h40 row al col1">
+							<view class="stiao">
+							</view>
+							<view class="ml10">
+								<text class="fs14 fc6767">第{item.apInputOrder}方驾驶人及车辆信息</text>
+							</view>
+						</view>
+						<view class="h40 row sb bb bt mh12 col1">
+							<text class="fs13 fc6767">姓名</text>
+							<text class="fs13 fc6767">{item.apPartiesName}</text>
+						</view>
+						<view class="h40 row sb bb mh12 col1">
+							<text class="fs13 fc6767">车牌号</text>
+							<text class="fs13 fc6767">{item.aviPlateNumber}</text>
+						</view>
+						<view class="h40 row sb bb mh12 col1">
+							<text class="fs13 fc6767">驾驶状态</text>
+							<text class="fs13 fcfe7b50">{item.apLicenseState?item.apLicenseState:'暂无'}</text>
+						</view>
+						<view class="h40 row sb bb mh12 col1">
+							<text class="fs13 fc6767">车辆状态</text>
+							<text class="fs13 fcfe7b50">{item.aviLicenseState?item.aviLicenseState:'暂无'}</text>
+						</view>
+						<view class="pt10 pb10 bb row ac col1">
+							<view class="pic1 br5">
+								<image class="h w" src="{item.aviLicensePhotos}"/>
+							</view>
+						</view>
+						<view class="row sa col1 pt15 pb15" if="{$type!=1}">
+							<view class="{'row ac ' +($responsibilityType[item.apId]==5?'zebtn2':'zebtn1')}"
+									onClick="setResponsibilityType(5,item.apId,'全责')">
+								<text class="{'fs13 ' + ($responsibilityType[item.apId]==5?'fcfff':'fc6767')}">
+									全责
+								</text>
+							</view>
+							<view class="{'row ac ' +($responsibilityType[item.apId]==3?'zebtn2':'zebtn1')}"
+									onClick="setResponsibilityType(3,item.apId,'同责')">
+								<text class="{'fs13 ' + ($responsibilityType[item.apId]==3?'fcfff':'fc6767')}">
+									同责
+								</text>
+							</view>
+							<view class="{'row ac ' +($responsibilityType[item.apId]==1?'zebtn2':'zebtn1')}"
+									onClick="setResponsibilityType(1,item.apId,'无责')">
+								<text class="{'fs13 ' + ($responsibilityType[item.apId]==1?'fcfff':'fc6767')}">
+									无责
+								</text>
+							</view>
+							<view class="{'row ac ' +($responsibilityType[item.apId]==4?'zebtn2':'zebtn1')}"
+									onClick="setResponsibilityType(4,item.apId,'主责')">
+								<text class="{'fs13 ' + ($responsibilityType[item.apId]==4?'fcfff':'fc6767')}">
+									主责
+								</text>
+							</view>
+							<view class="{'row ac ' +($responsibilityType[item.apId]==2?'zebtn2':'zebtn1')}"
+									onClick="setResponsibilityType(2,item.apId,'次责')">
+								<text class="{'fs13 ' + ($responsibilityType[item.apId]==2?'fcfff':'fc6767')}">
+									次责
+								</text>
+							</view>
+						</view>
+						<view else="">
+							<view class="{'row ac ' +($responsibilityType[item.apId]==5?'zebtn2':'zebtn1')}"
+									onClick="setResponsibilityType(5,item.apId,'全责')">
+								<text class="{'fs13 ' + ($responsibilityType[item.apId]==5?'fcfff':'fc6767')}">
+									全责
+								</text>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+
+			<view class="layerbg row ac" if="{$show}">
+				<view class="layercon1">
+					<view class="h45 row ac col1 mt15">
+						<text class="fs17 fc333 fw600">温馨提示</text>
+					</view>
+					<view class="row ac mh15 col1">
+						<text class="fc6767 fs14">确认发送定责信息到后台系统处理吗？点击'发送'以提交到后台</text>
+					</view>
+					<view class="row sb mh15 col1 mt15 mb15">
+						<view class="row ac btn3" onClick="goCancel()">
+							<text class="fs15 fc2bd3df">取消</text>
+						</view>
+						<view class="row ac btn3" onClick="goSure()">
+							<text class="fs15 fc2bd3df">发送</text>
+						</view>
+					</view>
+				</view>
+			</view>
+
+			<view class="footer1 row ac col1 bgf8f8">
+				<view class="row ac mh12">
+					<!--<view class="btn4 b2bd3df row ac" onClick="goBackstage()">-->
+					<!--<text class="fs15 fc2bd3df">后台定责</text>-->
+					<!--</view>-->
+					<view class="btn1 bg2bd3df b2bd3df row ac" onClick="goResponsibility()">
+						<text class="fs15 fcfff">生成事故书</text>
+					</view>
+
+				</view>
+			</view>
+		</view>
+	</content>
+</page>

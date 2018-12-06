@@ -1,0 +1,53 @@
+<page>
+<navbar title="登录"/>
+<content>
+	<view class="mh bgf8f8">
+		<view class="header row bb">
+			<view class="headericon ac" onClick="goBack()">
+				<icon icon="icon-xiangzuo" class="fc333 f18"/>
+			</view>
+			<view class="col1 ac">
+				<text class="fc000 fs16">坐标采集</text>
+			</view>
+			<view class="headericon ac">
+			</view>
+		</view>
+		<view class="h44"/>
+		<view>
+
+			<!--<view class="ph12 row al col1 h40">-->
+				<!--<text class="fs14 fc6767">地址：重庆万州区音乐广场</text>-->
+			<!--</view>-->
+			<view class="ph12">
+				<view class="asd1">
+					<map showType="picker" onChange="setAddree(e)" startPoint="{$startPoint}" showLable="false"/>
+				</view>
+			</view>
+			<!--<view class="layerbg row ac">-->
+			<!--<view class="layercon1">-->
+			<!--<view class="row ac mh15 pt25 pb20 tc col1">-->
+			<!--<text class="fc333 fs15">请核对地图上的位置是否正确，点击正确以保存坐标</text>-->
+			<!--</view>-->
+			<!--<view class="row al col1 bt">-->
+			<!--<view class="row ac h50 col1 br">-->
+			<!--<text class="fs16 fc00a1ff">取消</text>-->
+			<!--</view>-->
+			<!--<view class="row ac h50 col1">-->
+			<!--<text class="fs16 fc00a1ff">正确</text>-->
+			<!--</view>-->
+			<!--</view>-->
+			<!--</view>-->
+			<!--</view>-->
+		</view>
+
+
+		<!--<view class="footer row ac col1 bgf8f8">-->
+			<!--<view class="btn1 bg2bd3df row ac">-->
+				<!--<text class="fs15 fcfff">保存坐标</text>-->
+			<!--</view>-->
+		<!--</view>-->
+		<!--<view class="h50">-->
+		<!--</view>-->
+	</view>
+</content>
+</page>

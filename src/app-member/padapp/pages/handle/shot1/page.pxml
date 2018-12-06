@@ -1,0 +1,356 @@
+<page>
+	<navbar title="拍照取证"/>
+	<content>
+		<view>
+			<view class="header1 row">
+				<view class="headericon ac" onClick="goBack()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">拍照取证</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view>
+				<view class="w h60 row ac col1 bgfff bt">
+					<view class="w h60 row ac col1 bgfff bt">
+						<view class="row ac col1 mh12">
+							<view class="col1">
+								<view class="row al col1">
+									<view class="row ac lineorder1 col1">
+									</view>
+									<!--已完成-->
+									<!--<view class="">-->
+									<!--<icon icon="icon-wancheng" class="fcFE7449 f18"/>-->
+									<!--</view>-->
+									<!--未完成-->
+									<view class="circle1">
+									</view>
+									<!--未进行-->
+									<!--<view class="circle2"/>-->
+									<view class="row ac lineorder1 col1">
+									</view>
+								</view>
+								<view class="row ac h20">
+									<!--完成不需要mt12-->
+									<view class="mt12">
+										<text class="fc2bd3df fs12">拍照取证</text>
+									</view>
+								</view>
+							</view>
+							<view class="col1">
+								<view class="row al col1">
+									<view class="row ac lineorder1 col1"/>
+									<view class="circle2"/>
+									<view class="row ac lineorder1 col1"/>
+								</view>
+								<view class="row ac h20">
+									<view class="mt12">
+										<text class="fc6767 fs12">事故描述</text>
+									</view>
+								</view>
+							</view>
+							<view class="col1">
+								<view class="row al col1">
+									<view class="row ac col1 lineorder1"/>
+									<view class="circle2"/>
+									<view class="row ac col1 lineorder1"/>
+								</view>
+								<view class="row ac h20">
+									<view class="mt12">
+										<text class="fc6767 fs12">信息采集</text>
+									</view>
+								</view>
+							</view>
+							<view class="col1">
+								<view class="row al col1">
+									<view class="row ac lineorder1 col1"/>
+									<view class="circle2"/>
+									<view class="row ac lineorder1 col1"/>
+								</view>
+								<view class="row ac h20">
+									<view class="mt12">
+										<text class="fc6767 fs12">责任划分</text>
+									</view>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+
+				<view class="row al ph12 h50">
+					<view class="mr10">
+						<icon icon="icon-shuoming1" class="fc2bd3df fs28"/>
+					</view>
+					<text class="fc6767 fs12">点击相机图标，模仿样图拍摄</text>
+				</view>
+				<view class="ml1vw row al wrap col1">
+					<view class="mb10" onClick="goShot('front')">
+						<view>
+							<view class="carpbox row ac" if="{$imgs[0]}">
+								<view class="passflag" if="{$imgs[0].state != 0}">
+									<text class="{'fs12 ' + ($imgs[0].state==1 ? 'fc0da7b2' : 'fc999')}">{$imgs[0].state==1 ? '通过'
+										: '不通过'}
+									</text>
+								</view>
+								<image class="carp" src="{$imgs[0].img}"/>
+							</view>
+							<view class="carpbox row ac" else="">
+								<image class="carp" src="assets://img/a1.jpg"/>
+							</view>
+						</view>
+						<view class="row ac col1">
+							<text class="fs12 fc6767">正前方</text>
+						</view>
+					</view>
+					<view class="mb10" onClick="goShot('behind')">
+						<view>
+							<view class="carpbox row ac" if="{$imgs[1]}">
+								<view class="passflag" if="{$imgs[1].state != 0}">
+									<text class="{'fs12 ' + ($imgs[1].state==1 ? 'fc0da7b2' : 'fc999')}">{$imgs[1].state==1 ? '通过'
+										: '不通过'}
+									</text>
+								</view>
+								<image class="carp" src="{$imgs[1].img}"/>
+							</view>
+							<view class="carpbox row ac" else="">
+								<image class="carp" src="assets://img/a2.jpg"/>
+							</view>
+						</view>
+						<view class="row ac col1">
+							<text class="fs12 fc6767">正后方</text>
+						</view>
+					</view>
+					<view class="mb10" onClick="goShot('impact')">
+						<view>
+							<view class="carpbox row ac" if="{$imgs[2]}">
+								<view class="passflag" if="{$imgs[2].state != 0}">
+									<text class="{'fs12 ' + ($imgs[2].state==1 ? 'fc0da7b2' : 'fc999')}">{$imgs[2].state==1 ? '通过'
+										: '不通过'}
+									</text>
+								</view>
+								<image class="carp" src="{$imgs[2].img}"/>
+							</view>
+							<view class="carpbox row ac" else="">
+								<image class="carp" src="assets://img/a3.png"/>
+							</view>
+						</view>
+						<view class="row ac col1">
+							<text class="fs12 fc6767">碰撞部位</text>
+						</view>
+					</view>
+					<view class="mb10" onClick="goShot('impact1')">
+						<view>
+							<view class="carpbox row ac" if="{$imgs[6]}">
+								<view class="passflag" if="{$imgs[6].state != 0}">
+									<text class="{'fs12 ' + ($imgs[6].state==1 ? 'fc0da7b2' : 'fc999')}">{$imgs[6].state==1 ? '通过'
+										: '不通过'}
+									</text>
+								</view>
+								<image class="carp" src="{$imgs[6].img}"/>
+							</view>
+							<view class="carpbox row ac" else="">
+								<image class="carp" src="assets://img/a3.png"/>
+							</view>
+						</view>
+						<view class="row ac col1">
+							<text class="fs12 fc6767">碰撞部位</text>
+						</view>
+					</view>
+					<view class="mb10" onClick="goShot('first')">
+						<view>
+							<view class="carpbox row ac" if="{$imgs[3]}">
+								<view class="passflag" if="{$imgs[3].state != 0}">
+									<text class="{'fs12 ' + ($imgs[3].state==1 ? 'fc0da7b2' : 'fc999')}">{$imgs[3].state==1 ? '通过'
+										: '不通过'}
+									</text>
+								</view>
+								<image class="carp" src="{$imgs[3].img}"/>
+							</view>
+							<view class="carpbox row ac" else="">
+								<image class="carp" src="assets://img/a4.png"/>
+							</view>
+						</view>
+						<view class="row ac col1">
+							<text class="fs12 fc6767">{$handleType==1 ? '机动车号牌' : '第一方机动车号牌'}</text>
+						</view>
+					</view>
+					<view class="mb10" onClick="goShot('second')" if="{$handleType==2 || $handleType==3}">
+						<view>
+							<view class="carpbox row ac" if="{$imgs[4]}">
+								<view class="passflag" if="{$imgs[4].state != 0}">
+									<text class="{'fs12 ' + ($imgs[4].state==1 ? 'fc0da7b2' : 'fc999')}">{$imgs[4].state==1 ? '通过'
+										: '不通过'}
+									</text>
+								</view>
+								<image class="carp" src="{$imgs[4].img}"/>
+							</view>
+							<view class="carpbox row ac" else="">
+								<image class="carp" src="assets://img/a5.png"/>
+							</view>
+						</view>
+						<view class="row ac col1">
+							<text class="fs12 fc6767">第二方机动车号牌</text>
+						</view>
+					</view>
+					<view class="mb10" onClick="goShot('third')" if="{$handleType==3}">
+						<view>
+							<view class="carpbox row ac" if="{$imgs[5]}">
+								<view class="passflag" if="{$imgs[5].state != 0}">
+									<text class="{'fs12 ' + ($imgs[5].state==1 ? 'fc0da7b2' : 'fc999')}">{$imgs[5].state==1 ? '通过'
+										: '不通过'}
+									</text>
+								</view>
+								<image class="carp" src="{$imgs[5].img}"/>
+							</view>
+							<view class="carpbox row ac" else="">
+								<image class="carp" src="assets://img/a5.png"/>
+							</view>
+						</view>
+
+						<view class="row ac col1">
+							<text class="fs12 fc6767">第三方机动车号牌</text>
+						</view>
+					</view>
+					<view class="mb10">
+						<view class="carpbox row ac positionr hidden">
+							<view>
+								<view class="carpbox row ac" if="{$videoImg}">
+									<image class="carp" src="{$videoImg}"/>
+								</view>
+								<view class="carpbox row ac" else="">
+									<image class="carp" src="assets://img/a7.png"/>
+								</view>
+							</view>
+							<input ref="video" onChange="uploadVideo(-2)" class="uploadbtn" type="file" accept="video/*"
+									 defaultValue="拍摄"/>
+						</view>
+						<view class="row ac col1">
+							<text class="fs12 fc6767">其他现场视频</text>
+						</view>
+					</view>
+					<view class="mb10" if="{$otherImgs}" for="{$otherImgs}">
+						<view class="carpbox">
+							<view class="carpbox1 row ac">
+								<image class="carp" src="{item}"/>
+							</view>
+						</view>
+
+						<view class="row ac col1">
+							<text class="fs12 fc6767">其他现场照片</text>
+						</view>
+					</view>
+					<view class="mb10">
+						<view class="carpbox" onClick="goShot('other')">
+							<view class="carpbox1 row ac" if="{$otherImg}">
+								<image class="carp" src="{$otherImg}"/>
+							</view>
+							<view class="carpbox1 row ac" else="">
+								<image class="carp" src="assets://img/a8.png"/>
+							</view>
+						</view>
+
+						<view class="row ac col1">
+							<text class="fs12 fc6767">其他现场照片</text>
+						</view>
+					</view>
+				</view>
+
+			</view>
+			<view class="footer1 row ac col1 bgf8f8 mt10 mb10" onClick="goFinish()">
+				<view class="btn1 bg2bd3df row ac">  <!--bg2bd3df-->
+					<text class="fs15 fcfff">提交</text>
+				</view>
+			</view>
+
+			<!--<view class="layerbg1 column col1" if="{$show==2}">-->
+			<!--<view class="column ar hb15">-->
+			<!--<view class="mb20">-->
+			<!--<text class="fs14 fcfff">本方机动车号牌</text>-->
+			<!--</view>-->
+			<!--</view>-->
+			<!--<view class="row ac">-->
+			<!--<image class="shot1-box-img2" src="{'assets://img/a' + $type + '.png'}"/>-->
+			<!--</view>-->
+
+			<!--<view class="row ac col2">-->
+			<!--<view class="row sb wb84">-->
+			<!--<view class="btn2 row ac bgfff">-->
+			<!--<text class="fs15 fc2bd3df">从相册中选择</text>-->
+			<!--</view>-->
+			<!--<view class="btn2 row ac bg2bd3df">-->
+			<!--<text class="fs15 fcfff">使用该照片</text>-->
+			<!--</view>-->
+			<!--</view>-->
+			<!--</view>-->
+
+			<!--<view class="row ac col3">-->
+			<!--<view class="mt30">-->
+			<!--<text class="fcfff fs15">关闭</text>-->
+			<!--</view>-->
+			<!--</view>-->
+			<!--</view>-->
+
+			<view class="layerbg1 column col1" if="{$show==1}">
+				<view>
+					<view class="column ar hb15">
+						<view class="mb20">
+							<text class="fs14 fcfff">{$title}</text>
+						</view>
+					</view>
+					<view class="row ac">
+						<view class="shot1-box" if="{$type=='front' || $type=='other'}">
+							<image class="shot1-box-img" src="assets://img/a9.jpg"/>
+						</view>
+						<view class="shot1-box" if="{$type=='behind'}">
+							<image class="shot1-box-img" src="assets://img/a13.jpg"/>
+						</view>
+						<view class="shot1-box" if="{$type=='impact' || $type=='impact1'}">
+							<image class="shot1-box-img" src="assets://img/a11.jpg"/>
+						</view>
+						<view class="shot1-box" if="{$type=='first'}">
+							<image class="shot1-box-img" src="assets://img/a19.jpg"/>
+						</view>
+						<view class="shot1-box" if="{$type=='third' || $type == 'second'}">
+							<image class="shot1-box-img" src="assets://img/a18.jpg"/>
+						</view>
+					</view>
+					<view class="row ac mt20">
+						<view class="wb80" if="{$type=='front'||$type=='behind'}">
+							<text class="fs14 fcfff">请在事故车辆</text>
+							<text class="fs14 fcFE7449">前方大约15米左右处拍全景照。图片应尽量展示事故现场</text>。
+							<text class="fs14 fcfff">如路口形态、道路上的标志标线，车辆行驶方向，车牌信息，以及有可能出现的刹车印痕等信息。</text>
+						</view>
+						<view class="wb80" if="{$type=='first' || $type == 'second' || $type=='third'}">
+							<text class="fs14 fcfff">机动车号牌拍照时，注意保证车辆号牌的完整！</text>
+						</view>
+						<view class="wb80" if="{$type=='impact' || $type=='impact1'}">
+							<text class="fs14 fcfff">请在事故现场稍近距离从左右两侧拍中心照。图片应能反映事故车辆号牌、接触部位及损坏情况</text>
+						</view>
+						<view class="wb80" if="{$type=='other'}">
+							<text class="fs14 fcfff">补充照片拍摄</text>
+						</view>
+					</view>
+				</view>
+
+				<view class="column ar col2">
+					<view class="btn1 row ac bg2bd3df positionr hidden">
+						<input ref="file" onChange="uploadFile(1)" class="uploadbtnb" type="file" accept="image/*"
+								 capture="camera" defaultValue="从相册中选取"/>
+						<text class="fs15 fcfff">拍照</text>
+					</view>
+					<view class="btn4 row ac bgfff mt15 positionr hidden">
+						<input ref="file1" class="uploadbtnsm" onChange="uploadFile(2)" type="file" accept="image/*"
+								 defaultValue="从相册中选择"/>
+						<text class="fs15 fc2bd3df">从相册中选择</text>
+					</view>
+				</view>
+
+				<view class="row ac col1 mt10" onClick="setShow(0)">
+					<text class="fcfff fs15">关闭</text>
+				</view>
+			</view>
+		</view>
+	</content>
+</page>

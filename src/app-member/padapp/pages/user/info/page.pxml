@@ -1,0 +1,74 @@
+<page>
+	<navbar title="个人信息"/>
+	<content>
+		<view class="mh col1 column bgfff">
+			<view class="header row bb">
+				<view class="headericon ac" onClick="goBack()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">个人信息</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h44"/>
+			<view>
+				<view class="ph15 ">
+					<view class="row al bb pv10">
+						<view class="col1">
+							<text class="fs12 fc797979">头像</text>
+						</view>
+						<view class="y50 hidden mr10 positionr">
+							<view>
+								<image class="w" src="{$userInfo.data.duPic}" if="{$userInfo.data.duPic}"/>
+								<image class="w" src="assets://img/huiz.png" else=""/>
+							</view>
+							<input ref="file" type="file" class="uploadhead" accept="image/*" onChange="uploadFile()"/>
+						</view>
+						<icon icon="icon-xiangyou" class="fcd4d4d4 fs12 mt4"/>
+					</view>
+					<view class="row al h40 bb" onClick="goUpdate('name')">
+						<view class="col1">
+							<text class="fs12 fc797979">姓名</text>
+						</view>
+						<view class="mr10">
+							<text class="fs12 fc797979">{$userInfo.data.duName}</text>
+						</view>
+						<icon icon="icon-xiangyou" class="fcd4d4d4 fs12 mt4"/>
+					</view>
+					<view class="row al h40 bb" onClick="goUpdate('sex')">
+						<view class="col1">
+							<text class="fs12 fc797979">性别</text>
+						</view>
+						<view class="mr10">
+							<text class="fs12 fc797979">{$userInfo.data.duSex?($userInfo.data.duSex==1?'男':'女'):'请选择'}</text>
+						</view>
+						<icon icon="icon-xiangyou" class="fcd4d4d4 fs12 mt4"/>
+					</view>
+					<view class="row al h40 bb" onClick="goUpdate('idCard')">
+						<view class="col1">
+							<text class="fs12 fc797979">身份证</text>
+						</view>
+						<view class="mr20">
+							<text class="fs12 fc797979">{$userInfo.data.duIdCard?$userInfo.data.duIdCard:'无'}</text>
+						</view>
+					</view>
+					<!--<view class="row al h40 bb">-->
+						<!--<view class="col1">-->
+							<!--<text class="fs12 fc797979">二维码</text>-->
+						<!--</view>-->
+						<!--<view class="row al">-->
+							<!--<view class="mr5">-->
+								<!--<icon icon="icon-erweima" class="fs20 fc999"/>-->
+							<!--</view>-->
+							<!--<icon icon="icon-xiangyou" class="fs13 fcd1d1d1"/>-->
+						<!--</view>-->
+					<!--</view>-->
+				</view>
+			</view>
+
+
+		</view>
+	</content>
+</page>

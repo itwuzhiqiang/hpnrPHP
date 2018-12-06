@@ -1,0 +1,149 @@
+<page>
+	<navbar title="驾驶人及车辆信息"/>
+	<content>
+		<view>
+			<view class="header row bbddd">
+				<view class="headericon ac" onClick="goHistory()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df f18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">驾驶人及车辆信息</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h44"/>
+			<view if="{$parties.length>0}">
+				<view class="bgfff mt10"  if="{$partyoneShow}">
+					<view class="h40 row al col1">
+						<view class="stiao">
+						</view>
+						<view class="ml10">
+							<text class="fs14 fc6767">第一方驾驶人及车辆信息</text>
+						</view>
+					</view>
+					<view class="h40 row sb bb bt mh12 col1">
+						<text class="fs13 fc6767">姓名</text>
+						<text class="fs13 fc6767">{$partyone.apPartiesName}</text>
+					</view>
+					<view class="h40 row sb bb bt mh12 col1">
+						<text class="fs13 fc6767">联系方式</text>
+						<text class="fs13 fc6767">{$partyone.apPartiesPhone}</text>
+					</view>
+					<view class="h40 row sb bb bt mh12 col1">
+						<text class="fs13 fc6767">车型</text>
+						<text class="fs13 fc6767">{$partyone.aviPlateTypeText}</text>
+					</view>
+					<view class="h40 row sb bb mh12 col1">
+						<text class="fs13 fc6767">车牌号</text>
+						<text class="fs13 fc6767">{$partyone.aviPlateNumber}</text>
+					</view>
+					<view class="h40 row sb bb mh12 col1">
+						<text class="fs13 fc6767">驾驶状态</text>
+						<text class="fs13 fc6767">{$partyone.apInvalidStateText}</text>
+					</view>
+					<view class="h40 row sb bb mh12 col1">
+						<text class="fs13 fc6767">车辆状态</text>
+						<text class="fs13 fc6767">{$partyone.aviInvalidStateText}</text>
+					</view>
+					<view class="h40 row sb bb mh12 col1">
+						<text class="fs13 fc6767">事故责任</text>
+						<text class="fs13 fc6767">{$partyone.apResponsibilityText}</text>
+					</view>
+					<view class="pt10 pb20 row ac col1">
+						<view class="pic1 br5">
+							<image class="pic1" src="{$partyone.aviLicensePhotos}"/>
+						</view>
+					</view>
+				</view>
+
+				<view class="bgfff mt10" if="{$partytwoShow}" >
+					<view class="h40 row al col1">
+						<view class="stiao">
+						</view>
+						<view class="ml10">
+							<text class="fs14 fc6767">第二方驾驶人及车辆信息</text>
+						</view>
+					</view>
+					<view class="h40 row sb bb bt mh12 col1">
+						<text class="fs13 fc6767">姓名</text>
+						<text class="fs13 fc6767">{$partytwo.apPartiesName}</text>
+					</view>
+					<view class="h40 row sb bb bt mh12 col1">
+						<text class="fs13 fc6767">联系方式</text>
+						<text class="fs13 fc6767">{$partytwo.apPartiesPhone}</text>
+					</view>
+					<view class="h40 row sb bb bt mh12 col1">
+						<text class="fs13 fc6767">车型</text>
+						<text class="fs13 fc6767">{$partytwo.aviPlateTypeText}</text>
+					</view>
+					<view class="h40 row sb bb mh12 col1">
+						<text class="fs13 fc6767">车牌号</text>
+						<text class="fs13 fc6767">{$partytwo.aviPlateNumber}</text>
+					</view>
+					<view class="h40 row sb bb mh12 col1">
+						<text class="fs13 fc6767">驾驶状态</text>
+						<text class="fs13 fc6767">{$partytwo.apInvalidStateText}</text>
+					</view>
+					<view class="h40 row sb bb mh12 col1">
+						<text class="fs13 fc6767">车辆状态</text>
+						<text class="fs13 fc6767">{$partytwo.aviInvalidStateText}</text>
+					</view>
+					<view class="h40 row sb bb mh12 col1">
+						<text class="fs13 fc6767">事故责任</text>
+						<text class="fs13 fc6767">{$partytwo.apResponsibilityText}</text>
+					</view>
+					<view class="pt10 pb20 row ac col1">
+						<view class="pic1 br5">
+							<image class="pic1" src="{$partytwo.aviLicensePhotos}"/>
+						</view>
+					</view>
+				</view>
+
+				<view class="bgfff mt10"  if="{$partythreeShow}">
+					<view class="h40 row al col1">
+						<view class="stiao">
+						</view>
+						<view class="ml10">
+							<text class="fs14 fc6767">第三方驾驶人及车辆信息</text>
+						</view>
+					</view>
+					<view class="h40 row sb bb bt mh12 col1">
+						<text class="fs13 fc6767">姓名</text>
+						<text class="fs13 fc6767">{$partythree.apPartiesName}</text>
+					</view>
+					<view class="h40 row sb bb bt mh12 col1">
+						<text class="fs13 fc6767">联系方式</text>
+						<text class="fs13 fc6767">{$partythree.apPartiesPhone}</text>
+					</view>
+					<view class="h40 row sb bb bt mh12 col1">
+						<text class="fs13 fc6767">车型</text>
+						<text class="fs13 fc6767">{$partythree.aviPlateTypeText}</text>
+					</view>
+					<view class="h40 row sb bb mh12 col1">
+						<text class="fs13 fc6767">车牌号</text>
+						<text class="fs13 fc6767">{$partythree.aviPlateNumber}</text>
+					</view>
+					<view class="h40 row sb bb mh12 col1">
+						<text class="fs13 fc6767">驾驶状态</text>
+						<text class="fs13 fc6767">{$partythree.apInvalidStateText}</text>
+					</view>
+					<view class="h40 row sb bb mh12 col1">
+						<text class="fs13 fc6767">车辆状态</text>
+						<text class="fs13 fc6767">{$partythree.aviInvalidStateText}</text>
+					</view>
+					<view class="h40 row sb bb mh12 col1">
+						<text class="fs13 fc6767">事故责任</text>
+						<text class="fs13 fc6767">{$partythree.apResponsibilityText}</text>
+					</view>
+					<view class="pt10 pb20 row ac col1">
+						<view class="pic1 br5">
+							<image class="pic1" src="{$partythree.aviLicensePhotos}"/>
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="h50"/>
+		</view>
+	</content>
+</page>

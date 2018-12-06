@@ -1,0 +1,63 @@
+<page>
+	<navbar title="请选择"/>
+	<content>
+		<view class="mh bgf8f8">
+			<view class="header row">
+				<view class="headericon ac" onClick="goHistory()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">请选择</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h44"/>
+			<view>
+				<view class="tixing h60 row ac bbFE7449 bgfff bt">
+					<view class="mr10">
+						<icon icon="icon-shuoming1" class="fcFE7449 fs28"/>
+					</view>
+					<text class="fs14 fcFE7449">请选择事故类型!</text>
+				</view>
+				<view class="w h60"/>
+				<view class="mt10" onClick="goShot1(1)">
+					<image class="w" src="assets://img/car1.jpg"/>
+				</view>
+				<view onClick="goShot(2)">
+					<image class="w" src="assets://img/car2.jpg"/>
+				</view>
+				<view onClick="goShot(3)">
+					<image class="w" src="assets://img/car3.jpg"/>
+				</view>
+				<!--<view class="layerbg row ac">-->
+					<!--<view class="column ac">-->
+						<!--<view class="layercon column ac">-->
+							<!--<view class="ts-item bg55e0ea b55e0ea row ac col1 mt25 mb30">-->
+								<!--<view class="mr20">-->
+									<!--<image class="w25" src="assets://img/ts-1.png"/>-->
+								<!--</view>-->
+								<!--<text class="fs15 fcfff">信息采集+手工单</text>-->
+							<!--</view>-->
+							<!--<view class="ts-item b2bd3df row ac col1 mb30">-->
+								<!--<view class="mr20">-->
+									<!--<image class="w25" src="assets://img/ts-2.png"/>-->
+								<!--</view>-->
+								<!--<text class="fs15 fc2bd3df">信息采集</text>-->
+							<!--</view>-->
+							<!--<view class="ts-item b999 row ac col1 mb25">-->
+								<!--<view class="mr20">-->
+									<!--<image class="w25" src="assets://img/ts-3.png"/>-->
+								<!--</view>-->
+								<!--<text class="fs15 fc999">后台交通执法人员定责</text>-->
+							<!--</view>-->
+						<!--</view>-->
+						<!--<view class="mt30 row ac col1">-->
+							<!--<icon icon="icon-guanbi" class="fcfff fs30"/>-->
+						<!--</view>-->
+					<!--</view>-->
+				<!--</view>-->
+			</view>
+		</view>
+	</content>
+</page>

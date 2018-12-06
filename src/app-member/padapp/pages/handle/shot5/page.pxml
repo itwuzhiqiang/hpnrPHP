@@ -1,0 +1,97 @@
+<page>
+	<navbar title="拍照取证"/>
+	<content>
+		<view class="bgf8f8 h column col1">
+			<view class="header1 row bbddd">
+				<view class="headericon ac" onClick="goBack()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">执法人员远程定责</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view>
+				<view class="row ac col1 hb30 positionr">
+					<!--<view class="row al col1 shot4-ts1">-->
+					<!--<view class="mr5 ml12"><icon icon="icon-finish" class="fcfff fs18"/></view>-->
+					<!--<text class="fs14 fcfff">责任认定书已到达，点击查看吧！</text>-->
+					<!--<view class="mr12 ar col1"><icon icon="icon-xiangyou" class="fcfff fs14"/></view>-->
+					<!--</view>-->
+					<view class="positionr">
+						<view class="shot4-djs">
+							<view class="row ac">
+								<text class="fs32 fc999">{$per}</text>
+							</view>
+							<view class="row ac">
+								<text class="fs18 fcFE7449">s</text>
+							</view>
+						</view>
+						<image class="w90" src="assets://img/watch.png"/>
+					</view>
+				</view>
+
+				<view class="row ac">
+					<view>
+						<view class="column ac h40 w30">
+							<view class="circle2"/>
+							<view class="row ac lineorder2 col1"/>
+						</view>
+						<view class="column ac h40 w30">
+							<view class="row ac lineorder2 col1"/>
+							<view>
+								<view class="" if="{$rpaProcessState>31}">
+									<icon icon="icon-wancheng" class="fcFE7449 fs22"/>
+								</view>
+								<view class="circle2" else=""/>
+							</view>
+
+							<view class="row ac lineorder2 col1"/>
+						</view>
+						<view class="column ac h40 w30">
+							<view class="row ac lineorder2 col1"/>
+							<view>
+								<view class="" if="{$rpaProcessState>32}">
+									<icon icon="icon-wancheng" class="fcFE7449 fs22"/>
+								</view>
+								<view class="circle2" else=""/>
+							</view>
+						</view>
+					</view>
+					<view>
+						<view class="h40">
+							<text class="fs15 fc6767">处理状态</text>
+						</view>
+						<view class="column atc h40">
+							<view>
+								<text class="fs12 fc999">{$rpaProcessState>31?$time:''}</text>
+							</view>
+							<view>
+								<text class="fs15 fc6767">等待执法人员远程定责</text>
+							</view>
+						</view>
+						<view class="column ars h60">
+							<view>
+								<text class="fs12 fc999">{$rpaProcessState>32?$time1:''}</text>
+							</view>
+							<view>
+								<text class="fs15 fc6767">执法人员远程定责成功</text>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view class="column ac col1 hb35">
+					<view class="row ac mt30">
+						<image class="w180" src="assets://img/mp.png"/>
+					</view>
+					<view class="row ac" onClick="goShot3()">
+						<view class="{'row ac btn1 ' +($rpaProcessState>32?'bg2bd3df':'bgddd')}">
+							<text class="fs15 fcfff">{$stateName}</text>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</content>
+</page>

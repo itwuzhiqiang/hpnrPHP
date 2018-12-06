@@ -1,0 +1,12 @@
+<page>
+	<navbar title="首页" disableTree="true"/>
+	<content>
+		<view onClick="goLogin()">
+			<text>dddddddddddddd</text>
+		</view>
+		<view>
+			<text>2342343</text>
+			<input type="file" accept="audio/*" capture="microphone"/>
+		</view>
+	</content>
+</page>

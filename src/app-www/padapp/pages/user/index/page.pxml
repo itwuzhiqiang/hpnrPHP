@@ -1,0 +1,113 @@
+<page>
+	<navbar title="登录"/>
+	<content>
+		<view class="mh bgf8f8">
+			<view class="header row bb">
+				<view class="headericon ac">
+					<!--<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>-->
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">我的</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h44">
+			</view>
+			<view>
+				<view class="ph15 pv15 row al bgfff" onClick="goInfo()">
+					<view class="y50 hidden">
+						<image class="w" src="{$policeInfo.data.policePic}"/>
+					</view>
+					<view class="col1 ml15">
+						<view>
+							<text class="fs12 fc8e8e8e">{$policeInfo.data.policeName}</text>
+						</view>
+						<view class="mt10">
+							<text class="fs12 fc8e8e8e">警号：{$policeInfo.data.policeNumber}</text>
+						</view>
+					</view>
+					<view class="iconfont icon-xiangyou fcd1d1d1">
+					</view>
+				</view>
+				<!--<view class="mt10 bgfff bt">-->
+					<!--<view class="h45 bb al row ph15">-->
+						<!--<view class="iconfont icon-mingpian fc2bd3df fs22">-->
+						<!--</view>-->
+						<!--<view class="col1 ml10">-->
+							<!--<text class="fs12 fc797979">驾驶人信息</text>-->
+						<!--</view>-->
+						<!--<view class="iconfont icon-xiangyou fcd1d1d1">-->
+						<!--</view>-->
+					<!--</view>-->
+					<!--<view class="h45 bb al row ph15">-->
+						<!--<view class="iconfont icon-xiaojiaoche fs20 fc2bd3df">-->
+						<!--</view>-->
+						<!--<view class="col1 ml10">-->
+							<!--<text class="fs12 fc797979">车辆信息</text>-->
+						<!--</view>-->
+						<!--<view class="iconfont icon-xiangyou fcd1d1d1">-->
+						<!--</view>-->
+					<!--</view>-->
+				<!--</view>-->
+				<view class="mt10 bgfff bt">
+					<view class="h45 bb al row ph15" onClick="goUpdatepassword()">
+						<view class="iconfont icon-mima fc2bd3df fs22">
+						</view>
+						<view class="col1 ml10">
+							<text class="fs12 fc797979">修改密码</text>
+						</view>
+						<view class="iconfont icon-xiangyou fcd1d1d1">
+						</view>
+					</view>
+					<view class="h45 bb al row ph15" onClick="goUse()">
+						<view class="iconfont icon-dangyuanxinxichaxun fs20 fc2bd3df">
+						</view>
+						<view class="col1 ml10">
+							<text class="fs12 fc797979">使用说明</text>
+						</view>
+						<view class="iconfont icon-xiangyou fcd1d1d1">
+						</view>
+					</view>
+					<view class="h45 bb al row ph15" onClick="goFeedback()">
+						<view class="iconfont icon-shuoming fs20 fc2bd3df">
+						</view>
+						<view class="col1 ml10">
+							<text class="fs12 fc797979">意见反馈</text>
+						</view>
+						<view class="iconfont icon-xiangyou fcd1d1d1">
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="footer row al col1 bgf5f5">
+				<view class="col1 ac" onClick="goHome()">
+					<view>
+						<view class="row ac">
+							<icon icon="icon-xiaoqichecemian" class="fc999 fs24"/>
+						</view>
+						<text class="fs12 fc999">事故处理</text>
+					</view>
+				</view>
+				<view class="col1 ac"  onClick="goBeResponsibility()">
+					<view>
+						<view class="row ac">
+							<icon icon="icon-pankeshenhe" class="fc999 fs24"/>
+						</view>
+						<text class="fs12 fc999">事故定责</text>
+					</view>
+				</view>
+				<view class="col1 ac">
+					<view>
+						<view class="row ac">
+							<icon icon="icon-wode" class="fc2bd3df fs24"/>
+						</view>
+						<text class="fs12 fc2bd3df">我的</text>
+					</view>
+				</view>
+			</view>
+			<view class="h50">
+			</view>
+		</view>
+	</content>
+</page>

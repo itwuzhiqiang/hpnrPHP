@@ -1,0 +1,101 @@
+<page>
+	<navbar title="事故照片"/>
+	<content>
+		<view class="bgf8f8 mh">
+			<view class="header1 row bbddd">
+				<view class="headericon ac">
+					<icon icon="icon-xiangzuo" class="fc2bd3df fs18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">事故照片</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view>
+				<view class="h45 row al ph12">
+					<view class="mr5">
+						<image class="w20" src="assets://img/icon4.png"/>
+					</view>
+					<text class="fs14 fc6767">照片 共5张</text>
+				</view>
+				<view class="ml1vw row al wrap col1">
+					<view class="mb10">
+						<view class="carpbox row ac" if="{1==1}">
+							<image class="carp" src="assets://img/a1.jpg"/>
+						</view>
+						<view class="carpbox row ac" else="">
+							<image class="carp" src="assets://img/a1.jpg"/>
+						</view>
+						<view class="row ac col1">
+							<text class="fs12 fc6767">正前方</text>
+						</view>
+					</view>
+					<view class="mb10">
+						<view class="carpbox row ac" if="{1==1}">
+							<image class="carp" src="assets://img/a2.jpg"/>
+						</view>
+						<view class="carpbox row ac" else="">
+							<image class="carp" src="assets://img/a2.jpg"/>
+						</view>
+						<view class="row ac col1">
+							<text class="fs12 fc6767">正后方</text>
+						</view>
+					</view>
+					<view class="mb10">
+						<view class="carpbox row ac" if="{1==1}">
+							<image class="carp" src="assets://img/a3.png"/>
+						</view>
+						<view class="carpbox row ac" else="">
+							<image class="carp" src="assets://img/a3.png"/>
+						</view>
+						<view class="row ac col1">
+							<text class="fs12 fc6767">碰撞部位</text>
+						</view>
+					</view>
+
+					<view class="mb10">
+						<view class="carpbox row ac" if="{1==1}">
+							<image class="carp" src="assets://img/a4.png"/>
+						</view>
+						<view class="carpbox row ac" else="">
+							<image class="carp" src="assets://img/a4.png"/>
+						</view>
+						<view class="row ac col1">
+							<text class="fs12 fc6767">本方机动车号牌</text>
+						</view>
+					</view>
+					<view class="mb10">
+						<view class="carpbox row ac" if="{1==1}">
+							<image class="carp" src="assets://img/a5.png"/>
+						</view>
+						<view class="carpbox row ac" else="">
+							<image class="carp" src="assets://img/a5.png"/>
+						</view>
+						<view class="row ac col1">
+							<text class="fs12 fc6767">对方机动车号牌</text>
+						</view>
+					</view>
+				</view>
+
+				<view class="h45 row al ph12">
+					<view class="mr5">
+						<image class="w20" src="assets://img/icon5.png"/>
+					</view>
+					<text class="fs14 fc6767">视频 共1个</text>
+				</view>
+				<view class="ml1vw row al wrap col1">
+					<view class="mb10">
+						<view class="carpbox row ac" if="{1==1}">
+							<image class="carp" src="assets://img/a1.jpg"/>
+						</view>
+						<view class="carpbox row ac" else="">
+							<image class="carp" src="assets://img/a1.jpg"/>
+						</view>
+					</view>
+				</view>
+
+			</view>
+		</view>
+	</content>
+</page>

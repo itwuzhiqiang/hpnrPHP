@@ -1,0 +1,114 @@
+<page>
+	<navbar title="事故照片"/>
+	<content>
+		<view class="mh bgfff">
+			<view class="header row bbddd">
+				<view class="headericon ac" onClick="goHistory()">
+					<icon icon="icon-xiangzuo" class="fc2bd3df f18"/>
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">事故照片</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h50"/>
+			<view>
+				<view class="ml1vw row al wrap col1" if="{$imgs}">
+					<view class="mb10" for="{$imgs}">
+						<view class="carpbox row ac">
+							<image class="carp" src="{item.src}"/>
+							<!--<input ref="video" class="uploadbtns" type="file" accept="video/*"-->
+									 <!--capture="camcorder" defaultValue="拍摄"/>-->
+						</view>
+						<view class="row ac col1">
+							<text class="fs12 fc6767">{item.text}</text>
+						</view>
+					</view>
+				</view>
+
+
+
+
+
+
+
+				<!--<view class="ph12 row sb col1 mb10">-->
+					<!--<view if="{$showevidence0}">-->
+						<!--<view class="carpbox row ac">-->
+							<!--<image class="carp" src="{$evidence0['hostName']+$evidence0['aeFileAddress']}"/>-->
+						<!--</view>-->
+						<!--<view class="row ac col1">-->
+							<!--<text class="fs12 fc6767">{$evidence0['aeFileDescription']}</text>-->
+						<!--</view>-->
+					<!--</view>-->
+					<!--<view if="{$showevidence1}">-->
+						<!--<view class="carpbox row ac">-->
+							<!--<image class="carp" src="{$evidence1['hostName']+$evidence1['aeFileAddress']}"/>-->
+						<!--</view>-->
+						<!--<view class="row ac col1">-->
+							<!--<text class="fs12 fc6767">{$evidence1['aeFileDescription']}</text>-->
+						<!--</view>-->
+					<!--</view>-->
+				<!--</view>-->
+				<!--<view class="ph12 row sb col1 mb10">-->
+					<!--<view if="{$showevidence2}">-->
+						<!--<view class="carpbox row ac">-->
+							<!--<image class="carp" src="{$evidence2['hostName']+$evidence2['aeFileAddress']}"/>-->
+						<!--</view>-->
+						<!--<view class="row ac col1">-->
+							<!--<text class="fs12 fc6767">{$evidence2['aeFileDescription']}</text>-->
+						<!--</view>-->
+					<!--</view>-->
+					<!--<view if="{$showevidence3}">-->
+						<!--<view class="carpbox row ac">-->
+							<!--<image class="carp" src="{$evidence3['hostName']+$evidence3['aeFileAddress']}"/>-->
+						<!--</view>-->
+						<!--<view class="row ac col1">-->
+							<!--<text class="fs12 fc6767">{$evidence3['aeFileDescription']}</text>-->
+						<!--</view>-->
+					<!--</view>-->
+				<!--</view>-->
+				<!--<view class="ph12 row sb col1 mb10">-->
+					<!--<view if="{$showevidence4}">-->
+						<!--<view class="carpbox row ac">-->
+							<!--<image class="carp" src="{$evidence4['hostName']+$evidence4['aeFileAddress']}"/>-->
+						<!--</view>-->
+						<!--<view class="row ac col1">-->
+							<!--<text class="fs12 fc6767">{$evidence4['aeFileDescription']}</text>-->
+						<!--</view>-->
+					<!--</view>-->
+					<!--<view if="{$showevidence5}">-->
+						<!--<view class="carpbox row ac">-->
+							<!--<image class="carp" src="{$evidence5['hostName']+$evidence5['aeFileAddress']}"/>-->
+						<!--</view>-->
+						<!--<view class="row ac col1">-->
+							<!--<text class="fs12 fc6767">{$evidence5['aeFileDescription']}</text>-->
+						<!--</view>-->
+					<!--</view>-->
+				<!--</view>-->
+				<!--<view class="ph12 row sb col1 mb10">-->
+					<!--<view if="{$showevidence6}">-->
+						<!--<view class="carpbox row ac">-->
+							<!--<image class="carp" src="{$evidence6['hostName']+$evidence6['aeFileAddress']}"/>-->
+						<!--</view>-->
+						<!--<view class="row ac col1">-->
+							<!--<text class="fs12 fc6767">{$evidence6['aeFileDescription']}</text>-->
+						<!--</view>-->
+					<!--</view>-->
+					<!--<view if="{$showevidence_1}">-->
+						<!--<view class="carpbox row ac">-->
+							<!--<image class="carp" src="{$evidence_1['hostName']+$evidence_1['aeFileAddress']}"/>-->
+						<!--</view>-->
+						<!--<view class="row ac col1">-->
+							<!--<text class="fs12 fc6767">{$evidence_1['aeFileDescription']}</text>-->
+						<!--</view>-->
+					<!--</view>-->
+				<!--</view>-->
+
+
+			</view>
+			<view class="h50"/>
+		</view>
+	</content>
+</page>

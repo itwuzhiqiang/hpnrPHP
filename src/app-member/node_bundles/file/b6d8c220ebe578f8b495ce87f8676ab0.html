@@ -1,0 +1,438 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui, maximum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<style type="text/css">
+
+		.appSence {
+			width: 100%;
+			height: 100%;
+			overflow-y: auto;
+		}
+
+		.appSence::-webkit-scrollbar {
+			width: 0px;
+			height: 0px;
+		}
+
+		.appSence::-webkit-scrollbar-track {
+			background: transparent;
+			opacity: 0;
+		}
+
+		.column {
+			display: flex;
+			flex-direction: column;
+			-ms-flex-direction: column;
+			-webkit-flex-direction: column;
+		}
+
+		.row {
+			display: flex;
+			flex-direction: row;
+			-ms-flex-direction: row;
+			-webkit-flex-direction: row;
+		}
+
+		.wrap {
+			display: flex;
+			flex-wrap: wrap;
+			-ms-flex-wrap: wrap;
+			-webkit-flex-wrap: wrap;
+		}
+
+		.al {
+			display: flex;
+			justify-content: flex-start;
+			-ms-justify-content: flex-start;
+			-webkit-justify-content: flex-start;
+			align-items: center;
+			-ms-align-items: center;
+			-webkit-align-items: center;
+		}
+
+		.ac {
+			display: flex;
+			justify-content: center;
+			-ms-justify-content: center;
+			-webkit-justify-content: center;
+			align-items: center;
+			-ms-align-items: center;
+			-webkit-align-items: center;
+		}
+
+		.ar {
+			display: flex;
+			justify-content: flex-end;
+			-ms-justify-content: flex-end;
+			-webkit-justify-content: flex-end;
+			align-items: center;
+			-ms-align-items: center;
+			-webkit-align-items: center;
+		}
+
+		.atc {
+			display: flex;
+			justify-content: center;
+			-ms-justify-content: center;
+			-webkit-justify-content: center;
+			align-items: flex-start;
+			-ms-align-items: flex-start;
+			-webkit-align-items: flex-start;
+		}
+
+		.als {
+			display: flex;
+			justify-content: flex-start;
+			-ms-justify-content: flex-start;
+			-webkit-justify-content: flex-start;
+			align-items: flex-start;
+			-ms-align-items: flex-start;
+			-webkit-align-items: flex-start;
+		}
+
+		.abl {
+			display: flex;
+			justify-content: flex-start;
+			-ms-justify-content: flex-start;
+			-webkit-justify-content: flex-start;
+			align-items: flex-end;
+			-ms-align-items: flex-end;
+			-webkit-align-items: flex-end;
+		}
+
+		.abc {
+			display: flex;
+			justify-content: center;
+			-ms-justify-content: center;
+			-webkit-justify-content: center;
+			align-items: flex-end;
+			-ms-align-items: flex-end;
+			-webkit-align-items: flex-end;
+		}
+
+		.sb {
+			display: flex;
+			justify-content: space-between;
+			-ms-justify-content: space-between;
+			-webkit-justify-content: space-between;
+			align-items: center;
+			-ms-align-items: center;
+			-webkit-align-items: center;
+		}
+
+		.sbcol {
+			display: flex;
+			justify-content: space-between;
+			-ms-justify-content: space-between;
+			-webkit-justify-content: space-between;
+			align-items: flex-start;
+			-ms-align-items: flex-start;
+			-webkit-align-items: flex-start;
+		}
+
+		.sa {
+			display: flex;
+			justify-content: space-around;
+			-ms-justify-content: space-around;
+			-webkit-justify-content: space-around;
+			align-items: center;
+			-ms-align-items: center;
+			-webkit-align-items: center;
+		}
+
+		.col1 {
+			-ms-flex: 1;
+			-webkit-flex: 1;
+			flex: 1;
+		}
+
+		.col2 {
+			-ms-flex: 2;
+			-webkit-flex: 2;
+			flex: 2;
+		}
+
+		.col3 {
+			-ms-flex: 3;
+			-webkit-flex: 3;
+			flex: 3;
+		}
+
+		body, html {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			font-family: "微软雅黑";
+			font-size: 14px;
+		}
+
+		#allmap {
+			height: 88%;
+			max-height: 88%;
+		}
+
+		#r-result {
+			width: 100%;
+			height: 50px;
+			background-color: #fff;
+			padding: 0 12px;
+			box-sizing: border-box;
+		}
+
+		#suggestId {
+			background-color: transparent;
+			border: none;
+			margin-right: 10px;
+			font-size: 14px;
+			color: #666;
+			outline: none;
+			height: 50px;
+			width: 140px;
+		}
+
+		.btn {
+			font-size: 14px;
+			color: #fff;
+			display: inline-block;
+			min-width: 50px;
+			padding: 5px 0;
+			border-radius: 5px;
+			background-color: #00a1ff;
+			text-decoration: none;
+			text-align: center;
+		}
+
+		.tishi {
+			font-size: 14px;
+			min-width: 80px;
+		}
+
+	</style>
+	<script src="http://api.map.baidu.com/api?v=2.0&ak=9111654c94324102ef8d63b242868319"></script>
+	<title>关键字输入提示词条</title>
+</head>
+<body class="appSence">
+<div id="r-result" class=" row sb col1">
+	<div class="tishi">请输入地址:</div>
+	<input type="text" id="suggestId"/>
+	<a href="javascript:" class="btn" onclick="onConfirm()">确定</a>
+</div>
+<div id="searchResultPanel" style="border:1px solid #C0C0C0;width:150px;height:auto; display:none;"></div>
+<div id="allmap"></div>
+</body>
+<script type="text/javascript">
+	var u = navigator.userAgent;
+	var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+	var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+
+	var point, marker;
+	var data = {address: {}, point: {}};
+	var showSearchList = false;
+	//	var count = 1;
+
+	var map = new BMap.Map("allmap");
+	var geolocationControl = new BMap.GeolocationControl({
+//		enableAutoLocation: true, //百度地图首次自动定位无效
+	});
+	map.addControl(geolocationControl);
+	var navigationControl = new BMap.NavigationControl({
+		anchor: BMAP_ANCHOR_BOTTOM_RIGHT,
+		type: BMAP_NAVIGATION_CONTROL_ZOOM,
+		enableGeolocation: false
+	});
+	map.addControl(navigationControl);
+
+	var geolocation = new BMap.Geolocation();
+	var startPointLat = 0;
+	var startPointLng = 0;
+	if (isiOS) {
+		geolocation.getCurrentPosition(function (r) {
+			if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+				startPointLng = r.point.lng;
+				startPointLat = r.point.lat;
+				point = new BMap.Point(startPointLng, startPointLat); //106.48389, 29.564986
+				map.centerAndZoom(point, 18);
+				marker = new BMap.Marker(point);
+				map.addOverlay(marker);    //添加标注
+				getLocation(point, function (address) {
+					getId('suggestId').value = address;
+				});
+			} else {
+				alert('failed' + this.getStatus());
+			}
+		})
+	} else {
+		window.addEventListener('message', function (e) { //在ios上无法传递参数
+			if (e.data.startPoint) {
+				var datas = e.data;
+				startPointLat = datas.startPoint.lat;
+				startPointLng = datas.startPoint.lng;
+			}
+			point = new BMap.Point(startPointLng, startPointLat); //106.48389, 29.564986
+			map.centerAndZoom(point, 18);
+			marker = new BMap.Marker(point);
+			map.addOverlay(marker);    //添加标注
+			if (datas.showLable == 'true') {
+				setLabel('送到这里', {offset: new BMap.Size(-20, -30)});
+			}
+			getLocation(point, function (address) {
+				getId('suggestId').value = address;
+			});
+		});
+	}
+
+
+	setTimeout(() => {
+		map.addEventListener('moveend', function (e) {
+			point = map.getCenter();
+			marker.setPosition(point);
+			getLocation(point, function (address) {
+				getId('suggestId').value = address;
+			});
+		});
+	}, 2000);
+
+	geolocationControl.addEventListener("locationSuccess", function (e) {
+		// 定位成功事件
+		point = map.getCenter();
+		marker.setPosition(point);
+		getLocation(point, function (address) {
+			getId('suggestId').value = address;
+		});
+	});
+
+
+	var geoc = new BMap.Geocoder();
+
+
+	map.addEventListener("click", function (e) {
+		point = e.point;
+		marker.setPosition(point);
+		getLocation(point, function (address) {
+			getId('suggestId').value = address;
+		});
+	});
+	if (showSearchList) {
+		var ac = new BMap.Autocomplete({
+			"input": "suggestId",
+			"location": point
+		});
+		ac.addEventListener("onhighlight", function (e) {  //鼠标放在下拉列表上的事件
+			var str = "";
+			var _value = e.fromitem.value;
+			var value = "";
+			if (e.fromitem.index > -1) {
+				value = _value.province + _value.city + _value.district + _value.street + _value.business;
+			}
+			str = "FromItem<br />index = " + e.fromitem.index + "<br />value = " + value;
+
+			value = "";
+			if (e.toitem.index > -1) {
+				_value = e.toitem.value;
+				value = _value.province + _value.city + _value.district + _value.street + _value.business;
+			}
+			str += "<br />ToItem<br />index = " + e.toitem.index + "<br />value = " + value;
+			getId("searchResultPanel").innerHTML = str;
+		});
+
+
+		ac.addEventListener("onconfirm", function (e) {    //鼠标点击下拉列表后的事件
+			var _value = e.item.value;
+			myValue = _value.province + _value.city + _value.district + _value.street + _value.business;
+			getId("searchResultPanel").innerHTML = "onconfirm<br />index = " + e.item.index + "<br />myValue = " + myValue;
+			getPoint(myValue, function (point) {
+				setData(_value, point);
+			});
+			setPlace();
+		});
+	}
+
+
+	function setPlace() {
+		var local = new BMap.LocalSearch(point, { //智能搜索
+			onSearchComplete: myFun
+		});
+
+		var myFun = function () {
+			point = local.getResults().getPoi(0).point;    //获取第一个智能搜索的结果
+			marker.setPosition(point);
+		}
+
+		local.searchNearby(myValue, point, 1000);
+	}
+
+	function getId(id) {
+		return document.getElementById(id);
+	}
+
+	function getPoint(address, cbk) {
+		geoc.getPoint(address, function (point) {
+			if (point) {
+				cbk && cbk(point);
+			}
+		});
+	}
+
+	function getLocation(point, cbk) {
+		geoc.getLocation(point, function (res) {
+			if (res) {
+				var ad = res.addressComponents;
+				var address = ad.province + ad.city + ad.district;
+				let business = '';
+				if (res.surroundingPois.length > 0) {
+					business = res.surroundingPois[0].title;
+				}
+				if (ad.street) {
+					address += ad.street + ad.streetNumber
+				} else {
+					address += business;
+				}
+				ad['business'] = business;
+				setData(ad, point);
+
+				console.log(data, 111111);
+
+				cbk && cbk(address);
+			}
+		});
+	}
+
+	function setLabel(content, options) {
+		options = options || {};
+
+		var label = new BMap.Label(content, options);
+		label.setStyle({
+			fontSize: "0.6em",
+			border: 0,
+			fontFamily: "微软雅黑",
+			"border-radius": "20px",
+			padding: "0.3em 0.4em"
+		});
+
+		marker.setLabel(label);
+		return label;
+	}
+
+	function setData(ad, point) {
+		if (ad.province) {
+			data['address']['province'] = ad.province;
+		}
+		data['address']['city'] = ad.city;
+		data['address']['district'] = ad.district;
+		data['address']['street'] = ad.street;
+		data['address']['streetNumber'] = ad.streetNumber;
+		data['address']['business'] = ad.business;
+		data['point']['lng'] = point.lng;
+		data['point']['lat'] = point.lat;
+	}
+
+	function onConfirm() {
+		window.parent.postMessage(data, '*');
+	}
+</script>
+</html>
+<html>

@@ -1,0 +1,199 @@
+<page>
+	<navbar title="登录"/>
+	<content>
+		<view class="mh bgf8f8">
+			<view class="header row">
+				<view class="headericon ac">
+					<!--<icon icon="icon-xiangzuo" class="fc000 fs24"/>-->
+				</view>
+				<view class="col1 ac">
+					<text class="fc000 fs16">事故处理</text>
+				</view>
+				<view class="headericon ac">
+				</view>
+			</view>
+			<view class="h44"/>
+			<view>
+				<view class="w hw40 hidden positionr">
+					<image class="w hw40" src="assets://img/banner1.jpg"/>
+					<view class="newbanner row sb">
+						<view class="ml12 row al">
+							<text class="fs12 fcfff">{$date}</text>
+						</view>
+						<view class="mr12 row al">
+							<text class="fs12 fcfff">{$weather}</text>
+							<!--<icon icon="icon-wendu" class="fcfff fs18"/>-->
+						</view>
+					</view>
+				</view>
+				<view class="boxshadow mh12 bgfff">
+					<view class="row al col1 bb mt10">
+						<view class="br row ac col1 h60" onClick="goHandle()">
+							<view>
+								<image class="w40" src="assets://img/a.png"/>
+							</view>
+							<view class="ml10">
+								<text class="fs12 fc6767">在线快处</text>
+							</view>
+						</view>
+						<view class="row ac col1  h60" onClick="goComment()">
+							<view>
+								<image class="w40" src="assets://img/b.png"/>
+							</view>
+							<view class="ml10">
+								<view>
+									<text class="fs12 fc6767">一般事故</text>
+								</view>
+								<view>
+									<text class="fs12 fc6767">信息采集</text>
+								</view>
+							</view>
+						</view>
+					</view>
+					<view class="row al col1">
+						<view class="br row ac col1 h60" onClick="goSearch()">
+							<view>
+								<image class="w40" src="assets://img/c.png"/>
+							</view>
+							<view class="ml10">
+								<text class="fs12 fc6767">信息查询</text>
+							</view>
+						</view>
+						<view class="row ac col1 h60" onClick="goHistory()">
+							<view>
+								<image class="w40" src="assets://img/d.png"/>
+							</view>
+							<view class="ml10">
+								<view>
+									<text class="fs12 fc6767">历史事故</text>
+								</view>
+								<view>
+									<text class="fs12 fc6767">坐标采集</text>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<!--<view class="h150 mh12 mt10 bgfff row al">-->
+					<!--<view class="row ac col1">-->
+						<!--<view class="bgtest h140 w m5"/>-->
+					<!--</view>-->
+					<!--<view class="col1 mr5 mt5 newlist">-->
+						<!--<view class="mt15">-->
+							<!--<view class="fs12">-->
+								<!--<text class="fs12 fc6767">-->
+									<!--07-01 15:40-->
+								<!--</text>-->
+							<!--</view>-->
+							<!--<view class="fs12">-->
+								<!--<text class="fs12 fc6767 liu2">-->
+									<!--东环立交改造工程匝道支架拆除施工交通诱导信息-->
+								<!--</text>-->
+							<!--</view>-->
+						<!--</view>-->
+						<!--<view class="mt15">-->
+							<!--<view class="fs12">-->
+								<!--<text class="fs12 fc6767">-->
+									<!--07-01 15:40-->
+								<!--</text>-->
+							<!--</view>-->
+							<!--<view class="fs12">-->
+								<!--<text class="fs12 fc6767 liu2">-->
+									<!--东环立交改造工程匝道支架拆除施工交通诱导信息-->
+								<!--</text>-->
+							<!--</view>-->
+						<!--</view>-->
+						<!--<view class="mt15">-->
+							<!--<view class="fs12">-->
+								<!--<text class="fs12 fc6767">-->
+									<!--07-01 15:40-->
+								<!--</text>-->
+							<!--</view>-->
+							<!--<view class="fs12">-->
+								<!--<text class="fs12 fc6767 liu2">-->
+									<!--东环立交改造工程匝道支架拆除施工交通诱导信息-->
+								<!--</text>-->
+							<!--</view>-->
+						<!--</view>-->
+						<!--<view class="mt15">-->
+							<!--<view class="fs12">-->
+								<!--<text class="fs12 fc6767">-->
+									<!--07-01 15:40-->
+								<!--</text>-->
+							<!--</view>-->
+							<!--<view class="fs12">-->
+								<!--<text class="fs12 fc6767 liu2">-->
+									<!--东环立交改造工程匝道支架拆除施工交通诱导信息-->
+								<!--</text>-->
+							<!--</view>-->
+						<!--</view>-->
+						<!--<view class="mt15">-->
+							<!--<view class="fs12">-->
+								<!--<text class="fs12 fc6767">-->
+									<!--07-01 15:40-->
+								<!--</text>-->
+							<!--</view>-->
+							<!--<view class="fs12">-->
+								<!--<text class="fs12 fc6767 liu2">-->
+									<!--东环立交改造工程匝道支架拆除施工交通诱导信息-->
+								<!--</text>-->
+							<!--</view>-->
+						<!--</view>-->
+
+					<!--</view>-->
+				<!--</view>-->
+				<!--<view class="pt30 pb30 mt30">-->
+					<!--<view class="row ac col1">-->
+						<!--<text class="fs12 fc6767">监制单位：重庆市交通行政执法总队</text>-->
+					<!--</view>-->
+					<!--<view class="row ac col1 mt5">-->
+						<!--<text class="fs12 fc6767">技术支持：重庆云保创客科技有限公司</text>-->
+					<!--</view>-->
+					<!--&lt;!&ndash;<view>&ndash;&gt;-->
+					<!--&lt;!&ndash;<input accept="image/*" type="file"/>&ndash;&gt;-->
+					<!--&lt;!&ndash;</view>&ndash;&gt;-->
+					<!--&lt;!&ndash;<view class="row ac col1 mt5"><text class="fs12 fc6767">联系电话：400-023-8833</text></view>&ndash;&gt;-->
+				<!--</view>-->
+			</view>
+			<view class="footer row al col1 bgf5f5" if="{1==2}">
+				<view class="col1 ac">
+					<view>
+						<view class="row ac">
+							<icon icon="icon-xiaoqichecemian" class="fc2bd3df fs24"/>
+						</view>
+						<text class="fs12 fc2bd3df">事故处理</text>
+					</view>
+				</view>
+				<view class="col1 ac" onClick="goBeResponsibility()">
+					<view>
+						<view class="row ac">
+							<icon icon="icon-pankeshenhe" class="fc999 fs24"/>
+						</view>
+						<text class="fs12 fc999">事故定责</text>
+					</view>
+				</view>
+				<view class="col1 ac" onClick="goUser()">
+					<view>
+						<view class="row ac">
+							<icon icon="icon-wode" class="fc999 fs24"/>
+						</view>
+						<text class="fs12 fc999">我的</text>
+					</view>
+				</view>
+			</view>
+			<view id="cover"></view>
+			<view id="showdiv">
+                  <view class="showdiv01">提示</view>
+                  <view class="showdiv02">您还有未完成的事件是否继续处理？</view>
+                  <view class="showdiv03">
+                      <view class="showdiv0304"></view>
+                      <view class="showdiv0301" onClick="confirm()">确 定</view>
+                      <view class="showdiv0303"></view>
+                      <view class="showdiv0302" onClick="cancel()">取 消</view>
+                      <view class="showdiv0305"></view>
+                  </view>
+			</view>
+			<view class="h50"/>
+		</view>
+	</content>
+</page>
