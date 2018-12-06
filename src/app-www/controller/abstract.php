@@ -55,7 +55,7 @@ class Controller_Abstract {
 					}
 				} else {
 					//事故接口经常挂
-					echo "<script>alert('连接失败请联系管理员')</script>";
+					echo "<script>alert('连接失败请联系管理员111')</script>";
 					exit;
 				}
 			} else if ($cookieKey) {

@@ -22,7 +22,7 @@ class Helper_Helper {
 				$data = $arr['data'];
 			}
 		} else {
-			throw new PadBizException('连接失败请联系管理员');//事故接口经常挂
+			throw new PadBizException('连接失败请联系管理员111');//事故接口经常挂
 		}
 
 		return $data;
