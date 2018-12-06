@@ -6,7 +6,7 @@ class Controller_Abstract {
 	public $memberToken;
 
 	/**
-	 * 通行证类
+	 * 通行证类111
 	 * @return PadBasePassport
 	 */
 	static public function getPassport() {
